@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1949783082241146966}
   - component: {fileID: 1949783082241146961}
   - component: {fileID: 1949783082241146960}
+  - component: {fileID: 7938912501153375192}
   - component: {fileID: 1949783082241146967}
   - component: {fileID: 1949783082241146962}
   - component: {fileID: 1949783082241146973}
@@ -86,6 +87,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7938912501153375192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949783082241146972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4dddc1a39d5bfe41956d6b3528b0adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1949783082241146967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,11 +111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b516e6b08485244596168bc09090c6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravitySpeed: 9.8
-  rayDistance: 2
-  antigravitySpeed: 5
-  maxSpeed: 10
-  acceleration: 10
 --- !u!114 &1949783082241146962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,10 +123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 819de01154d22014d846c33e3d4d118b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  jumpSpeed: 95
 --- !u!54 &1949783082241146973
 Rigidbody:
   m_ObjectHideFlags: 0
