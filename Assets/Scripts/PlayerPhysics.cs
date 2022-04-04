@@ -62,11 +62,14 @@ namespace Player {
 
         private void GroundCheck()
         {
+            Debug.DrawRay(transform.position, -transform.up * groundRayDistance, Color.red, 1);
             if (Physics.Raycast(transform.position, -transform.up, out ray, groundRayDistance, groundLayer))
             {
+                Debug.Log("YES ground");
                 isGrounded = true;
             } else
             {
+                Debug.Log("NO ground");
                 isGrounded = false;
             }
         }
@@ -76,6 +79,7 @@ namespace Player {
             if (isGrounded)
             {
                 groundNormal = ray.normal;
+                Debug.DrawRay(ray.point, ray.normal * 2, Color.blue, 1);
                 slopeRotation = Quaternion.FromToRotation(transform.up, groundNormal) * transform.rotation;
 
                 rb.MoveRotation(slopeRotation);

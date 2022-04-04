@@ -19,7 +19,7 @@ namespace Player
 
         [Header("Movement")]
         private Vector3 velocity;
-        private Vector3 gravityVelocity;
+        [SerializeField] private float gravityVelocity;
         public Vector3 Velocity
         {
             get { return velocity; }
@@ -51,7 +51,6 @@ namespace Player
         private void FixedUpdate()
         {
             MoveCharacter();
-            Debug.Log(rb.velocity);
         }
 
         private void MoveCharacter()
@@ -67,7 +66,7 @@ namespace Player
             Accelerate();
 
             rb.velocity = (Quaternion.Euler(transform.rotation.eulerAngles.x, cam.transform.eulerAngles.y, transform.rotation.eulerAngles.z) * new Vector3(velocity.x, 0f, velocity.z)) +
-                (Quaternion.Euler(0f, cam.transform.eulerAngles.y, 0f) * new Vector3(0f, rb.velocity.y, 0f));
+                Physics.gravity * gravityVelocity;
 
         }
 
