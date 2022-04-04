@@ -19,6 +19,7 @@ namespace Player
 
         [Header("Movement")]
         private Vector3 velocity;
+        private Vector3 gravityVelocity;
         public Vector3 Velocity
         {
             get { return velocity; }
@@ -64,7 +65,10 @@ namespace Player
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(transform.rotation.eulerAngles.x, playerRotation.eulerAngles.y, transform.rotation.eulerAngles.z), rotationSpeed * Time.fixedDeltaTime);
             }*/
             Accelerate();
-            rb.velocity = Quaternion.Euler(transform.rotation.eulerAngles.x, cam.transform.eulerAngles.y, transform.rotation.eulerAngles.z) * new Vector3(velocity.x, rb.velocity.y, velocity.z);
+
+            rb.velocity = (Quaternion.Euler(transform.rotation.eulerAngles.x, cam.transform.eulerAngles.y, transform.rotation.eulerAngles.z) * new Vector3(velocity.x, 0f, velocity.z)) +
+                (Quaternion.Euler(0f, cam.transform.eulerAngles.y, 0f) * new Vector3(0f, rb.velocity.y, 0f));
+
         }
 
         public void Accelerate()

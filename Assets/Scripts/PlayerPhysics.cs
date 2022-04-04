@@ -78,11 +78,9 @@ namespace Player {
                 groundNormal = ray.normal;
                 slopeRotation = Quaternion.FromToRotation(transform.up, groundNormal) * transform.rotation;
 
-                //transform.rotation = slopeRotation;
                 rb.MoveRotation(slopeRotation);
             } else
             {
-                //transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
                 rb.MoveRotation(Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f));
             }
         }
