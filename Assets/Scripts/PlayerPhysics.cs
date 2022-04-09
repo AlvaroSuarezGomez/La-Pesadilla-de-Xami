@@ -9,7 +9,7 @@ namespace Player {
         private Rigidbody rb;
         private Movement movementScript;
 
-        [Header("Ground Physics")]
+        [Header("Ground")]
         private bool isGrounded;
         public bool IsGrounded
         {
@@ -25,8 +25,22 @@ namespace Player {
         [SerializeField] private Transform crashTransform;
         [SerializeField] private float crashRayDistance = 0.25f;
 
-        [Header("Gravity Physics")]
+        [SerializeField] private Transform groundColPos;
+        [SerializeField] private float groundColRadius;
+
+        [Header("Gravity")]
         [SerializeField] private float antigravitySpeed = 8f;
+        [SerializeField] private float gravityVelocity;
+        [SerializeField] private float groundedVelocity;
+        public float GravityVelocity => gravityVelocity;
+
+        [Header("Jump")]
+        private bool isJumping;
+        public bool IsJumping
+        {
+            get { return isJumping; }
+            set { isJumping = value; }
+        }
 
         private void Awake()
         {
@@ -44,19 +58,27 @@ namespace Player {
 
         private void GravityManager()
         {
-            if ((Mathf.Abs(movementScript.Velocity.x) > antigravitySpeed) || (Mathf.Abs(movementScript.Velocity.z) > antigravitySpeed) && isGrounded)
+            var groundCol = Physics.CheckSphere(groundColPos.position, groundColRadius, groundLayer);
+
+            if (((Mathf.Abs(movementScript.Velocity.x) > antigravitySpeed) || (Mathf.Abs(movementScript.Velocity.z) > antigravitySpeed)) && isGrounded && (!isJumping))
             {
-                rb.useGravity = false;
-            } else
+                movementScript.Velocity = new Vector3(movementScript.Velocity.x, 0f, movementScript.Velocity.z);
+            }
+            
+            else if ((groundCol) && (!isJumping))
             {
-                rb.useGravity = true;
+                movementScript.Velocity = new Vector3(movementScript.Velocity.x, -groundedVelocity, movementScript.Velocity.z);
+            } 
+            else
+            {
+                movementScript.Velocity -= new Vector3(0f, gravityVelocity, 0f) * Time.fixedDeltaTime;
             }
         }
 
         private void Crash()
         {
             if (Physics.Raycast(crashTransform.position, movementScript.InputDirection, crashRayDistance)) {
-                movementScript.Velocity = Vector3.zero;
+                movementScript.Velocity = new Vector3(0f, movementScript.Velocity.y, 0f);
             }
         }
 
@@ -87,6 +109,11 @@ namespace Player {
             {
                 rb.MoveRotation(Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f));
             }
+        }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawWireSphere(groundColPos.position, groundColRadius);
         }
     }
 }

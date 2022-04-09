@@ -10,6 +10,7 @@ namespace Player
         [Header("Components")]
         [SerializeField] private Rigidbody rb;
         [SerializeField] private Camera cam;
+        [SerializeField] private PlayerPhysics physicsScript;
 
         [Header("Input")]
         [SerializeField] private InputActionAsset input;
@@ -19,7 +20,7 @@ namespace Player
 
         [Header("Movement")]
         private Vector3 velocity;
-        [SerializeField] private float gravityVelocity;
+        
         public Vector3 Velocity
         {
             get { return velocity; }
@@ -32,6 +33,9 @@ namespace Player
         [SerializeField] private float acceleration = 10f;
         [SerializeField] private float maxSpeed = 10f;
 
+        //[Header("Model Settings")]
+        //[SerializeField] private Transform playerModel;
+
         private void Awake()
         {
             if (rb == null)
@@ -42,6 +46,11 @@ namespace Player
             if (cam == null)
             {
                 cam = Camera.main;
+            }
+
+            if (physicsScript == null)
+            {
+                physicsScript = GetComponent<PlayerPhysics>();
             }
 
             input.Enable();
@@ -58,16 +67,17 @@ namespace Player
             Vector2 dir = moveAction.ReadValue<Vector2>();
             inputDirection = new Vector3(dir.x, 0f, dir.y);
 
-            /*playerRotation = Quaternion.LookRotation(transform.up, inputDirection);
-            if (inputDirection.x != 0f || inputDirection.z != 0f)
+            playerRotation = Quaternion.LookRotation(Vector3.up, inputDirection);
+            /*if (inputDirection.x != 0f || inputDirection.z != 0f)
             {
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(transform.rotation.eulerAngles.x, playerRotation.eulerAngles.y, transform.rotation.eulerAngles.z), rotationSpeed * Time.fixedDeltaTime);
+               transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, playerRotation.eulerAngles.y, transform.rotation.eulerAngles.z);
             }*/
             Accelerate();
 
             rb.velocity = (Quaternion.Euler(transform.rotation.eulerAngles.x, cam.transform.eulerAngles.y, transform.rotation.eulerAngles.z) * new Vector3(velocity.x, 0f, velocity.z)) +
-                Physics.gravity * gravityVelocity;
+                Physics.gravity * -velocity.y * Time.fixedDeltaTime * physicsScript.GravityVelocity;
 
+            Debug.Log(rb.velocity.y);
         }
 
         public void Accelerate()

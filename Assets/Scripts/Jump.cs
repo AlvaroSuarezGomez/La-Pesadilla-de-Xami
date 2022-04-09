@@ -8,6 +8,7 @@ namespace Player
     public class Jump : MonoBehaviour
     {
         [Header("Components")]
+        [SerializeField] private Movement movementScript;
         [SerializeField] private PlayerPhysics playerPhysicsScript;
         [SerializeField] private Rigidbody rb;
 
@@ -24,6 +25,11 @@ namespace Player
                 rb = GetComponent<Rigidbody>();
             }
 
+            if (movementScript == null)
+            {
+                movementScript = GetComponent<Movement>();
+            }
+
             jumpActionReference.action.performed += Action_performed;
         }
 
@@ -31,8 +37,18 @@ namespace Player
         {
             if (playerPhysicsScript.IsGrounded)
             {
-                rb.AddForce(transform.up * jumpForce);
+                playerPhysicsScript.IsJumping = true;
+                movementScript.Velocity = new Vector3(movementScript.Velocity.x, 0f, movementScript.Velocity.z);
+                movementScript.Velocity += transform.up * jumpForce;
+                StartCoroutine(WaitAndDeactivateJump());
             }
+        }
+
+        private IEnumerator WaitAndDeactivateJump()
+        {
+            yield return new WaitForSeconds(0.25f);
+            playerPhysicsScript.IsJumping = false; ;
+
         }
     }
 }
