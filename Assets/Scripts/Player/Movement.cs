@@ -19,6 +19,8 @@ namespace Player
         public Vector3 InputDirection { get { return inputDirection; } }
 
         [Header("Movement")]
+        private bool canMove = true;
+        private bool CanMove { get { return canMove; } set { canMove = value; } }
         private Vector3 velocity;
         
         public Vector3 Velocity
@@ -59,7 +61,10 @@ namespace Player
 
         private void FixedUpdate()
         {
-            MoveCharacter();
+            if (canMove)
+            {
+                MoveCharacter();
+            }
         }
 
         private void MoveCharacter()

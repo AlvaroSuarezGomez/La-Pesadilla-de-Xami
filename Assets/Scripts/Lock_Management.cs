@@ -10,6 +10,8 @@ namespace Player
         [SerializeField] private GameObject texture;
         [SerializeField] private GameObject player;
         private GameObject colObject;
+        public GameObject ColObject { get { return colObject; } }   
+
         private bool lockCol;
 
         void Update()
@@ -21,12 +23,11 @@ namespace Player
                 texture.SetActive(true);
                 texture.transform.position = colObject.transform.position;
             }
-            Debug.Log(colObject);
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.tag == "Enemy")
+            if ((other.gameObject.tag == "Enemy") && player.GetComponent<PlayerPhysics>().IsGrounded)
             {
                 if (!lockCol)
                 {
