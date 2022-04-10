@@ -9,6 +9,7 @@ public class EnemyShoot : MonoBehaviour
     private Vector3 playerPosition;
     private enum EnemyState {Track,Shoot,Wait};
     private EnemyState enemyState;
+    [SerializeField]
     private GameObject player;
     [SerializeField]
     private float maxDistance;
@@ -27,9 +28,10 @@ public class EnemyShoot : MonoBehaviour
         if((Vector3.Distance(transform.position,player.transform.position) <= maxDistance) && (enemyState == EnemyState.Wait))
         {
             enemyState = EnemyState.Track;
+            StartCoroutine(WaitAndChangeState());
         }
-        StartCoroutine(WaitAndChangeState());
-        if(enemyState == EnemyState.Shoot)
+ 
+        else if (enemyState == EnemyState.Shoot)
         {
             Shoot();
 
@@ -38,8 +40,8 @@ public class EnemyShoot : MonoBehaviour
 
     private void Shoot()
     {
-        var bulletObjet = Instantiate(bullet, transform.position, transform.rotation);
-        bulletObjet.GetComponent<BulletBehavouir>().Position = playerPosition;
+        var bulletObject = Instantiate(bullet, transform.position, bullet.transform.rotation);
+        bulletObject.GetComponent<BulletBehaviour>().Position = playerPosition;
         enemyState = EnemyState.Wait;
     }
 
