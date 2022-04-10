@@ -33,8 +33,8 @@ namespace Player
         [SerializeField] private float acceleration = 10f;
         [SerializeField] private float maxSpeed = 10f;
 
-        //[Header("Model Settings")]
-        //[SerializeField] private Transform playerModel;
+        [Header("Model Settings")]
+        [SerializeField] private Transform playerModel;
 
         private void Awake()
         {
@@ -68,16 +68,14 @@ namespace Player
             inputDirection = new Vector3(dir.x, 0f, dir.y);
 
             playerRotation = Quaternion.LookRotation(Vector3.up, inputDirection);
-            /*if (inputDirection.x != 0f || inputDirection.z != 0f)
+            if (inputDirection.x != 0f || inputDirection.z != 0f)
             {
-               transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, playerRotation.eulerAngles.y, transform.rotation.eulerAngles.z);
-            }*/
+               playerModel.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, playerRotation.eulerAngles.y + 180, transform.rotation.eulerAngles.z);
+            }
             Accelerate();
 
             rb.velocity = (Quaternion.Euler(transform.rotation.eulerAngles.x, cam.transform.eulerAngles.y, transform.rotation.eulerAngles.z) * new Vector3(velocity.x, 0f, velocity.z)) +
                 Physics.gravity * -velocity.y * Time.fixedDeltaTime * physicsScript.GravityVelocity;
-
-            Debug.Log(rb.velocity.y);
         }
 
         public void Accelerate()

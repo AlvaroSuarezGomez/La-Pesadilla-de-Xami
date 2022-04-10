@@ -2,25 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RampBehaviour : MonoBehaviour
+namespace Player
 {
-    [SerializeField]
-    private float force;
 
-    [SerializeField]
-    private Vector3 direction;
-
-
-    private void OnCollisionEnter(Collision collision)
+    public class RampBehaviour : MonoBehaviour
     {
-        var pRigidBody = collision.gameObject?.GetComponent<Rigidbody>();
+        [SerializeField]
+        private float force;
 
-        pRigidBody.AddForce(direction * force);
-        
-    }
+        [SerializeField]
+        private Vector3 direction;
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawRay(transform.position, transform.position + direction);
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            var playerMovement = collision.gameObject?.GetComponent<Movement>();
+
+            playerMovement.Velocity += (direction * force);
+
+            Debug.Log("AAAA");
+
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.DrawRay(transform.position, direction * force);
+        }
     }
 }
