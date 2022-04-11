@@ -25,7 +25,7 @@ namespace Player {
         [SerializeField] private Transform crashTransform;
         [SerializeField] private float crashRayDistance = 0.25f;
 
-        [SerializeField] private Transform groundColPos;
+        [SerializeField] private Vector3 groundColPos;
         [SerializeField] private float groundColRadius;
 
         [Header("Gravity")]
@@ -58,7 +58,7 @@ namespace Player {
 
         private void GravityManager()
         {
-            var groundCol = Physics.CheckSphere(groundColPos.position, groundColRadius, groundLayer);
+            var groundCol = Physics.CheckSphere(transform.position + groundColPos, groundColRadius, groundLayer);
 
             if (((Mathf.Abs(movementScript.Velocity.x) > antigravitySpeed) || (Mathf.Abs(movementScript.Velocity.z) > antigravitySpeed)) && isGrounded && (!isJumping))
             {
@@ -87,11 +87,11 @@ namespace Player {
             Debug.DrawRay(transform.position, -transform.up * groundRayDistance, Color.red, 1);
             if (Physics.Raycast(transform.position, -transform.up, out ray, groundRayDistance, groundLayer))
             {
-                Debug.Log("YES ground");
+                //Debug.Log("YES ground");
                 isGrounded = true;
             } else
             {
-                Debug.Log("NO ground");
+                //Debug.Log("NO ground");
                 isGrounded = false;
             }
         }
@@ -114,7 +114,7 @@ namespace Player {
 
         private void OnDrawGizmos()
         {
-            Gizmos.DrawWireSphere(groundColPos.position, groundColRadius);
+            Gizmos.DrawWireSphere(transform.position + groundColPos, groundColRadius);
         }
     }
 }

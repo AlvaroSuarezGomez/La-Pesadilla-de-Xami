@@ -14,6 +14,7 @@ namespace Player
         private GameObject targetObject;
         private bool activateHommingAttack;
         [SerializeField] private float hommingAttackSpeed = 10f;
+        Coroutine preventiveDeactivation;
 
         private void Awake()
         {
@@ -33,6 +34,11 @@ namespace Player
         private void Update()
         {
             targetObject = lockScript.ColObject;
+            if (targetObject == null)
+            {
+                Debug.Log("ALERTA ALERTA ALERTA");
+            }
+
             MoveTowardsObject();
         }
 
@@ -50,7 +56,7 @@ namespace Player
             {
                 movementScript.Velocity = Vector3.zero;
                 transform.position = Vector3.MoveTowards(transform.position, targetObject.transform.position, hommingAttackSpeed * Time.deltaTime);
-                StartCoroutine(PreventiveHommingAttackDeactivation());
+                preventiveDeactivation = StartCoroutine(PreventiveHommingAttackDeactivation());
             }
         }
 
@@ -64,6 +70,7 @@ namespace Player
         {
             if ((collision.gameObject.tag == "Enemy") && (activateHommingAttack))
             {
+                StopCoroutine(preventiveDeactivation);
                 playerPhysicsScript.IsJumping = true;
                 movementScript.Velocity = new Vector3(movementScript.Velocity.x, 0f, movementScript.Velocity.z);
                 movementScript.Velocity += transform.up * jumpForce;

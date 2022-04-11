@@ -27,13 +27,11 @@ namespace Player
                 texture.SetActive(false);
                 lockCol = false;
             }
-
-            Debug.Log(colObject);
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            if ((other.gameObject.tag == "Enemy") && player.GetComponent<PlayerPhysics>().IsGrounded && (!lockCol))
+            if ((other.gameObject.tag == "Enemy") && !player.GetComponent<PlayerPhysics>().IsGrounded && (!lockCol))
             {
                 if (!lockCol)
                 {
