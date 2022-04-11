@@ -5,14 +5,14 @@ using UnityEngine;
 public class FlyingEnemyMove : MonoBehaviour
 {
     [SerializeField]
-    Vector3 startposition;
+    private Vector3 startposition;
     [SerializeField]
-    Vector3 finalposition;
+    private Vector3 finalposition;
 
-    bool rise;
+    private bool rise;
 
     [SerializeField]
-    int enemyspeed;
+    private float enemyspeed;
 
     
 

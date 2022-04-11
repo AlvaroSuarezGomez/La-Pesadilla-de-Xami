@@ -41,7 +41,7 @@ public class EnemyShoot : MonoBehaviour
     private void Shoot()
     {
         var bulletObject = Instantiate(bullet, transform.position, bullet.transform.rotation);
-        bulletObject.GetComponent<BulletBehaviour>().Position = playerPosition;
+        bulletObject.GetComponentInChildren<BulletBehaviour>().Position = playerPosition;
         enemyState = EnemyState.Wait;
     }
 

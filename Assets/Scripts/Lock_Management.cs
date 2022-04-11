@@ -22,7 +22,13 @@ namespace Player
             {
                 texture.SetActive(true);
                 texture.transform.position = colObject.transform.position;
+            } else
+            {
+                texture.SetActive(false);
+                lockCol = false;
             }
+
+            Debug.Log(colObject);
         }
 
         private void OnTriggerEnter(Collider other)
@@ -42,7 +48,7 @@ namespace Player
         {
             if (other.gameObject.tag == "Enemy")
             {
-                if (lockCol == false)
+                if (!lockCol)
                 {
                     lockCol = true;
                     colObject = other.gameObject;
