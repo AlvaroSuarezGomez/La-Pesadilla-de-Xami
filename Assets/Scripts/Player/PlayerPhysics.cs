@@ -107,7 +107,8 @@ namespace Player {
                 rb.MoveRotation(slopeRotation);
             } else
             {
-                rb.MoveRotation(Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f));
+                
+                rb.MoveRotation(Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f), slopeRotationSpeed * Time.fixedDeltaTime));
             }
         }
 

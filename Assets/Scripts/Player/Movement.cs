@@ -20,7 +20,7 @@ namespace Player
 
         [Header("Movement")]
         private bool canMove = true;
-        private bool CanMove { get { return canMove; } set { canMove = value; } }
+        public bool CanMove { get { return canMove; } set { canMove = value; } }
         private Vector3 velocity;
         
         public Vector3 Velocity
@@ -65,6 +65,9 @@ namespace Player
             {
                 MoveCharacter();
             }
+
+            rb.velocity = (Quaternion.Euler(transform.rotation.eulerAngles.x, cam.transform.eulerAngles.y, transform.rotation.eulerAngles.z) * new Vector3(velocity.x, 0f, velocity.z)) +
+                Physics.gravity * -velocity.y * Time.fixedDeltaTime * physicsScript.GravityVelocity;
         }
 
         private void MoveCharacter()
@@ -77,10 +80,7 @@ namespace Player
             {
                playerModel.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, playerRotation.eulerAngles.y + 180, transform.rotation.eulerAngles.z);
             }
-            Accelerate();
-
-            rb.velocity = (Quaternion.Euler(transform.rotation.eulerAngles.x, cam.transform.eulerAngles.y, transform.rotation.eulerAngles.z) * new Vector3(velocity.x, 0f, velocity.z)) +
-                Physics.gravity * -velocity.y * Time.fixedDeltaTime * physicsScript.GravityVelocity;
+            Accelerate();  
         }
 
         public void Accelerate()

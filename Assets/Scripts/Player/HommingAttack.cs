@@ -54,13 +54,6 @@ namespace Player
             }
         }
 
-        private IEnumerator WaitAndDeactivateJump()
-        {
-            yield return new WaitForSeconds(0.25f);
-            playerPhysicsScript.IsJumping = false;
-
-        }
-
         private IEnumerator PreventiveHommingAttackDeactivation()
         {
             yield return new WaitForSeconds(2f);
@@ -75,7 +68,7 @@ namespace Player
                 movementScript.Velocity = new Vector3(movementScript.Velocity.x, 0f, movementScript.Velocity.z);
                 movementScript.Velocity += transform.up * jumpForce;
                 activateHommingAttack = false;
-                StartCoroutine(WaitAndDeactivateJump());
+                playerPhysicsScript.IsJumping = false;
             }
         }
     }

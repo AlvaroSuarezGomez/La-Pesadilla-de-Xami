@@ -1595,8 +1595,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 15, y: 5, z: 5}
-  m_Center: {x: 0, y: 0, z: 5}
+  m_Size: {x: 15, y: 5, z: 10}
+  m_Center: {x: 0, y: 0, z: 7.5}
 --- !u!65 &483783192
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2322,6 +2322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 100
   direction: {x: 0, y: 1, z: 1}
+  reactivationTime: 1
 --- !u!64 &945265209
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4865,7 +4866,7 @@ MonoBehaviour:
   jumpActionReference: {fileID: -2583163502711110346, guid: 0aec3d36dfd8e8947aa69d56a5e80c76, type: 3}
   lockScript: {fileID: 483783193}
   jumpForce: 5
-  hommingAttackSpeed: 10
+  hommingAttackSpeed: 20
 --- !u!1 &1838449656 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8513424388201257645, guid: 5daedf05b050e2449bedd547d46e1395, type: 3}
@@ -9050,7 +9051,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  slopeRotationSpeed: 1080
+  slopeRotationSpeed: 180
   crashTransform: {fileID: 0}
   crashRayDistance: 0.1
   groundColPos: {fileID: 1579734028}

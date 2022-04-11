@@ -27,7 +27,7 @@ namespace Player
 
         private void OnTriggerEnter(Collider other)
         {
-            if ((other.gameObject.tag == "Enemy") && player.GetComponent<PlayerPhysics>().IsGrounded)
+            if ((other.gameObject.tag == "Enemy") && player.GetComponent<PlayerPhysics>().IsGrounded && (!lockCol))
             {
                 if (!lockCol)
                 {

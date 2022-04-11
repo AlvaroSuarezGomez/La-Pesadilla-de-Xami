@@ -13,20 +13,37 @@ namespace Player
         [SerializeField]
         private Vector3 direction;
 
+        [SerializeField]
+        private float reactivationTime;
+
+        private PlayerPhysics playerPhysicsScript;
+        private Movement playerMovement;
+
 
         private void OnCollisionEnter(Collision collision)
         {
-            var playerMovement = collision.gameObject?.GetComponent<Movement>();
+            playerMovement = collision.gameObject?.GetComponent<Movement>();
+            playerPhysicsScript = collision.gameObject?.GetComponent<PlayerPhysics>();
+            playerMovement.CanMove = false;
 
+            playerPhysicsScript.IsJumping = true;
+            playerMovement.Velocity = Vector3.zero;
             playerMovement.Velocity += (direction * force);
-
-            Debug.Log("AAAA");
+            StartCoroutine(WaitAndReactivatePlayerMovement());
 
         }
 
         private void OnDrawGizmosSelected()
         {
             Gizmos.DrawRay(transform.position, direction * force);
+        }
+
+        private IEnumerator WaitAndReactivatePlayerMovement()
+        {
+            yield return new WaitForSeconds(reactivationTime);
+            playerPhysicsScript.IsJumping = false;
+            playerMovement.Velocity = Vector3.zero;
+            playerMovement.CanMove = true;
         }
     }
 }
