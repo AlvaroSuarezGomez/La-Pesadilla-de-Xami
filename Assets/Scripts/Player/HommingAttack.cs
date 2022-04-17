@@ -14,7 +14,7 @@ namespace Player
         private GameObject targetObject;
         private bool activateHommingAttack;
         [SerializeField] private float hommingAttackSpeed = 10f;
-        Coroutine preventiveDeactivation;
+        private Coroutine preventiveDeactivation;
 
         private void Awake()
         {
@@ -34,11 +34,6 @@ namespace Player
         private void Update()
         {
             targetObject = lockScript.ColObject;
-            if (targetObject == null)
-            {
-                Debug.Log("ALERTA ALERTA ALERTA");
-            }
-
             MoveTowardsObject();
         }
 

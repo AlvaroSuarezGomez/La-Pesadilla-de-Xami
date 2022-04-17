@@ -31,39 +31,29 @@ namespace Player
 
         private void OnTriggerEnter(Collider other)
         {
-            if ((other.gameObject.tag == "Enemy") && !player.GetComponent<PlayerPhysics>().IsGrounded && (!lockCol))
+            if ((other.gameObject.tag == "Enemy") && (!lockCol))
             {
-                if (!lockCol)
-                {
                     lockCol = true;
                     colObject = other.gameObject;
                     //lockSound.Play();
-                }
             }
         }
 
         private void OnTriggerStay(Collider other)
         {
-            if (other.gameObject.tag == "Enemy")
+            if ((other.gameObject.tag == "Enemy") && (!lockCol))
             {
-                if (!lockCol)
-                {
                     lockCol = true;
                     colObject = other.gameObject;
-                }
             }
         }
 
         private void OnTriggerExit(Collider other)
         {
-            if (colObject != null)
+            if (other.gameObject == colObject)
             {
-                if (colObject.tag == "Enemy")
-                {
-                    colObject = null;
-                    lockCol = false;
-                    texture.SetActive(false);
-                }
+                colObject = null;
+                lockCol = false;
             }
         }
     }
