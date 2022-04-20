@@ -75,10 +75,10 @@ namespace Player
             Vector2 dir = moveAction.ReadValue<Vector2>();
             inputDirection = new Vector3(dir.x, 0f, dir.y);
 
-            playerRotation = Quaternion.LookRotation(Vector3.up, inputDirection);
+            playerRotation = Quaternion.LookRotation(inputDirection, Vector3.up);
             if (inputDirection.x != 0f || inputDirection.z != 0f)
             {
-               playerModel.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, playerRotation.eulerAngles.y + 180, transform.rotation.eulerAngles.z);
+                playerModel.rotation = transform.rotation * playerRotation;
             }
             Accelerate();  
         }
