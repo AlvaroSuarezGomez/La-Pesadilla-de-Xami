@@ -8,6 +8,7 @@ namespace Player {
         [Header("Components")]
         private Rigidbody rb;
         private Movement movementScript;
+        [SerializeField] private Camera cam;
 
         [Header("Ground")]
         private bool isGrounded;
@@ -104,7 +105,7 @@ namespace Player {
                 Debug.DrawRay(ray.point, ray.normal * 2, Color.blue, 1);
                 slopeRotation = Quaternion.FromToRotation(transform.up, groundNormal) * transform.rotation;
 
-                rb.MoveRotation(slopeRotation);
+                rb.MoveRotation(Quaternion.Euler(slopeRotation.eulerAngles.x, cam.transform.rotation.eulerAngles.y, slopeRotation.eulerAngles.z));
             } else
             {
                 
