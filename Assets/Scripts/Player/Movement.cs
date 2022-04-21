@@ -28,6 +28,9 @@ namespace Player
             get { return velocity; }
             set { velocity = value; }
         }
+
+        private Vector3 localVelocity;
+
         private Quaternion playerRotation;
         [SerializeField] private float rotationSpeed = 90f;
 
@@ -61,13 +64,7 @@ namespace Player
 
         private void FixedUpdate()
         {
-            if (canMove)
-            {
                 MoveCharacter();
-            }
-
-            rb.velocity = (Quaternion.Euler(transform.rotation.eulerAngles.x, cam.transform.eulerAngles.y, transform.rotation.eulerAngles.z) * new Vector3(velocity.x, 0f, velocity.z)) +
-                Physics.gravity * -velocity.y * Time.fixedDeltaTime * physicsScript.GravityVelocity;
         }
 
         private void MoveCharacter()
@@ -79,51 +76,45 @@ namespace Player
             if (inputDirection.x != 0f || inputDirection.z != 0f)
             {
                 playerModel.rotation = transform.rotation * playerRotation;
+                transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, cam.transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
             }
-            Accelerate();  
+
+            velocity = rb.velocity;
+            localVelocity = transform.InverseTransformDirection(velocity);
+
+            if (canMove)
+            {
+                localVelocity.x = Accelerate(inputDirection.x, localVelocity.x);
+                localVelocity.z = Accelerate(inputDirection.z, localVelocity.z);
+            }
+
+            velocity = transform.TransformDirection(localVelocity);
+            rb.velocity = velocity;
         }
 
-        public void Accelerate()
+        public float Accelerate(float dir, float vel)
         {
-            if ((inputDirection.x != 0f) && (Mathf.Abs(velocity.x) < maxSpeed))
+            if ((dir != 0f) && (Mathf.Abs(vel) < maxSpeed))
             {
-                velocity.x += acceleration * Time.fixedDeltaTime * inputDirection.x;
+                vel += acceleration * Time.fixedDeltaTime * dir;
             }
-            else if ((inputDirection.x == 0f) && (Mathf.Abs(velocity.x) > 0f))
+            else if ((dir == 0f) && (Mathf.Abs(vel) > 0f))
             {
-                if (velocity.x > 0f)
+                if (vel > 0f)
                 {
-                    velocity.x -= acceleration * Time.fixedDeltaTime;
+                    vel -= acceleration * Time.fixedDeltaTime;
                 }
-                else if (velocity.x < 0f)
+                else if (vel < 0f)
                 {
-                    velocity.x += acceleration * Time.fixedDeltaTime;
+                    vel += acceleration * Time.fixedDeltaTime;
                 }
             }
             else
             {
-                velocity.x = Mathf.Abs(velocity.x) * inputDirection.x;
+                vel = Mathf.Abs(vel) * dir;
             }
 
-            if ((inputDirection.z != 0f) && (Mathf.Abs(velocity.z) < maxSpeed))
-            {
-                velocity.z += acceleration * Time.fixedDeltaTime * inputDirection.z;
-            }
-            else if ((inputDirection.z == 0f) && (Mathf.Abs(velocity.z) > 0f))
-            {
-                if (velocity.z > 0f)
-                {
-                    velocity.z -= acceleration * Time.fixedDeltaTime;
-                }
-                else if (velocity.z < 0f)
-                {
-                    velocity.z += acceleration * Time.fixedDeltaTime;
-                }
-            }
-            else
-            {
-                velocity.z = Mathf.Abs(velocity.z) * inputDirection.z;
-            }
+            return vel;
         }
         private void OnDrawGizmos()
         {

@@ -16,20 +16,9 @@ namespace Player
         [SerializeField]
         private float reactivationTime;
 
-        [SerializeField]
-        private Camera cam;
-
         private PlayerPhysics playerPhysicsScript;
         private Movement playerMovement;
 
-
-        private void Awake()
-        {
-            if (cam == null)
-            {
-                cam = Camera.main;
-            }
-        }
 
         private void OnTriggerEnter(Collider collision)
         {
@@ -42,7 +31,7 @@ namespace Player
 
                 playerPhysicsScript.IsJumping = true;
                 playerMovement.Velocity = Vector3.zero;
-                playerMovement.Velocity += Quaternion.Euler(0f, -cam.transform.rotation.eulerAngles.y, 0f) * (direction * force);
+                collision.gameObject.GetComponent<Rigidbody>().velocity += (direction * force);
                 StartCoroutine(WaitAndReactivatePlayerMovement());
             }
         }
@@ -56,7 +45,6 @@ namespace Player
         {
             yield return new WaitForSeconds(reactivationTime);
             playerPhysicsScript.IsJumping = false;
-            //playerMovement.Velocity = Vector3.zero;
             playerMovement.CanMove = true;
         }
     }

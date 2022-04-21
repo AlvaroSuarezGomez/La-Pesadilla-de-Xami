@@ -41,8 +41,7 @@ namespace Player
             if (playerPhysicsScript.IsGrounded)
             {
                 playerPhysicsScript.IsJumping = true;
-                movementScript.Velocity = new Vector3(movementScript.Velocity.x, 0f, movementScript.Velocity.z);
-                movementScript.Velocity += transform.up * jumpForce;
+                rb.velocity += transform.up * jumpForce;
                 StartCoroutine(WaitAndDeactivateJump());
             }
         }

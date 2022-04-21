@@ -105,11 +105,11 @@ namespace Player {
                 Debug.DrawRay(ray.point, ray.normal * 2, Color.blue, 1);
                 slopeRotation = Quaternion.FromToRotation(transform.up, groundNormal) * transform.rotation;
 
-                rb.MoveRotation(Quaternion.Euler(slopeRotation.eulerAngles.x, cam.transform.rotation.eulerAngles.y, slopeRotation.eulerAngles.z));
+                rb.MoveRotation(slopeRotation);
             } else
             {
                 
-                rb.MoveRotation(Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(Vector3.zero), slopeRotationSpeed * Time.fixedDeltaTime));
+                rb.MoveRotation(Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f), slopeRotationSpeed * Time.fixedDeltaTime));
             }
         }
 

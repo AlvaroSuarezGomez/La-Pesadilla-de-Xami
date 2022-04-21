@@ -6,6 +6,7 @@ namespace Player
 {
     public class HommingAttack : MonoBehaviour
     {
+        [SerializeField] private Rigidbody rb;
         [SerializeField] private PlayerPhysics playerPhysicsScript;
         [SerializeField] private Movement movementScript;
         [SerializeField] private InputActionReference jumpActionReference;
@@ -67,8 +68,7 @@ namespace Player
             {
                 StopCoroutine(preventiveDeactivation);
                 playerPhysicsScript.IsJumping = true;
-                movementScript.Velocity = new Vector3(movementScript.Velocity.x, 0f, movementScript.Velocity.z);
-                movementScript.Velocity += transform.up * jumpForce;
+                rb.velocity += transform.up * jumpForce;
                 activateHommingAttack = false;
                 playerPhysicsScript.IsJumping = false;
             }
