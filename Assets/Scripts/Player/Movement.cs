@@ -76,7 +76,7 @@ namespace Player
             if (inputDirection.x != 0f || inputDirection.z != 0f)
             {
                 playerModel.rotation = transform.rotation * playerRotation;
-                transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, cam.transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
+                //transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, cam.transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
             }
 
             velocity = rb.velocity;

@@ -109,7 +109,7 @@ namespace Player {
             } else
             {
                 
-                rb.MoveRotation(Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f), slopeRotationSpeed * Time.fixedDeltaTime));
+                rb.MoveRotation(Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, 0f, 0f), slopeRotationSpeed * Time.fixedDeltaTime));
             }
         }
 
