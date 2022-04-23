@@ -2226,7 +2226,6 @@ MonoBehaviour:
   force: 100
   direction: {x: 0, y: 1, z: 1}
   reactivationTime: 1
-  cam: {fileID: 0}
 --- !u!64 &945265209
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3831,10 +3830,6 @@ PrefabInstance:
       propertyPath: texture
       value: 
       objectReference: {fileID: 326827584}
-    - target: {fileID: 1698778271028830308, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1698778271028830309, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
       propertyPath: m_Name
       value: PlayerV1
@@ -3887,34 +3882,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5664233776025633984, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5664233776025633984, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5664233776025633984, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5664233776025633984, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5664233776025633984, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7111445975565599713, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 963194227}
-    - target: {fileID: 7111445975565599713, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: slopeRotationSpeed
-      value: 360
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
 --- !u!1 &1377252942
