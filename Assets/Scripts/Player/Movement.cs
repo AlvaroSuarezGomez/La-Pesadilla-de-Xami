@@ -70,7 +70,10 @@ namespace Player
         private void MoveCharacter()
         {
             Vector2 dir = moveAction.ReadValue<Vector2>();
-            inputDirection = new Vector3(dir.x, 0f, dir.y);
+            inputDirection = Quaternion.Euler(0f, cam.transform.eulerAngles.y, 0f) * new Vector3(dir.x, 0f, dir.y);
+
+            Debug.Log("Input: " + dir.x + " / " + dir.y);
+            Debug.Log("inputDirection: " + inputDirection.x + " / " + inputDirection.z);
 
             playerRotation = Quaternion.LookRotation(inputDirection, Vector3.up);
             if (inputDirection.x != 0f || inputDirection.z != 0f)
@@ -88,6 +91,8 @@ namespace Player
                 localVelocity.z = Accelerate(inputDirection.z, localVelocity.z);
             }
 
+            Debug.Log("Velocity : " + localVelocity.x + " / " + localVelocity.z);
+
             velocity = transform.TransformDirection(localVelocity);
             rb.velocity = velocity;
         }
@@ -102,11 +107,11 @@ namespace Player
             {
                 if (vel > 0f)
                 {
-                    vel -= acceleration * Time.fixedDeltaTime;
+                    vel = Mathf.Max(0, vel - acceleration * Time.fixedDeltaTime);
                 }
                 else if (vel < 0f)
                 {
-                    vel += acceleration * Time.fixedDeltaTime;
+                    vel = Mathf.Min(0, vel + acceleration * Time.fixedDeltaTime);
                 }
             }
             else
