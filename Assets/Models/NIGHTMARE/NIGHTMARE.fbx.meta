@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 25765a35198b9d54f8fdd10eac92c930
+guid: 5275bb343e5cd1545b3fd94ba7058c12
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
@@ -271,9 +271,6 @@ ModelImporter:
       74: -6383396148915535687
     second: Armature|TopL__Wait
   - first:
-      74: -8166893684906593567
-    second: Armature|TopL__Wait.001
-  - first:
       74: -2945305147905755671
     second: Armature|TopL__YubiShotChargeLeft
   - first:
@@ -304,6 +301,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: MainC.001
+    second: {fileID: 2100000, guid: 858a791275622194594295987381d406, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainC.002
+    second: {fileID: 2100000, guid: 97a163bdbf1871a45ac8ae1f668d252b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: MantoInsideC
     second: {fileID: 2100000, guid: ba1ab5621b5056946bbed6bf2e56ef4e, type: 2}
   - first:
@@ -311,6 +318,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: MantoOutsideC
     second: {fileID: 2100000, guid: 51ed917f4a832e249930a225299fc6ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MantoOutsideC.001
+    second: {fileID: 2100000, guid: e6c7db4364e356f45ad8df8478e2356e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -380,7 +392,7 @@ ModelImporter:
     secondaryUVMinLightmapResolution: 40
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
