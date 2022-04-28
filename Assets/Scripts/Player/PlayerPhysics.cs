@@ -47,6 +47,8 @@ namespace Player {
         {
             rb = GetComponent<Rigidbody>();
             movementScript = GetComponent<Movement>();
+
+            Physics.gravity = new Vector3(0f, -gravityVelocity, 0f);
         }
 
         private void FixedUpdate()

@@ -78,8 +78,7 @@ namespace Player
             playerRotation = Quaternion.LookRotation(inputDirection, Vector3.up);
             if (inputDirection.x != 0f || inputDirection.z != 0f)
             {
-                playerModel.rotation = transform.rotation * playerRotation;
-                //transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, cam.transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
+                playerModel.rotation = Quaternion.Slerp(playerModel.rotation, transform.rotation * playerRotation, rotationSpeed * Time.fixedDeltaTime);
             }
 
             velocity = rb.velocity;
@@ -99,11 +98,11 @@ namespace Player
 
         public float Accelerate(float dir, float vel)
         {
-            if ((dir != 0f) && (Mathf.Abs(vel) < maxSpeed))
+            if ((Mathf.Round(dir) != 0f) && (Mathf.Abs(vel) < maxSpeed))
             {
                 vel += acceleration * Time.fixedDeltaTime * dir;
             }
-            else if ((dir == 0f) && (Mathf.Abs(vel) > 0f))
+            else if ((Mathf.Round(dir) == 0f) && (Mathf.Abs(vel) > 0f))
             {
                 if (vel > 0f)
                 {
