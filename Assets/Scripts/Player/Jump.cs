@@ -30,10 +30,7 @@ namespace Player
                 movementScript = GetComponent<Movement>();
             }
 
-            if (movementScript.CanMove)
-            {
-                jumpActionReference.action.performed += Action_performed;
-            }
+            jumpActionReference.action.performed += Action_performed;
         }
 
         private void Action_performed(InputAction.CallbackContext obj)
