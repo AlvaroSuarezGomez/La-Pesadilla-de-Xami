@@ -4321,6 +4321,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerV1
       objectReference: {fileID: 0}
+    - target: {fileID: 1698778271028830317, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
+      propertyPath: jumpForce
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698778271028830317, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
+      propertyPath: hommingAttackSpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1698778271028830318, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
       propertyPath: cam
       value: 

@@ -36,7 +36,7 @@ namespace Player
 
         private void FixedUpdate()
         {
-            MoveTowardsObject();
+            PerformHommingAttack();
         }
 
         private void Action_performed(InputAction.CallbackContext obj)
@@ -47,7 +47,7 @@ namespace Player
             }
         }
 
-        private void MoveTowardsObject()
+        private void PerformHommingAttack()
         {
             if ((activateHommingAttack) && (targetObject != null))
             {
