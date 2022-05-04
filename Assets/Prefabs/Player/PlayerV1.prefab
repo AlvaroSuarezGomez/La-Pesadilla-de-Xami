@@ -655,10 +655,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1698778270755510485}
   - component: {fileID: 1698778270755510490}
-  - component: {fileID: 1110575730}
   - component: {fileID: 1110575731}
   m_Layer: 0
-  m_Name: HommingAttackColliders
+  m_Name: HommingAttackCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -692,20 +691,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   texture: {fileID: 0}
   player: {fileID: 1698778271028830309}
---- !u!136 &1110575730
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1698778270755510486}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 10
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 9.64}
 --- !u!136 &1110575731
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -716,10 +701,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 5
+  m_Radius: 7.5
   m_Height: 1
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 3.39}
+  m_Center: {x: 0, y: 0, z: 6.5}
 --- !u!1 &1698778271028830309
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,7 +757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  groundRayDistance: 1
+  groundRayDistance: 0.75
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -833,13 +818,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b7c3971a81ddc44ba7b9ff5e78ac10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  rb: {fileID: 1698778271028830308}
   playerPhysicsScript: {fileID: 7111445975565599713}
   movementScript: {fileID: 1698778271028830318}
   jumpActionReference: {fileID: -2583163502711110346, guid: 0aec3d36dfd8e8947aa69d56a5e80c76, type: 3}
   lockScript: {fileID: 1698778270755510490}
   jumpForce: 5
-  hommingAttackSpeed: 20
+  hommingAttackSpeed: 5
+  preventiveTime: 5
 --- !u!114 &1698778271028830312
 MonoBehaviour:
   m_ObjectHideFlags: 0

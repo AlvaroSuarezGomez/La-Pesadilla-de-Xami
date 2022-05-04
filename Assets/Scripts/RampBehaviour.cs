@@ -31,6 +31,7 @@ namespace Player
 
                 playerPhysicsScript.IsJumping = true;
                 playerMovement.Velocity = Vector3.zero;
+                collision.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
                 collision.gameObject.GetComponent<Rigidbody>().velocity += (direction * force);
                 StartCoroutine(WaitAndReactivatePlayerMovement());
             }

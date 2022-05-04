@@ -4273,11 +4273,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1698778271028830309, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
   m_PrefabInstance: {fileID: 9147960141066827917}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &7595127882556053739 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 1698778271028830308, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-  m_PrefabInstance: {fileID: 9147960141066827917}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8879367954840888255
 GameObject:
   m_ObjectHideFlags: 0
@@ -4318,34 +4313,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1110575730, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_Radius
-      value: 7.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1110575730, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_Center.z
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1110575731, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_Center.z
-      value: 4.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1698778270755510490, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
       propertyPath: texture
       value: 
       objectReference: {fileID: 169694480}
-    - target: {fileID: 1698778271028830308, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1698778271028830309, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
       propertyPath: m_Name
       value: PlayerV1
       objectReference: {fileID: 0}
-    - target: {fileID: 1698778271028830317, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 7595127882556053739}
     - target: {fileID: 1698778271028830318, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
       propertyPath: cam
       value: 
@@ -4398,9 +4373,5 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1233812418}
-    - target: {fileID: 7111445975565599713, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: groundRayDistance
-      value: 0.75
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}

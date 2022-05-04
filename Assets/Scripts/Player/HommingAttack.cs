@@ -12,10 +12,12 @@ namespace Player
         [SerializeField] private InputActionReference jumpActionReference;
         [SerializeField] private Lock_Management lockScript;
         [SerializeField] private float jumpForce;
+        private Vector3 hommingAttackDirection;
         private GameObject targetObject;
+        public GameObject TargetObject { get { return targetObject; } set { targetObject = value; } }
         private bool activateHommingAttack;
         [SerializeField] private float hommingAttackSpeed = 10f;
-        private Coroutine preventiveDeactivation;
+        [SerializeField] private float preventiveTime = 5f;
 
         private void Awake()
         {
@@ -32,9 +34,8 @@ namespace Player
             jumpActionReference.action.performed += Action_performed;
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
-            targetObject = lockScript.ColObject;
             MoveTowardsObject();
         }
 
@@ -51,14 +52,17 @@ namespace Player
             if ((activateHommingAttack) && (targetObject != null))
             {
                 movementScript.Velocity = Vector3.zero;
-                transform.position = Vector3.MoveTowards(transform.position, targetObject.transform.position, hommingAttackSpeed * Time.deltaTime);
-                preventiveDeactivation = StartCoroutine(PreventiveHommingAttackDeactivation());
+                rb.velocity = hommingAttackDirection * hommingAttackSpeed;
+                StartCoroutine(PreventiveHommingAttackDeactivation());
+            } else if ((!activateHommingAttack) && (targetObject != null))
+            {
+                hommingAttackDirection = targetObject.transform.position - transform.position;
             }
         }
 
         private IEnumerator PreventiveHommingAttackDeactivation()
         {
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(preventiveTime);
             activateHommingAttack = false;
         }
 
@@ -66,8 +70,9 @@ namespace Player
         {
             if ((collision.gameObject.tag == "Enemy") && (activateHommingAttack))
             {
-                StopCoroutine(preventiveDeactivation);
+                StopAllCoroutines();
                 playerPhysicsScript.IsJumping = true;
+                rb.velocity = Vector3.zero;
                 rb.velocity += transform.up * jumpForce;
                 activateHommingAttack = false;
                 playerPhysicsScript.IsJumping = false;

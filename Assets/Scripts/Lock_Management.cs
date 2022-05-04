@@ -9,10 +9,16 @@ namespace Player
         //[SerializeField] private AudioSource lockSound;
         [SerializeField] private GameObject texture;
         [SerializeField] private GameObject player;
+        private HommingAttack hommingAttackScript;
         private GameObject colObject;
         public GameObject ColObject { get { return colObject; } }   
 
         private bool lockCol;
+
+        private void Awake()
+        {
+            hommingAttackScript = player.GetComponent<HommingAttack>();
+        }
 
         void Update()
         {
@@ -33,9 +39,11 @@ namespace Player
         {
             if ((other.gameObject.tag == "Enemy") && (!lockCol))
             {
-                    lockCol = true;
-                    colObject = other.gameObject;
-                    //lockSound.Play();
+                lockCol = true;
+                colObject = other.gameObject;
+                hommingAttackScript.TargetObject = colObject;
+                //lockSound.Play();
+                return;
             }
         }
 
@@ -43,8 +51,10 @@ namespace Player
         {
             if ((other.gameObject.tag == "Enemy") && (!lockCol))
             {
-                    lockCol = true;
-                    colObject = other.gameObject;
+                lockCol = true;
+                colObject = other.gameObject;
+                hommingAttackScript.TargetObject = colObject;
+                return;
             }
         }
 
@@ -54,6 +64,8 @@ namespace Player
             {
                 colObject = null;
                 lockCol = false;
+                hommingAttackScript.TargetObject = colObject;
+                return;
             }
         }
     }
