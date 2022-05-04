@@ -92,6 +92,7 @@ namespace Player
             if ((collision.gameObject.tag == "Enemy") && (activateHommingAttack) && inHommingAttack)
             {
                 StopAllCoroutines();
+                movementScript.CanMove = true;
                 playerPhysicsScript.IsJumping = true;
                 rb.velocity = Vector3.zero;
                 rb.velocity += transform.up * jumpForce;
