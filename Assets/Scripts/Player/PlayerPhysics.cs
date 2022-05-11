@@ -105,7 +105,7 @@ namespace Player {
             {
                 groundNormal = ray.normal;
                 Debug.DrawRay(ray.point, ray.normal * 2, Color.blue, 1);
-                slopeRotation = Quaternion.FromToRotation(transform.up, groundNormal) * transform.rotation;
+                slopeRotation = Quaternion.RotateTowards(transform.rotation, Quaternion.FromToRotation(transform.up, groundNormal) * transform.rotation, slopeRotationSpeed * Time.fixedDeltaTime);
 
                 rb.MoveRotation(slopeRotation);
             } else
