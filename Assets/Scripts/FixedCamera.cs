@@ -11,7 +11,7 @@ public class FixedCamera : MonoBehaviour
 
     private void Update()
     {
-        transform.position = parent.position - (parent.rotation * offset);
+        transform.position = parent.position - ((parent.rotation * transform.rotation) * offset);
         PlayerRotationCamera();
         //DetectCollision();
     }
