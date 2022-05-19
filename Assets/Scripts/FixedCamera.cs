@@ -11,7 +11,7 @@ public class FixedCamera : MonoBehaviour
 
     private void Update()
     {
-        transform.position = parent.position - ((parent.rotation * transform.rotation) * offset);
+        transform.position = parent.position - (transform.rotation * offset);
         PlayerRotationCamera();
         //DetectCollision();
     }
@@ -31,6 +31,7 @@ public class FixedCamera : MonoBehaviour
 
     private void PlayerRotationCamera()
     {
-        transform.rotation = Quaternion.Euler(parent.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, parent.rotation.eulerAngles.z);
+        //transform.rotation = Quaternion.Euler(parent.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, parent.rotation.eulerAngles.z);
+        transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
     }
 }
