@@ -1690,7 +1690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 857a935eca9d21e44a3dd24286aad2a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 50
+  force: 40
   direction: {x: 0.15, y: 0, z: -1}
   reactivationTime: 5
 --- !u!64 &1406221400
@@ -1707,6 +1707,25 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 389644066914341481, guid: 29e13525d4f20474c93b0b3d6b84a666, type: 3}
+--- !u!95 &1406221401
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406221397}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2704be4ffcd639f4eb667034af0dbe01, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1459822260 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9124813071887857263, guid: 3bfe6ceb4f823614d9312e63b5996a0d, type: 3}
