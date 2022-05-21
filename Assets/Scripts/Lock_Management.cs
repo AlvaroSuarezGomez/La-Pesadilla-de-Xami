@@ -9,6 +9,7 @@ namespace Player
         //[SerializeField] private AudioSource lockSound;
         [SerializeField] private GameObject texture;
         [SerializeField] private GameObject player;
+        [SerializeField] private List<string> objectTags = new List<string>();
         private HommingAttack hommingAttackScript;
         private GameObject colObject;
         public GameObject ColObject { get { return colObject; } }   
@@ -37,7 +38,7 @@ namespace Player
 
         private void OnTriggerEnter(Collider other)
         {
-            if ((other.gameObject.tag == "Enemy") && (!lockCol))
+            if (objectTags.Contains(other.gameObject.tag) && (!lockCol))
             {
                 lockCol = true;
                 colObject = other.gameObject;
@@ -49,7 +50,7 @@ namespace Player
 
         private void OnTriggerStay(Collider other)
         {
-            if ((other.gameObject.tag == "Enemy") && (!lockCol))
+            if (objectTags.Contains(other.gameObject.tag) && (!lockCol))
             {
                 lockCol = true;
                 colObject = other.gameObject;

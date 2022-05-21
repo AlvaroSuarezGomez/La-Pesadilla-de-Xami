@@ -691,6 +691,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   texture: {fileID: 0}
   player: {fileID: 1698778271028830309}
+  objectTags:
+  - Enemy
+  - Targetable
 --- !u!136 &1110575731
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -824,6 +827,9 @@ MonoBehaviour:
   jumpActionReference: {fileID: -2583163502711110346, guid: 0aec3d36dfd8e8947aa69d56a5e80c76, type: 3}
   lockScript: {fileID: 1698778270755510490}
   jumpForce: 5
+  objectTags:
+  - Enemy
+  - Targetable
   hommingAttackSpeed: 5
   preventiveTime: 5
 --- !u!114 &1698778271028830312

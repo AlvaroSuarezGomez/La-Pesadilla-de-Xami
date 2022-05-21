@@ -12,6 +12,7 @@ namespace Player
         [SerializeField] private InputActionReference jumpActionReference;
         [SerializeField] private Lock_Management lockScript;
         [SerializeField] private float jumpForce;
+        [SerializeField] private List<string> objectTags = new List<string>();
         private Vector3 hommingAttackDirection;
         private GameObject targetObject;
         public GameObject TargetObject { get { return targetObject; } set { targetObject = value; } }
@@ -74,7 +75,7 @@ namespace Player
 
         private void OnCollisionEnter(Collision collision)
         {
-            if ((collision.gameObject.tag == "Enemy") && (activateHommingAttack))
+            if ((objectTags.Contains(collision.gameObject.tag)) && (activateHommingAttack))
             {
                 StopAllCoroutines();
                 movementScript.CanMove = true;
@@ -89,7 +90,7 @@ namespace Player
 
         private void OnCollisionStay(Collision collision)
         {
-            if ((collision.gameObject.tag == "Enemy") && (activateHommingAttack) && inHommingAttack)
+            if ((objectTags.Contains(collision.gameObject.tag)) && (activateHommingAttack) && inHommingAttack)
             {
                 StopAllCoroutines();
                 movementScript.CanMove = true;
