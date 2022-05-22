@@ -24,7 +24,7 @@ namespace Player
         {
 
             if (collision.gameObject.tag == "Player")
-            {
+            {   
                 playerMovement = collision.gameObject?.GetComponent<Movement>();
                 playerPhysicsScript = collision.gameObject?.GetComponent<PlayerPhysics>();
                 playerMovement.CanMove = false;

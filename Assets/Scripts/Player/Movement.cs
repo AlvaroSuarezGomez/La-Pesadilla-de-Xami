@@ -76,7 +76,7 @@ namespace Player
             //Debug.Log("inputDirection: " + inputDirection.x + " / " + inputDirection.z);
 
             playerRotation = Quaternion.LookRotation(inputDirection, Vector3.up);
-            if (inputDirection.x != 0f || inputDirection.z != 0f)
+            if ((inputDirection.x != 0f || inputDirection.z != 0f) && canMove)
             {
                 playerModel.rotation = Quaternion.Slerp(playerModel.rotation, transform.rotation * playerRotation, rotationSpeed * Time.fixedDeltaTime);
             }
@@ -93,7 +93,15 @@ namespace Player
             //Debug.Log("Velocity : " + localVelocity.x + " / " + localVelocity.z);
 
             velocity = transform.TransformDirection(localVelocity);
-            rb.velocity = velocity;
+
+            if (Mathf.Abs(velocity.sqrMagnitude) > physicsScript.AntigravitySpeed)
+            {
+                rb.velocity = velocity;
+            }
+            else
+            {
+                rb.velocity = new Vector3(velocity.x, rb.velocity.y, velocity.z);
+            }
         }
 
         public float Accelerate(float dir, float vel)

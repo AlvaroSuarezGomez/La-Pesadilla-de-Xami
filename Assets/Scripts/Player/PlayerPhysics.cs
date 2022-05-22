@@ -31,6 +31,7 @@ namespace Player {
 
         [Header("Gravity")]
         [SerializeField] private float antigravitySpeed = 8f;
+        public float AntigravitySpeed => antigravitySpeed;
         [SerializeField] private float gravityVelocity;
         [SerializeField] private float groundedVelocity;
         public float GravityVelocity => gravityVelocity;

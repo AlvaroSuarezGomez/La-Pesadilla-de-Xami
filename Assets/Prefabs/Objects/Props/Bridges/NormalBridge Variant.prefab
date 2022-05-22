@@ -11,7 +11,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 0.025000036, z: 1.75}
+  m_Size: {x: 3, y: 0.025000036, z: 1.6}
   m_Center: {x: 0, y: 0.000000029802322, z: 0}
 --- !u!64 &1672383961
 MeshCollider:
@@ -52,7 +52,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5c745e3a313a3f4a875e9839c3984ac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.62
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5c745e3a313a3f4a875e9839c3984ac, type: 3}
       propertyPath: m_LocalPosition.y
@@ -60,7 +60,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5c745e3a313a3f4a875e9839c3984ac, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -48.33
+      value: -4.23
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5c745e3a313a3f4a875e9839c3984ac, type: 3}
       propertyPath: m_LocalRotation.w
@@ -96,7 +96,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b0bcd3135da68fc4b8e30c3f52b8eabd, type: 2}
     - target: {fileID: 919132149155446097, guid: d5c745e3a313a3f4a875e9839c3984ac, type: 3}
       propertyPath: m_Name
-      value: NormalBridge (14)
+      value: NormalBridge
       objectReference: {fileID: 0}
     - target: {fileID: 2886308639884631784, guid: d5c745e3a313a3f4a875e9839c3984ac, type: 3}
       propertyPath: m_Layer

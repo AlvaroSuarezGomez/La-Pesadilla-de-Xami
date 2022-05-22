@@ -5402,18 +5402,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerV1
       objectReference: {fileID: 0}
-    - target: {fileID: 1698778271028830315, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: jumpForce
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1698778271028830317, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: jumpForce
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1698778271028830317, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: hommingAttackSpeed
-      value: 7.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1698778271028830318, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
       propertyPath: cam
       value: 
@@ -5466,10 +5454,6 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 963194227}
-    - target: {fileID: 7111445975565599713, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: gravityVelocity
-      value: 9.8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
 --- !u!1 &1377252942

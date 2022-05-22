@@ -46,4 +46,9 @@ public class FixedCamera : MonoBehaviour
         var rotation = Quaternion.LookRotation(lookPos);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 90f);
     }
+
+    public void SetOffset(Vector3 newOffset)
+    {
+        offset = newOffset;
+    }
 }
