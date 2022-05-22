@@ -9,6 +9,10 @@ public class EnemyShoot : MonoBehaviour
     private Vector3 playerPosition;
     private enum EnemyState {Track,Shoot,Wait};
     private EnemyState enemyState;
+
+    [SerializeField]
+    private Transform shootTransform;
+
     [SerializeField]
     private GameObject player;
     [SerializeField]
@@ -25,7 +29,7 @@ public class EnemyShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if((Vector3.Distance(transform.position,player.transform.position) <= maxDistance) && (enemyState == EnemyState.Wait))
+        if((Vector3.Distance(transform.position, player.transform.position) <= maxDistance) && (enemyState == EnemyState.Wait))
         {
             enemyState = EnemyState.Track;
             StartCoroutine(WaitAndChangeState());
@@ -40,7 +44,7 @@ public class EnemyShoot : MonoBehaviour
 
     private void Shoot()
     {
-        var bulletObject = Instantiate(bullet, transform.position, bullet.transform.rotation);
+        var bulletObject = Instantiate(bullet, shootTransform.position, bullet.transform.rotation);
         bulletObject.GetComponentInChildren<BulletBehaviour>().Position = playerPosition;
         enemyState = EnemyState.Wait;
     }

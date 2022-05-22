@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6842357145923747119}
+  - component: {fileID: 7383627386742104405}
+  - component: {fileID: 6875601467590741477}
   m_Layer: 0
   m_Name: EnemyBullet
   m_TagString: Untagged
@@ -31,6 +33,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &7383627386742104405
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410108966886765364}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.125
+  m_Height: 1
+  m_Direction: 2
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &6875601467590741477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410108966886765364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05278aca96bf70447b079f140286fd9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTime: 5
+  bulletSpeed: 25
+  parent: {fileID: 1410108966886765364}
 --- !u!1 &8906276798762206875
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,8 +73,6 @@ GameObject:
   - component: {fileID: 7239433899972489698}
   - component: {fileID: 3383026570929100133}
   - component: {fileID: 6401627232493536277}
-  - component: {fileID: 4652236628950757658}
-  - component: {fileID: 6822117417192144457}
   m_Layer: 0
   m_Name: EnemyBulletMesh
   m_TagString: Untagged
@@ -114,32 +143,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &4652236628950757658
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8906276798762206875}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &6822117417192144457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8906276798762206875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05278aca96bf70447b079f140286fd9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyTime: 5
-  bulletSpeed: 15
-  parent: {fileID: 1410108966886765364}

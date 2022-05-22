@@ -46,7 +46,9 @@ namespace Player
         {
             if ((!playerPhysicsScript.IsGrounded) && (targetObject != null))
             {
-                activateHommingAttack = true;
+                {
+                    activateHommingAttack = true;
+                }
             }
         }
 

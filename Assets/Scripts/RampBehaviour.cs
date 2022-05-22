@@ -16,6 +16,9 @@ namespace Player
         [SerializeField]
         private float reactivationTime;
 
+        [SerializeField]
+        private bool activateOnlyOnce;
+
         private PlayerPhysics playerPhysicsScript;
         private Movement playerMovement;
 
@@ -33,7 +36,7 @@ namespace Player
                 playerMovement.Velocity = Vector3.zero;
                 collision.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
                 collision.gameObject.GetComponent<Rigidbody>().velocity += (direction * force);
-                StartCoroutine(WaitAndReactivatePlayerMovement());
+                StartCoroutine(WaitAndReactivatePlayerMovement());  
             }
         }
 
@@ -47,6 +50,10 @@ namespace Player
             yield return new WaitForSeconds(reactivationTime);
             playerPhysicsScript.IsJumping = false;
             playerMovement.CanMove = true;
+            if (activateOnlyOnce)
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
 }
