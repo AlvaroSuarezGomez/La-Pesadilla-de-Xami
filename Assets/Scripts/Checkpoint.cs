@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-    
+    [SerializeField]
     bool activated = true;
 
     [SerializeField]
@@ -19,9 +19,17 @@ public class Checkpoint : MonoBehaviour
         if(other.gameObject.tag == "Player" && activated)
         {
             CheckpointLogic.Instance.SetCheckpoint(this);
-            rend.material.SetTexture("_MainTex", texture);
+            
             
             activated = false;
+        }
+    }
+
+    private void Update()
+    {
+        if (!activated)
+        {
+            rend.material.mainTexture = texture;
         }
     }
 }
