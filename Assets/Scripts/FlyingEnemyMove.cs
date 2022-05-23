@@ -9,43 +9,29 @@ public class FlyingEnemyMove : MonoBehaviour
     [SerializeField]
     private Vector3 finalposition;
 
-    private bool rise;
+    private bool rise = true;
 
     [SerializeField]
     private float enemyspeed;
-
-    
-
-
-
-    void Start()
-    {
-        
-        rise = true;
-
-        
-    }
-
     
     void Update()
     {
-        if(transform.position.y <= startposition.y)
+        if(transform.localPosition == startposition)
         {
             rise = true;
         }
-        if (transform.position.y >= finalposition.y)
+        if (transform.localPosition == finalposition)
         {
             rise = false;
         }
         if (rise)
         {
-            transform.Translate(transform.up * Time.deltaTime * enemyspeed);
+            transform.localPosition = Vector3.MoveTowards(transform.localPosition, finalposition, enemyspeed * Time.deltaTime);
 
         }
         else
         {
-            transform.Translate(-transform.up * Time.deltaTime * enemyspeed);
+            transform.localPosition = Vector3.MoveTowards(transform.localPosition, startposition, enemyspeed * Time.deltaTime);
         }
-        
     }
 }

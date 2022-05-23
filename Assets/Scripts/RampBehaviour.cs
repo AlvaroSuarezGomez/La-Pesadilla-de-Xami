@@ -40,6 +40,23 @@ namespace Player
             }
         }
 
+        private void OnCollisionEnter(Collision collision)
+        {
+
+            if (collision.gameObject.tag == "Player")
+            {
+                playerMovement = collision.gameObject?.GetComponent<Movement>();
+                playerPhysicsScript = collision.gameObject?.GetComponent<PlayerPhysics>();
+                playerMovement.CanMove = false;
+
+                playerPhysicsScript.IsJumping = true;
+                playerMovement.Velocity = Vector3.zero;
+                collision.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                collision.gameObject.GetComponent<Rigidbody>().velocity += (direction * force);
+                StartCoroutine(WaitAndReactivatePlayerMovement());
+            }
+        }
+
         private void OnDrawGizmosSelected()
         {
             Gizmos.DrawRay(transform.position, direction * force);

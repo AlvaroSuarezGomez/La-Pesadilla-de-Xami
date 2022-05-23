@@ -27,7 +27,6 @@ public class IllusoryWall : MonoBehaviour
         {
             rend.material.SetColor("_BaseColor", new Color(rend.material.color.r, rend.material.color.g, rend.material.color.b, rend.material.color.a - 0.01f));
             yield return new WaitForSeconds(0.01f);
-            Debug.Log(rend.material.color.a);
         }
     }
 }
