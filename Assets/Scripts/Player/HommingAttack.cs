@@ -13,7 +13,6 @@ namespace Player
         [SerializeField] private Lock_Management lockScript;
         [SerializeField] private float jumpForce;
         [SerializeField] private List<string> objectTags = new List<string>();
-        private Vector3 hommingAttackDirection;
         private GameObject targetObject;
         public GameObject TargetObject { get { return targetObject; } set { targetObject = value; } }
         private bool activateHommingAttack;
@@ -39,7 +38,7 @@ namespace Player
         private void FixedUpdate()
         {
             PerformHommingAttack();
-            Debug.Log(inHommingAttack);
+            //Debug.Log(inHommingAttack);
         }
 
         private void Action_performed(InputAction.CallbackContext obj)
@@ -58,12 +57,9 @@ namespace Player
             {
                 inHommingAttack = true;
                 movementScript.Velocity = Vector3.zero;
-                rb.velocity = hommingAttackDirection * hommingAttackSpeed;
+                StartCoroutine(MoveToObject());
                 movementScript.CanMove = false;
                 StartCoroutine(PreventiveHommingAttackDeactivation());
-            } else if ((!activateHommingAttack) && (targetObject != null))
-            {
-                hommingAttackDirection = targetObject.transform.position - transform.position;
             }
         }
 
@@ -102,6 +98,15 @@ namespace Player
                 activateHommingAttack = false;
                 playerPhysicsScript.IsJumping = false;
                 inHommingAttack = false;
+            }
+        }
+
+        private IEnumerator MoveToObject()
+        {
+            while (inHommingAttack)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, targetObject.transform.position, hommingAttackSpeed * Time.deltaTime);
+                yield return null;
             }
         }
     }
