@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CheckpointLogic : MonoBehaviour
 {
     public static CheckpointLogic Instance;
 
-    private Transform player;
+    public Vector3 currentCheckpoint;
 
-    private Checkpoint currentCheckpoint;
+    public bool activatedOnce;
 
     private void Awake()
     {
@@ -21,15 +22,18 @@ public class CheckpointLogic : MonoBehaviour
         {
             Instance = this;
         }
+
+        DontDestroyOnLoad(Instance);
     }
 
     public void SetCheckpoint(Checkpoint checkpoint)
     {
-        currentCheckpoint = checkpoint;
+        activatedOnce = true;
+        currentCheckpoint = checkpoint.transform.position;
     }
 
     public void Respawn()
     {
-        player.position = currentCheckpoint.transform.position;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

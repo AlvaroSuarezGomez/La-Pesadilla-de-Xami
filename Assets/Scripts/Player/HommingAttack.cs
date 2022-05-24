@@ -12,11 +12,13 @@ namespace Player
         [SerializeField] private InputActionReference jumpActionReference;
         [SerializeField] private Lock_Management lockScript;
         [SerializeField] private float jumpForce;
+        private Vector3 hommingAttackDirection;
         [SerializeField] private List<string> objectTags = new List<string>();
         private GameObject targetObject;
         public GameObject TargetObject { get { return targetObject; } set { targetObject = value; } }
         private bool activateHommingAttack;
         private bool inHommingAttack;
+        public bool InHommingAttack { get { return InHommingAttack; } set { inHommingAttack = value; } }
         [SerializeField] private float hommingAttackSpeed = 10f;
         [SerializeField] private float preventiveTime = 5f;
 
@@ -55,20 +57,27 @@ namespace Player
         {
             if (activateHommingAttack && (targetObject != null) && !inHommingAttack)
             {
+                hommingAttackDirection = targetObject.transform.position - transform.position;
+                movementScript.CanMove = false;
                 inHommingAttack = true;
                 movementScript.Velocity = Vector3.zero;
+                //rb.velocity = hommingAttackDirection * hommingAttackSpeed;
                 StartCoroutine(MoveToObject());
-                movementScript.CanMove = false;
                 StartCoroutine(PreventiveHommingAttackDeactivation());
             }
+            /*
+            else if ((!activateHommingAttack) && (targetObject != null))
+            {
+                hommingAttackDirection = targetObject.transform.position - transform.position;
+            }*/
         }
 
         private IEnumerator PreventiveHommingAttackDeactivation()
         {
             yield return new WaitForSeconds(preventiveTime);
+            movementScript.CanMove = true;
             activateHommingAttack = false;
             inHommingAttack = false;
-            movementScript.CanMove = true;
         }
 
         private void OnCollisionEnter(Collision collision)
@@ -103,9 +112,9 @@ namespace Player
 
         private IEnumerator MoveToObject()
         {
-            while (inHommingAttack)
+            while (inHommingAttack && targetObject != null)
             {
-                transform.position = Vector3.MoveTowards(transform.position, targetObject.transform.position, hommingAttackSpeed * Time.deltaTime);
+                rb.MovePosition(Vector3.MoveTowards(transform.position, targetObject.GetComponent<Collider>().bounds.center, hommingAttackSpeed * Time.fixedDeltaTime));
                 yield return null;
             }
         }

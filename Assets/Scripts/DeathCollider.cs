@@ -9,7 +9,7 @@ public class DeathCollider : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            CheckpointLogic.Instance.Respawn();
         }
     }
 }

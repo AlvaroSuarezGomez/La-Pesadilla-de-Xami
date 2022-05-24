@@ -30,10 +30,10 @@ namespace Player
             {   
                 playerMovement = collision.gameObject?.GetComponent<Movement>();
                 playerPhysicsScript = collision.gameObject?.GetComponent<PlayerPhysics>();
-                playerMovement.CanMove = false;
 
                 playerPhysicsScript.IsJumping = true;
                 playerMovement.Velocity = Vector3.zero;
+                Debug.Log("colision");
                 collision.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
                 collision.gameObject.GetComponent<Rigidbody>().velocity += (direction * force);
                 StartCoroutine(WaitAndReactivatePlayerMovement());  
@@ -47,7 +47,6 @@ namespace Player
             {
                 playerMovement = collision.gameObject?.GetComponent<Movement>();
                 playerPhysicsScript = collision.gameObject?.GetComponent<PlayerPhysics>();
-                playerMovement.CanMove = false;
 
                 playerPhysicsScript.IsJumping = true;
                 playerMovement.Velocity = Vector3.zero;
@@ -64,9 +63,9 @@ namespace Player
 
         private IEnumerator WaitAndReactivatePlayerMovement()
         {
+            playerMovement.DisableMovementForTime(reactivationTime);
             yield return new WaitForSeconds(reactivationTime);
             playerPhysicsScript.IsJumping = false;
-            playerMovement.CanMove = true;
             if (activateOnlyOnce)
             {
                 gameObject.SetActive(false);

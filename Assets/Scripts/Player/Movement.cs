@@ -20,7 +20,7 @@ namespace Player
 
         [Header("Movement")]
         private bool canMove = true;
-        public bool CanMove { get { return canMove; } set { canMove = value; } }
+        public bool CanMove { get { return canMove && movementCooldown <= 0; } set { canMove = value; } }
         private Vector3 velocity;
         
         public Vector3 Velocity
@@ -41,6 +41,9 @@ namespace Player
         [Header("Model Settings")]
         [SerializeField] private Transform playerModel;
 
+        public Coroutine disableMovementCoroutine;
+        private float movementCooldown;
+
         private void Awake()
         {
             if (rb == null)
@@ -60,6 +63,20 @@ namespace Player
 
             input.Enable();
             moveAction = input.FindAction("Move");
+
+            Debug.Log(CheckpointLogic.Instance);
+
+            if (CheckpointLogic.Instance != null && CheckpointLogic.Instance.activatedOnce)
+            {
+                transform.position = CheckpointLogic.Instance.currentCheckpoint;
+            }
+        }
+
+        private void Update()
+        {
+            movementCooldown -= Time.deltaTime;
+            movementCooldown = Mathf.Max(0, movementCooldown);
+            //Debug.Log(movementCooldown);
         }
 
         private void FixedUpdate()
@@ -76,7 +93,7 @@ namespace Player
             //Debug.Log("inputDirection: " + inputDirection.x + " / " + inputDirection.z);
 
             playerRotation = Quaternion.LookRotation(inputDirection, Vector3.up);
-            if ((inputDirection.x != 0f || inputDirection.z != 0f) && canMove)
+            if ((inputDirection.x != 0f || inputDirection.z != 0f) && CanMove)
             {
                 playerModel.rotation = Quaternion.Slerp(playerModel.rotation, transform.rotation * playerRotation, rotationSpeed * Time.fixedDeltaTime);
             }
@@ -84,7 +101,7 @@ namespace Player
             velocity = rb.velocity;
             localVelocity = transform.InverseTransformDirection(velocity);
 
-            if (canMove)
+            if (CanMove)
             {
                 localVelocity.x = Accelerate(inputDirection.x, localVelocity.x);
                 localVelocity.z = Accelerate(inputDirection.z, localVelocity.z);
@@ -131,6 +148,11 @@ namespace Player
         private void OnDrawGizmos()
         {
             Gizmos.DrawRay(transform.position, Quaternion.Euler(transform.rotation.eulerAngles.x, cam.transform.eulerAngles.y, transform.rotation.eulerAngles.z) * velocity);
+        }
+
+        public void DisableMovementForTime(float time)
+        {
+            movementCooldown = time;
         }
     }
 }
