@@ -14,8 +14,11 @@ namespace Player
         [SerializeField] private float jumpForce;
         private Vector3 hommingAttackDirection;
         [SerializeField] private List<string> objectTags = new List<string>();
+        [SerializeField] private List<string> dontJumpTags = new List<string>();
         private GameObject targetObject;
         public GameObject TargetObject { get { return targetObject; } set { targetObject = value; } }
+        [SerializeField]
+        private Collider hommingAttackCollider;
         private bool activateHommingAttack;
         private bool inHommingAttack;
         public bool InHommingAttack { get { return InHommingAttack; } set { inHommingAttack = value; } }
@@ -57,24 +60,21 @@ namespace Player
         {
             if (activateHommingAttack && (targetObject != null) && !inHommingAttack)
             {
+                hommingAttackCollider.enabled = false;
                 hommingAttackDirection = targetObject.transform.position - transform.position;
                 movementScript.CanMove = false;
                 inHommingAttack = true;
                 movementScript.Velocity = Vector3.zero;
-                //rb.velocity = hommingAttackDirection * hommingAttackSpeed;
+                
                 StartCoroutine(MoveToObject());
                 StartCoroutine(PreventiveHommingAttackDeactivation());
             }
-            /*
-            else if ((!activateHommingAttack) && (targetObject != null))
-            {
-                hommingAttackDirection = targetObject.transform.position - transform.position;
-            }*/
         }
 
         private IEnumerator PreventiveHommingAttackDeactivation()
         {
             yield return new WaitForSeconds(preventiveTime);
+            hommingAttackCollider.enabled = true;
             movementScript.CanMove = true;
             activateHommingAttack = false;
             inHommingAttack = false;
@@ -84,11 +84,15 @@ namespace Player
         {
             if ((objectTags.Contains(collision.gameObject.tag)) && (activateHommingAttack))
             {
+                hommingAttackCollider.enabled = true;
                 StopAllCoroutines();
                 movementScript.CanMove = true;
                 playerPhysicsScript.IsJumping = true;
-                rb.velocity = Vector3.zero;
-                rb.velocity += transform.up * jumpForce - transform.forward;
+                if (!dontJumpTags.Contains(collision.gameObject.tag))
+                {
+                    rb.velocity = Vector3.zero;
+                    rb.velocity += transform.up * jumpForce - transform.forward;
+                }
                 activateHommingAttack = false;
                 playerPhysicsScript.IsJumping = false;
                 inHommingAttack = false;
@@ -99,11 +103,53 @@ namespace Player
         {
             if ((objectTags.Contains(collision.gameObject.tag)) && (activateHommingAttack) && inHommingAttack)
             {
+                hommingAttackCollider.enabled = true;
                 StopAllCoroutines();
                 movementScript.CanMove = true;
                 playerPhysicsScript.IsJumping = true;
-                rb.velocity = Vector3.zero;
-                rb.velocity += transform.up * jumpForce;
+                if (!dontJumpTags.Contains(collision.gameObject.tag))
+                {
+                    rb.velocity = Vector3.zero;
+                    rb.velocity += transform.up * jumpForce;
+                }
+                activateHommingAttack = false;
+                playerPhysicsScript.IsJumping = false;
+                inHommingAttack = false;
+            }
+        }
+
+        private void OnTriggerEnter(Collider collision)
+        {
+            if ((objectTags.Contains(collision.gameObject.tag)) && (activateHommingAttack))
+            {
+                hommingAttackCollider.enabled = true;
+                StopAllCoroutines();
+                movementScript.CanMove = true;
+                playerPhysicsScript.IsJumping = true;
+                if (!dontJumpTags.Contains(collision.gameObject.tag))
+                {
+                    rb.velocity = Vector3.zero;
+                    rb.velocity += transform.up * jumpForce - transform.forward;
+                }
+                activateHommingAttack = false;
+                playerPhysicsScript.IsJumping = false;
+                inHommingAttack = false;
+            }
+        }
+
+        private void OnTriggerStay(Collider collision)
+        {
+            if ((objectTags.Contains(collision.gameObject.tag)) && (activateHommingAttack) && inHommingAttack)
+            {
+                hommingAttackCollider.enabled = true;
+                StopAllCoroutines();
+                movementScript.CanMove = true;
+                playerPhysicsScript.IsJumping = true;
+                if (!dontJumpTags.Contains(collision.gameObject.tag))
+                {
+                    rb.velocity = Vector3.zero;
+                    rb.velocity += transform.up * jumpForce;
+                }
                 activateHommingAttack = false;
                 playerPhysicsScript.IsJumping = false;
                 inHommingAttack = false;

@@ -81,51 +81,5 @@ namespace Player
                 return;
             }
         }
-
-        private void OnCollisionEnter(Collision collision)
-        {
-            if (objectTags.Contains(collision.gameObject.tag) && (!lockCol))
-            {
-                if (Physics.Raycast(transform.position, (collision.transform.position - transform.position), out RaycastHit hit))
-                {
-                    if (objectTags.Contains(hit.transform.tag))
-                    {
-                        lockCol = true;
-                        colObject = collision.gameObject;
-                        hommingAttackScript.TargetObject = colObject;
-                        //lockSound.Play();
-                        return;
-                    }
-                }
-            }
-        }
-
-        private void OnCollisionStay(Collision collision)
-        {
-            if (objectTags.Contains(collision.gameObject.tag) && (!lockCol))
-            {
-                if (Physics.Raycast(transform.position, (collision.transform.position - transform.position), out RaycastHit hit))
-                {
-                    if (objectTags.Contains(hit.transform.tag))
-                    {
-                        lockCol = true;
-                        colObject = collision.gameObject;
-                        hommingAttackScript.TargetObject = colObject;
-                        return;
-                    }
-                }
-            }
-        }
-
-        private void OnCollisionExit(Collision collision)
-        {
-            if (collision.gameObject == colObject)
-            {
-                colObject = null;
-                lockCol = false;
-                hommingAttackScript.TargetObject = colObject;
-                return;
-            }
-        }
     }
 }

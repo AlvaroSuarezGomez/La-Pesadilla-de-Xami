@@ -64,7 +64,7 @@ namespace Player
             input.Enable();
             moveAction = input.FindAction("Move");
 
-            Debug.Log(CheckpointLogic.Instance);
+            //Debug.Log(CheckpointLogic.Instance);
 
             if (CheckpointLogic.Instance != null && CheckpointLogic.Instance.activatedOnce)
             {

@@ -7,14 +7,23 @@ public class CameraController : MonoBehaviour
     [SerializeField] private Camera cam;
     [SerializeField] private Vector3 newOffset;
     [SerializeField] private Vector3 newRotation;
-    [SerializeField] private float rotationSpeed;
+    [SerializeField] private Transform anchorPoint;
+    [SerializeField] private float rotationSpeed = 10f;
     [SerializeField] private bool changePosition;
     [SerializeField] private bool changeRotation;
+    [SerializeField] private bool changeAnchorPoint;
 
-    private void OnTriggerExit(Collider other)
+    private static Coroutine cameraChangerCoroutine;
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (cam.gameObject.GetComponent<FixedCamera>() != null)
+        if ((cam.gameObject.GetComponent<FixedCamera>() != null) && (other.gameObject.tag == "Player"))
         {
+            if (cameraChangerCoroutine != null)
+            {
+                StopCoroutine(cameraChangerCoroutine);
+            }
+
             if (changePosition)
             {
                 cam.GetComponent<FixedCamera>().SetOffset(newOffset);
@@ -22,8 +31,43 @@ public class CameraController : MonoBehaviour
 
             if (changeRotation)
             {
-                StartCoroutine(ChangeCameraRotation());
+                cameraChangerCoroutine = StartCoroutine(ChangeCameraRotation());
             }
+
+            if (anchorPoint != null)
+            {
+                cam.GetComponent<FixedCamera>().target = anchorPoint;
+            }
+
+            cam.GetComponent<FixedCamera>().lookAtObject = changeAnchorPoint;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if ((cam.gameObject.GetComponent<FixedCamera>() != null) && (collision.gameObject.tag == "Player"))
+        {
+            if (cameraChangerCoroutine != null)
+            {
+                StopCoroutine(cameraChangerCoroutine);
+            }
+
+            if (changePosition)
+            {
+                cam.GetComponent<FixedCamera>().SetOffset(newOffset);
+            }
+
+            if (changeRotation)
+            {
+                cameraChangerCoroutine = StartCoroutine(ChangeCameraRotation());
+            }
+
+            if (anchorPoint != null)
+            {
+                cam.GetComponent<FixedCamera>().target = anchorPoint;
+            }
+
+            cam.GetComponent<FixedCamera>().lookAtObject = changeAnchorPoint;
         }
     }
 

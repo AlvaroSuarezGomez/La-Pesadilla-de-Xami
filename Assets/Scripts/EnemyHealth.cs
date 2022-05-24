@@ -5,12 +5,13 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int health = 1;
+    [SerializeField] private GameObject mainObject;
 
     private void Update()
     {
         if (health <= 0)
         {
-            Destroy(transform.parent.gameObject);
+            Destroy(mainObject);
         }
     }
 

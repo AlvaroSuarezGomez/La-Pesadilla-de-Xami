@@ -6,8 +6,8 @@ public class FixedCamera : MonoBehaviour
 {
     [SerializeField] private Transform parent;
     [SerializeField] private Vector3 offset;
-    [SerializeField] private bool lookAtObject;
-    [SerializeField] private Transform target;
+    [SerializeField] public bool lookAtObject;
+    [SerializeField] public Transform target;
 
     private void Update()
     {
@@ -36,10 +36,10 @@ public class FixedCamera : MonoBehaviour
     private void PlayerRotationCamera()
     {
         //transform.rotation = Quaternion.Euler(parent.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, parent.rotation.eulerAngles.z);
-        transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
+        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
     }
 
-    private void RotationRelativeToObject()
+    public void RotationRelativeToObject()
     {
         var lookPos = target.position - transform.position;
         lookPos.y = 0;
