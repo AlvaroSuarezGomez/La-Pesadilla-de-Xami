@@ -12,7 +12,6 @@ public class FixedCamera : MonoBehaviour
     private void Update()
     {
         transform.position = parent.position - (transform.rotation * offset);
-        PlayerRotationCamera();
         if (lookAtObject)
         {
             RotationRelativeToObject();
@@ -27,16 +26,11 @@ public class FixedCamera : MonoBehaviour
         {
             offset.z = offset.z - hit.distance;
             Debug.Log("Colisiona");
-        } else
+        }
+        else
         {
             offset.z = 8f;
         }
-    }
-
-    private void PlayerRotationCamera()
-    {
-        //transform.rotation = Quaternion.Euler(parent.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, parent.rotation.eulerAngles.z);
-        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
     }
 
     public void RotationRelativeToObject()
@@ -44,7 +38,7 @@ public class FixedCamera : MonoBehaviour
         var lookPos = target.position - transform.position;
         lookPos.y = 0;
         var rotation = Quaternion.LookRotation(lookPos);
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 90f);
+        transform.rotation = rotation;
     }
 
     public void SetOffset(Vector3 newOffset)
