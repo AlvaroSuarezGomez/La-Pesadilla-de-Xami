@@ -26,9 +26,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 857a935eca9d21e44a3dd24286aad2a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 100
-  direction: {x: -1, y: 1, z: -1}
+  force: 40
+  direction: {x: -0.875, y: 0.505, z: -0.9}
   reactivationTime: 5
+  activateOnlyOnce: 0
 --- !u!1001 &7982028074817119559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -99,6 +100,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6b6964c5d24a0604685f16ca9e648b1a, type: 3}
       propertyPath: m_TagString
       value: Targetable
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779745573541866595, guid: 6b6964c5d24a0604685f16ca9e648b1a, type: 3}
+      propertyPath: m_TagString
+      value: Spring
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b6964c5d24a0604685f16ca9e648b1a, type: 3}
