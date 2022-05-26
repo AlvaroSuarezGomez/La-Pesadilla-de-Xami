@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class LevelMenuManager : MonoBehaviour
@@ -11,6 +12,8 @@ public class LevelMenuManager : MonoBehaviour
     [SerializeField] private GameObject levelSelector;
     [SerializeField] private GameObject principalMenu;
     [SerializeField] private Image[] imagelist;
+
+    [SerializeField] private GameObject mainMenuFirstButton;
     private int actualscene = 1;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +25,8 @@ public class LevelMenuManager : MonoBehaviour
 
     void returnM()
     {
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(mainMenuFirstButton);
         levelSelector.SetActive(false);
         principalMenu.SetActive(true);
     }

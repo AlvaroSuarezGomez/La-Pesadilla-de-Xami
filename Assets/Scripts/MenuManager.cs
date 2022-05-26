@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class MenuManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject levelSelector;
     [SerializeField] private GameObject optionsMenu;
     [SerializeField] private GameObject principalMenu;
+    [SerializeField] private GameObject optionsFirstButton, levelSelectorFirstButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,11 +24,15 @@ public class MenuManager : MonoBehaviour
     // Update is called once per frame
     void playM()
     {
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(levelSelectorFirstButton);
         principalMenu.SetActive(false);
         levelSelector.SetActive(true);
     }
     void optionsM()
     {
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(optionsFirstButton);
         principalMenu.SetActive(false);
         optionsMenu.SetActive(true);
     }

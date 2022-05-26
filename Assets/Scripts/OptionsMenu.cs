@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class OptionsMenu : MonoBehaviour
@@ -17,6 +18,8 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] private float sfxPre;
     [SerializeField] private AudioMixer music;
     [SerializeField] private AudioMixer sfx;
+
+    [SerializeField] private GameObject mainMenuFirstButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -64,6 +67,8 @@ public class OptionsMenu : MonoBehaviour
     }
     void returnM()
     {
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(mainMenuFirstButton);
         optionsMenu.SetActive(false);
         principalMenu.SetActive(true);
     }
