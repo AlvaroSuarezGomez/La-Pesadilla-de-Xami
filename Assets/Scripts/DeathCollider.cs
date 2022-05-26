@@ -12,4 +12,12 @@ public class DeathCollider : MonoBehaviour
             CheckpointLogic.Instance.Respawn();
         }
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            CheckpointLogic.Instance.Respawn();
+        }
+    }
 }

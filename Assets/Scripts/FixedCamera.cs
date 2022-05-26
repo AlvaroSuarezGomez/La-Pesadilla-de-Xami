@@ -5,6 +5,8 @@ using UnityEngine;
 public class FixedCamera : MonoBehaviour
 {
     [SerializeField] private Transform parent;
+    public Transform Parent { get { return parent; } set { parent = value; } }
+
     [SerializeField] private Vector3 offset;
     [SerializeField] public bool lookAtObject;
     [SerializeField] public Transform target;

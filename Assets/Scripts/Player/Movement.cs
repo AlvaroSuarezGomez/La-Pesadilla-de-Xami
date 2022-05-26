@@ -64,11 +64,10 @@ namespace Player
             input.Enable();
             moveAction = input.FindAction("Move");
 
-            //Debug.Log(CheckpointLogic.Instance);
-
             if (CheckpointLogic.Instance != null && CheckpointLogic.Instance.activatedOnce)
             {
                 transform.position = CheckpointLogic.Instance.currentCheckpoint;
+                cam.transform.rotation = CheckpointLogic.Instance.rotation;
             }
         }
 

@@ -9,6 +9,8 @@ public class CheckpointLogic : MonoBehaviour
 
     public Vector3 currentCheckpoint;
 
+    public Quaternion rotation;
+
     public bool activatedOnce;
 
     private void Awake()
