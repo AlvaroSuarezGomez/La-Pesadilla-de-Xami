@@ -49,8 +49,8 @@ public class Vehicle : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             player = other.gameObject;
-            Camera.main.GetComponent<FixedCamera>().lookAtObject = true;
-            Camera.main.GetComponent<FixedCamera>().target = gameObject.transform;
+            //Camera.main.GetComponent<FixedCamera>().lookAtObject = true;
+            //Camera.main.GetComponent<FixedCamera>().target = gameObject.transform;
             other.GetComponent<Movement>().CanMove = false;
             other.transform.parent = attachPoint;
             activated = true;
