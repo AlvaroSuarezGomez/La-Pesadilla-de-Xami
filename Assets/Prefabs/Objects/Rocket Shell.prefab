@@ -204,7 +204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activated: 0
   rb: {fileID: 1318187529655949887}
-  speed: 5
+  speed: 15
   rotationSpeed: 180
   input: {fileID: -944628639613478452, guid: 0aec3d36dfd8e8947aa69d56a5e80c76, type: 3}
   attachPoint: {fileID: 1318187527772456125}

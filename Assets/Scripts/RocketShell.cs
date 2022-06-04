@@ -21,9 +21,17 @@ public class RocketShell : Vehicle
             GroundCheck();
             SlopeRotation();
 
-            rb.velocity = new Vector3(0f, rb.velocity.y, 0f) + transform.forward * speed;
+            if (isGrounded)
+            {
+                rb.velocity = transform.forward * speed;
+            } else
+            {
+                rb.velocity = new Vector3(transform.forward.x * speed, rb.velocity.y, transform.forward.z * speed);
+            }
+            
+
             Vector2 dir = rotateAction.ReadValue<Vector2>();
-            transform.Rotate(new Vector3(0, dir.x, 0) * rotationSpeed * Time.fixedDeltaTime);
+            transform.Rotate(new Vector3(0, dir.x * rotationSpeed * Time.fixedDeltaTime, 0f));
         }
     }
 
@@ -48,9 +56,9 @@ public class RocketShell : Vehicle
         {
             groundNormal = ray.normal;
             Debug.DrawRay(ray.point, ray.normal * 2, Color.blue, 1);
-            slopeRotation = Quaternion.RotateTowards(transform.rotation, Quaternion.FromToRotation(transform.up, groundNormal) * transform.rotation, slopeRotationSpeed * Time.fixedDeltaTime);
+            slopeRotation = Quaternion.FromToRotation(transform.up, groundNormal) * transform.rotation;
 
-            rb.MoveRotation(slopeRotation);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, slopeRotation, slopeRotationSpeed * Time.fixedDeltaTime);
         }
         else
         {

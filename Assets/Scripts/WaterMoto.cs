@@ -14,4 +14,10 @@ public class WaterMoto : Vehicle
             transform.Rotate(new Vector3(0,dir.x,0)*rotationSpeed*Time.fixedDeltaTime);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Camera.main.GetComponent<FixedCamera>().lookAtObject = true;
+        Camera.main.GetComponent<FixedCamera>().target = gameObject.transform;
+    }
 }

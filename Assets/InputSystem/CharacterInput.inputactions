@@ -113,6 +113,17 @@
                 },
                 {
                     "name": "",
+                    "id": "fba1a2db-f1ac-4360-b25a-4083ef190a36",
+                    "path": "<DualShockGamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DualSense",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "0fc0fe43-739d-4b6c-876a-12a7218104de",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -140,6 +151,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a839b393-e79c-4fcb-ac65-e43c2d27afb3",
+                    "path": "<DualShockGamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DualSense",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -192,6 +214,17 @@
             "devices": [
                 {
                     "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "DualSense",
+            "bindingGroup": "DualSense",
+            "devices": [
+                {
+                    "devicePath": "<DualSenseGamepadHID>",
                     "isOptional": false,
                     "isOR": false
                 }

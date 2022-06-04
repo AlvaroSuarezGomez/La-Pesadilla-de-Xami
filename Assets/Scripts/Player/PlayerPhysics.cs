@@ -49,6 +49,11 @@ namespace Player {
             rb = GetComponent<Rigidbody>();
             movementScript = GetComponent<Movement>();
 
+            if (cam == null)
+            {
+                cam = Camera.main;
+            }
+
             Physics.gravity = new Vector3(0f, -gravityVelocity, 0f);
         }
 

@@ -21,6 +21,7 @@ namespace Player
 
         private PlayerPhysics playerPhysicsScript;
         private Movement playerMovement;
+        private Vehicle vehicleScript;
 
 
         private void OnTriggerEnter(Collider collision)
@@ -38,6 +39,14 @@ namespace Player
                 collision.gameObject.GetComponent<Rigidbody>().velocity += (direction * force);
                 StartCoroutine(WaitAndReactivatePlayerMovement());  
             }
+            else if (collision.gameObject.tag == "Vehicle")
+            {
+                Debug.Log("Vehiculo");
+                vehicleScript = collision.gameObject.GetComponent<Vehicle>();
+                StartCoroutine(WaitAndReactivateVehicle());
+                collision.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                collision.gameObject.GetComponent<Rigidbody>().velocity += (direction * force);
+            }
         }
 
         private void OnCollisionEnter(Collision collision)
@@ -53,6 +62,13 @@ namespace Player
                 collision.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
                 collision.gameObject.GetComponent<Rigidbody>().velocity += (direction * force);
                 StartCoroutine(WaitAndReactivatePlayerMovement());
+            } else if (collision.gameObject.tag == "Vehicle")
+            {
+                Debug.Log("Vehiculo");
+                vehicleScript = collision.gameObject.GetComponent<Vehicle>();
+                StartCoroutine(WaitAndReactivateVehicle());
+                collision.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                collision.gameObject.GetComponent<Rigidbody>().velocity += (direction * force);
             }
         }
 
@@ -66,6 +82,17 @@ namespace Player
             playerMovement.DisableMovementForTime(reactivationTime);
             yield return new WaitForSeconds(reactivationTime);
             playerPhysicsScript.IsJumping = false;
+            if (activateOnlyOnce)
+            {
+                gameObject.SetActive(false);
+            }
+        }
+
+        private IEnumerator WaitAndReactivateVehicle()
+        {
+            vehicleScript.Activated = false;
+            yield return new WaitForSeconds(reactivationTime);
+            vehicleScript.Activated = true;
             if (activateOnlyOnce)
             {
                 gameObject.SetActive(false);

@@ -5473,6 +5473,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 1698778271028830318, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1698778271028830319, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -7007,6 +7011,18 @@ PrefabInstance:
     - target: {fileID: 1318187529655949872, guid: 030728e504f62e34cb64942c3b5f42f3, type: 3}
       propertyPath: m_Name
       value: Rocket Shell
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318187529655949872, guid: 030728e504f62e34cb64942c3b5f42f3, type: 3}
+      propertyPath: m_TagString
+      value: Vehicle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318187529655949883, guid: 030728e504f62e34cb64942c3b5f42f3, type: 3}
+      propertyPath: groundRayDistance
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318187529655949883, guid: 030728e504f62e34cb64942c3b5f42f3, type: 3}
+      propertyPath: slopeRotationSpeed
+      value: 360
       objectReference: {fileID: 0}
     - target: {fileID: 1318187529655949884, guid: 030728e504f62e34cb64942c3b5f42f3, type: 3}
       propertyPath: m_RootOrder
