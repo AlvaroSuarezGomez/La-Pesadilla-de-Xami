@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class RocketShell : Vehicle
 {
@@ -8,11 +10,24 @@ public class RocketShell : Vehicle
     [SerializeField] private float groundRayDistance;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float slopeRotationSpeed;
+    [SerializeField] private float jumpForce;
+    [SerializeField] private InputActionReference jumpAction;
 
     private RaycastHit ray;
     private bool isGrounded;
     private Vector3 groundNormal;
     private Quaternion slopeRotation;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        jumpAction.action.performed += JumpAction_performed;
+    }
+
+    private void JumpAction_performed(InputAction.CallbackContext obj)
+    {
+        rb.velocity += transform.up * jumpForce;
+    }
 
     private void FixedUpdate()
     {
@@ -21,14 +36,7 @@ public class RocketShell : Vehicle
             GroundCheck();
             SlopeRotation();
 
-            if (isGrounded)
-            {
-                rb.velocity = transform.forward * speed;
-            } else
-            {
-                rb.velocity = new Vector3(transform.forward.x * speed, rb.velocity.y, transform.forward.z * speed);
-            }
-            
+            rb.velocity = new Vector3(transform.forward.x * speed, 0f, transform.forward.z * speed) ;
 
             Vector2 dir = rotateAction.ReadValue<Vector2>();
             transform.Rotate(new Vector3(0, dir.x * rotationSpeed * Time.fixedDeltaTime, 0f));
@@ -63,7 +71,7 @@ public class RocketShell : Vehicle
         else
         {
 
-            rb.MoveRotation(Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f), slopeRotationSpeed * Time.fixedDeltaTime));
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f), slopeRotationSpeed * Time.fixedDeltaTime);
         }
     }
 }

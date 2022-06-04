@@ -24,7 +24,7 @@ public class Vehicle : MonoBehaviour
     protected GameObject player;
     protected InputAction rotateAction;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         if (rb == null)
         {
@@ -37,7 +37,7 @@ public class Vehicle : MonoBehaviour
 
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         if (player != null)
         {
