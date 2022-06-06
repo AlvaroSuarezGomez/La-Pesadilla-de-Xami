@@ -13,7 +13,10 @@ public class RocketShell : Vehicle
     [SerializeField] private float jumpForce;
     [SerializeField] private InputActionReference jumpAction;
 
+    private Vector3 velocity;
+    private Vector3 localVelocity;
     private RaycastHit ray;
+    private float gravity;
     private bool isGrounded;
     private Vector3 groundNormal;
     private Quaternion slopeRotation;
@@ -26,7 +29,10 @@ public class RocketShell : Vehicle
 
     private void JumpAction_performed(InputAction.CallbackContext obj)
     {
-        rb.velocity += transform.up * jumpForce;
+        //if (isGrounded)
+        //{
+            rb.velocity += transform.up * jumpForce;
+        //}
     }
 
     private void FixedUpdate()
@@ -36,10 +42,36 @@ public class RocketShell : Vehicle
             GroundCheck();
             SlopeRotation();
 
-            rb.velocity = new Vector3(transform.forward.x * speed, 0f, transform.forward.z * speed) ;
+            velocity = rb.velocity;
+            localVelocity = transform.InverseTransformDirection(velocity);
+            localVelocity = new Vector3(0f, localVelocity.y, speed);
+            velocity = transform.TransformDirection(localVelocity);
+            rb.velocity = velocity;
 
             Vector2 dir = rotateAction.ReadValue<Vector2>();
-            transform.Rotate(new Vector3(0, dir.x * rotationSpeed * Time.fixedDeltaTime, 0f));
+            transform.Rotate(0f, dir.x * rotationSpeed * Time.fixedDeltaTime, 0f);
+
+            Debug.Log(velocity);
+        }
+        Debug.Log(isGrounded + " " + velocity);
+    }
+
+    protected override void Update()
+    {
+        base.Update();
+        if (!isGrounded)
+        {
+            if (localVelocity.y > -9.8f)
+            {
+                localVelocity.y = Mathf.Lerp(gravity, -9.8f, 100f * Time.deltaTime);
+            }
+        }
+        else
+        {
+            if (localVelocity.y != 0f)
+            {
+                localVelocity.y = Mathf.Lerp(gravity, 0f, 10f * Time.deltaTime);
+            }
         }
     }
 
@@ -66,12 +98,12 @@ public class RocketShell : Vehicle
             Debug.DrawRay(ray.point, ray.normal * 2, Color.blue, 1);
             slopeRotation = Quaternion.FromToRotation(transform.up, groundNormal) * transform.rotation;
 
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, slopeRotation, slopeRotationSpeed * Time.fixedDeltaTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, slopeRotation, slopeRotationSpeed * Time.fixedDeltaTime);
         }
         else
         {
 
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f), slopeRotationSpeed * Time.fixedDeltaTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f), slopeRotationSpeed * Time.fixedDeltaTime);
         }
     }
 }

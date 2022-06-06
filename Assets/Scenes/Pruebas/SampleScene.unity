@@ -7017,6 +7017,10 @@ PrefabInstance:
       value: Vehicle
       objectReference: {fileID: 0}
     - target: {fileID: 1318187529655949883, guid: 030728e504f62e34cb64942c3b5f42f3, type: 3}
+      propertyPath: jumpForce
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318187529655949883, guid: 030728e504f62e34cb64942c3b5f42f3, type: 3}
       propertyPath: groundRayDistance
       value: 0.5
       objectReference: {fileID: 0}
@@ -7066,6 +7070,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1318187529655949884, guid: 030728e504f62e34cb64942c3b5f42f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318187529655949887, guid: 030728e504f62e34cb64942c3b5f42f3, type: 3}
+      propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
