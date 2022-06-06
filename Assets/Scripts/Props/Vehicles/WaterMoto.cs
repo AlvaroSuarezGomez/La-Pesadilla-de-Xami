@@ -5,6 +5,11 @@ using UnityEngine.InputSystem;
 
 public class WaterMoto : Vehicle
 {
+    protected override void Update()
+    {
+        base.Update();
+    }
+
     private void FixedUpdate()
     {
         if (activated)
@@ -15,9 +20,13 @@ public class WaterMoto : Vehicle
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected override void OnTriggerEnter(Collider other)
     {
-        Camera.main.GetComponent<FixedCamera>().lookAtObject = true;
-        Camera.main.GetComponent<FixedCamera>().target = gameObject.transform;
+        base.OnTriggerEnter(other);
+        if (other.gameObject.tag == "Player")
+        {
+            Camera.main.GetComponent<FixedCamera>().lookAtObject = true;
+            Camera.main.GetComponent<FixedCamera>().target = gameObject.transform;
+        }
     }
 }

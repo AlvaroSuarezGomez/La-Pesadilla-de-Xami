@@ -29,10 +29,10 @@ public class RocketShell : Vehicle
 
     private void JumpAction_performed(InputAction.CallbackContext obj)
     {
-        //if (isGrounded)
-        //{
+        if (isGrounded && activated)
+        {
             rb.velocity += transform.up * jumpForce;
-        //}
+        }
     }
 
     private void FixedUpdate()
