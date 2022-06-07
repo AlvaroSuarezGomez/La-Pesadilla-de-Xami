@@ -25,6 +25,7 @@ public class WaterMoto : Vehicle
         base.OnTriggerEnter(other);
         if (other.gameObject.tag == "Player")
         {
+            activated = true;
             Camera.main.GetComponent<FixedCamera>().lookAtObject = true;
             Camera.main.GetComponent<FixedCamera>().target = gameObject.transform;
         }

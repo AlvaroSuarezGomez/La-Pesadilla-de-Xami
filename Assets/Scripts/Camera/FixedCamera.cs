@@ -13,7 +13,7 @@ public class FixedCamera : MonoBehaviour
 
     private void Update()
     {
-        transform.position = parent.position - (transform.rotation * offset);
+        transform.position = Vector3.Lerp(transform.position, parent.position - (transform.rotation * offset), 100f);
         if (lookAtObject)
         {
             RotationRelativeToObject();
@@ -40,7 +40,7 @@ public class FixedCamera : MonoBehaviour
         var lookPos = target.position - transform.position;
         lookPos.y = 0;
         var rotation = Quaternion.LookRotation(lookPos);
-        transform.rotation = rotation;
+        transform.rotation = Quaternion.Lerp(transform.rotation, rotation, 100f);
     }
 
     public void SetOffset(Vector3 newOffset)

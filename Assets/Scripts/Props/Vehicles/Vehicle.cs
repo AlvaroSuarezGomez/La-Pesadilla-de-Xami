@@ -53,7 +53,7 @@ public class Vehicle : MonoBehaviour
             player = other.gameObject;
             other.GetComponent<Movement>().CanMove = false;
             other.transform.parent = attachPoint;
-            activated = true;
+            //activated = true;
         }
     }
 }

@@ -24,7 +24,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Taunt",
+                    "name": "Attack",
                     "type": "Button",
                     "id": "a64a1c28-d3fa-468f-b9a7-91da3724b039",
                     "expectedControlType": "Button",
@@ -169,11 +169,44 @@
                 {
                     "name": "",
                     "id": "c89e06e0-9070-4fc3-afc4-07f800ccf50b",
-                    "path": "<Keyboard>/c",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard + Mouse",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "90de6e9d-72f4-4c9d-a434-905ad451b413",
+                    "path": "<DualShockGamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DualSense",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9a2499a4-06c6-447b-80bf-ea411f92cc7e",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7a517f21-ad53-4df3-a920-2120199f3e38",
+                    "path": "<XInputController>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Taunt",
+                    "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

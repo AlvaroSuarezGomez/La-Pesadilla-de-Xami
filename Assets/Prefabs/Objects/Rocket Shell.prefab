@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 1318187529655949887}
   - component: {fileID: 1318187529655949886}
   - component: {fileID: 1318187529655949883}
+  - component: {fileID: 1586614629}
   m_Layer: 0
   m_Name: Rocket Shell
   m_TagString: Untagged
@@ -172,7 +173,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
@@ -204,18 +205,122 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activated: 0
   rb: {fileID: 1318187529655949887}
-  speed: 15
-  rotationSpeed: 90
+  speed: 25
+  rotationSpeed: 180
   input: {fileID: -944628639613478452, guid: 0aec3d36dfd8e8947aa69d56a5e80c76, type: 3}
   attachPoint: {fileID: 1318187527772456125}
   player: {fileID: 0}
-  groundRayDistance: 5
+  groundRayDistance: 1.5
+  upperRayDistance: 8
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  slopeRotationSpeed: 90
-  jumpForce: 10
+  slopeRotationSpeed: 10
+  jumpForce: 20
+  waitRotationTime: 0.5
   jumpAction: {fileID: -2583163502711110346, guid: 0aec3d36dfd8e8947aa69d56a5e80c76, type: 3}
+  dashAction: {fileID: -6297868967318660386, guid: 0aec3d36dfd8e8947aa69d56a5e80c76, type: 3}
+  dashDeactivationTime: 2
+  anim: {fileID: 3410696850246147625}
+  animationTime: 1.5
+  audioSource: {fileID: 1586614629}
+  music: {fileID: 0}
+--- !u!82 &1586614629
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318187529655949872}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 6457068719400892297, guid: 849f0467eb628bd4fb2f02fb5b92f6c4, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 196b009756eab83409e03b169ce675a5, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1499990381123842329
 GameObject:
   m_ObjectHideFlags: 0
