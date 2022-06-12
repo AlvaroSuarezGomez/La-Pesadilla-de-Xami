@@ -38,4 +38,15 @@ public class CheckpointLogic : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void Respawn(float time)
+    {
+        StartCoroutine(WaitAndRespawn(time));
+    }
+
+    private IEnumerator WaitAndRespawn(float time)
+    {
+        yield return new WaitForSeconds(time);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }

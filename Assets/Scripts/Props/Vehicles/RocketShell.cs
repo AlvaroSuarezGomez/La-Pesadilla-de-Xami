@@ -19,17 +19,18 @@ public class RocketShell : Vehicle
     [SerializeField] private Animator anim;
     [SerializeField] private float animationTime;
     [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioSource music;
+    [SerializeField] private AudioSource levelMusic;
+    [SerializeField] private AudioClip music;
+    [SerializeField] private float jumpTime;
 
     private Vector3 velocity;
     private Vector3 localVelocity;
     private RaycastHit ray;
-    private float gravity;
     private bool isGrounded;
-    private bool rotateToGround = true;
     private Vector3 groundNormal;
     private Quaternion slopeRotation;
     private float waitAndRotate;
+    private bool isJumping;
     
 
     protected override void Awake()
@@ -60,11 +61,11 @@ public class RocketShell : Vehicle
     {
         if (isGrounded && activated)
         {
-            if (Physics.Raycast(transform.position, transform.up, out ray, upperRayDistance, groundLayer))
-            {
-                rotateToGround = false;
-            }
             rb.velocity += transform.up * jumpForce;
+            isJumping = true;
+            isGrounded = false;
+            StopCoroutine(WaitAndDisableJump());
+            StartCoroutine(WaitAndDisableJump());
         }
     }
 
@@ -72,45 +73,46 @@ public class RocketShell : Vehicle
     {
         if (activated)
         {
-            if (rotateToGround)
+            if (!isJumping)
             {
                 GroundCheck();
             }
-
+            Gravity();
             SlopeRotation();
+            Move();
+            
 
-            velocity = rb.velocity;
-            localVelocity = transform.InverseTransformDirection(velocity);
-            localVelocity = new Vector3(0f, localVelocity.y, speed);
-            velocity = transform.TransformDirection(localVelocity);
-            rb.velocity = velocity;
-
-            Vector2 dir = rotateAction.ReadValue<Vector2>();
-            transform.Rotate(0f, dir.x * rotationSpeed * Time.fixedDeltaTime, 0f);
-
-            Debug.Log(velocity);
+            //Debug.Log(velocity);
         }
-        Debug.Log(isGrounded + " " + velocity);
-        Debug.Log(localVelocity.y);
+        //Debug.Log(isGrounded + " " + velocity);
+        //Debug.Log(localVelocity.y);
     }
 
-    protected override void Update()
+    private void Move()
     {
-        base.Update();
+        velocity = rb.velocity;
+        localVelocity = transform.InverseTransformDirection(velocity);
+        localVelocity = new Vector3(0f, localVelocity.y, speed);
+        velocity = transform.TransformDirection(localVelocity);
+        rb.velocity = velocity;
+
+        Vector2 dir = rotateAction.ReadValue<Vector2>();
+        transform.Rotate(0f, dir.x * rotationSpeed * Time.fixedDeltaTime, 0f);
+    }
+
+    private void Gravity()
+    {
         if (!isGrounded)
         {
-            if (localVelocity.y > -9.8f)
-            {
-                localVelocity.y = Mathf.Lerp(gravity, -9.8f, 100f * Time.deltaTime);
-            }
+            //localVelocity.y = Mathf.Lerp(localVelocity.y, -50f, 1f * Time.deltaTime);
+            rb.velocity -= transform.up * 50f * Time.deltaTime;
         }
+
         else
         {
-            if (localVelocity.y != 0f)
-            {
-                localVelocity.y = Mathf.Lerp(gravity, 0f, 10f * Time.deltaTime);
-            }
+            localVelocity.y = Mathf.Lerp(localVelocity.y, 0f, 10f * Time.deltaTime);
         }
+        Debug.Log(isGrounded + " " + isJumping + " " + rb.velocity.y);
     }
 
     private void GroundCheck()
@@ -130,33 +132,44 @@ public class RocketShell : Vehicle
 
     private void SlopeRotation()
     {
-        if (isGrounded || !rotateToGround)
+        RaycastHit slopeRay;
+
+        if (isGrounded)
         {
-            if (isGrounded)
-            {
-                waitAndRotate = 0.5f;
-            }
-
-            groundNormal = ray.normal;
-            Debug.DrawRay(ray.point, ray.normal * 2, Color.blue, 1);
-            slopeRotation = Quaternion.FromToRotation(transform.up, groundNormal) * transform.rotation;
-
-            transform.rotation = Quaternion.Lerp(transform.rotation, slopeRotation, slopeRotationSpeed * Time.fixedDeltaTime);
-
-            if ((transform.rotation == slopeRotation) && !rotateToGround)
-            {
-                rotateToGround = true;
-            }
+            waitAndRotate = waitRotationTime;
+            slopeRay = ray;
+            groundNormal = slopeRay.normal;
+            Debug.DrawRay(ray.point, slopeRay.normal * 2, Color.blue, 1);
         }
-        else if (!isGrounded)
+
+        else if (!isGrounded && isJumping) 
+        {
+            waitAndRotate = waitRotationTime;
+            if (Physics.Raycast(transform.position, transform.up, out slopeRay, upperRayDistance, groundLayer))
+            {
+                isJumping = false;
+            }
+            groundNormal = slopeRay.normal;
+            Debug.DrawRay(ray.point, slopeRay.normal * 2, Color.blue, 1);
+        }
+
+        else if (!isGrounded && !isJumping)
         {
             if (waitAndRotate <= 0f)
             {
                 transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f), slopeRotationSpeed * Time.fixedDeltaTime);
-            } else
+            }
+            else
             {
                 waitAndRotate -= Time.deltaTime;
             }
+        }
+
+        if (isGrounded || isJumping)
+        {
+            slopeRotation = Quaternion.FromToRotation(transform.up, groundNormal) * transform.rotation;
+
+            transform.rotation = Quaternion.Lerp(transform.rotation, slopeRotation, slopeRotationSpeed * Time.fixedDeltaTime);
         }
     }
 
@@ -175,6 +188,16 @@ public class RocketShell : Vehicle
     {
         yield return new WaitForSeconds(animationTime);
         activated = true;
-        music.Play();
+        if (music != null)
+        {
+            levelMusic.clip = music;
+            levelMusic.Play();
+        }
+    }
+
+    private IEnumerator WaitAndDisableJump()
+    {
+        yield return new WaitForSeconds(jumpTime);
+        isJumping = false;
     }
 }
