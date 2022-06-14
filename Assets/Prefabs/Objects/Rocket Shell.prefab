@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionObject: {fileID: 6907937253307586749, guid: c13a9d41f10c2204f9292776a413c099, type: 3}
+  parent: {fileID: 1318187529655949884}
   collisionRadius: {x: 0.1, y: 0.1, z: 0.1}
   collisionLayer:
     serializedVersion: 2
@@ -258,14 +259,15 @@ MonoBehaviour:
   input: {fileID: -944628639613478452, guid: 0aec3d36dfd8e8947aa69d56a5e80c76, type: 3}
   attachPoint: {fileID: 1318187527772456125}
   player: {fileID: 0}
-  groundRayDistance: 1.5
-  upperRayDistance: 8
+  cam: {fileID: 0}
+  groundRayDistance: 2
+  upperRayDistance: 20
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  slopeRotationSpeed: 10
+  slopeRotationSpeed: 180
   jumpForce: 25
-  waitRotationTime: 0.5
+  waitRotationTime: 0.25
   jumpAction: {fileID: -2583163502711110346, guid: 0aec3d36dfd8e8947aa69d56a5e80c76, type: 3}
   dashAction: {fileID: -6297868967318660386, guid: 0aec3d36dfd8e8947aa69d56a5e80c76, type: 3}
   dashDeactivationTime: 2

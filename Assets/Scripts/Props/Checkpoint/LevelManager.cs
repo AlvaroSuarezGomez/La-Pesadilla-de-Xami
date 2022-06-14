@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CheckpointLogic : MonoBehaviour
+public class LevelManager : MonoBehaviour
 {
-    public static CheckpointLogic Instance;
+    public static LevelManager Instance;
 
     public Vector3 currentCheckpoint;
 

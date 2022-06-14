@@ -47,4 +47,9 @@ public class FixedCamera : MonoBehaviour
     {
         offset = newOffset;
     }
+
+    public void SetParent(Transform newParent)
+    {
+        parent = newParent;
+    }
 }

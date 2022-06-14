@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Player
+namespace Xami.Player
 {
     public class Movement : MonoBehaviour
     {
@@ -64,10 +64,10 @@ namespace Player
             input.Enable();
             moveAction = input.FindAction("Move");
 
-            if (CheckpointLogic.Instance != null && CheckpointLogic.Instance.activatedOnce)
+            if (LevelManager.Instance != null && LevelManager.Instance.activatedOnce)
             {
-                transform.position = CheckpointLogic.Instance.currentCheckpoint;
-                cam.transform.rotation = CheckpointLogic.Instance.rotation;
+                transform.position = LevelManager.Instance.currentCheckpoint;
+                cam.transform.rotation = LevelManager.Instance.rotation;
             }
         }
 
@@ -110,13 +110,15 @@ namespace Player
 
             velocity = transform.TransformDirection(localVelocity);
 
-            if (Mathf.Abs(velocity.sqrMagnitude) > physicsScript.AntigravitySpeed)
+            if ((Mathf.Abs(velocity.sqrMagnitude) > physicsScript.AntigravitySpeed) && physicsScript.IsGrounded)
             {
                 rb.velocity = velocity;
+                rb.useGravity = false;
             }
-            else
+            else 
             {
                 rb.velocity = new Vector3(velocity.x, rb.velocity.y, velocity.z);
+                rb.useGravity = true;
             }
         }
 

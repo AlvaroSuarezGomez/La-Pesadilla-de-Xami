@@ -60,6 +60,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   mainObject: {fileID: 6564127548492787444}
+--- !u!95 &6303700739044246259
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6564127548492787444}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e1430cbf77bbcf24f918f44f1b5117f6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &720999092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,7 +93,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 1410108966886765364, guid: 13a40071cf0b83041871e6ec4ccdf820, type: 3}
   shootTransform: {fileID: 2589496807757883684}
-  player: {fileID: 0}
   maxDistance: 50
   maxWaitTime: 1.5
 --- !u!1001 &6330124749138138021
@@ -89,8 +107,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 39d70d3e347d77e4bb3d11a630a31222, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 39d70d3e347d77e4bb3d11a630a31222, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 39d70d3e347d77e4bb3d11a630a31222, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 39d70d3e347d77e4bb3d11a630a31222, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -95.13
+      value: -126.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 39d70d3e347d77e4bb3d11a630a31222, type: 3}
       propertyPath: m_LocalPosition.y
@@ -98,7 +128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 39d70d3e347d77e4bb3d11a630a31222, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -283.33
+      value: -341.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 39d70d3e347d77e4bb3d11a630a31222, type: 3}
       propertyPath: m_LocalRotation.w
@@ -130,7 +160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 39d70d3e347d77e4bb3d11a630a31222, type: 3}
       propertyPath: m_Name
-      value: RobotEnemy
+      value: RobotEnemy (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 39d70d3e347d77e4bb3d11a630a31222, type: 3}
       propertyPath: m_TagString

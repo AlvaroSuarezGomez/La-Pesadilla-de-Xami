@@ -15,6 +15,14 @@ public class CameraController : MonoBehaviour
 
     private static Coroutine cameraChangerCoroutine;
 
+    private void Awake()
+    {
+        if (cam == null)
+        {
+            cam = Camera.main;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if ((cam.gameObject.GetComponent<FixedCamera>() != null) && (other.gameObject.tag == "Player"))

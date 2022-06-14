@@ -727,6 +727,7 @@ GameObject:
   - component: {fileID: 1698778271028830308}
   - component: {fileID: 1698778271028830313}
   - component: {fileID: 6159269621591751692}
+  - component: {fileID: 1256647544}
   m_Layer: 0
   m_Name: PlayerV1
   m_TagString: Player
@@ -771,7 +772,7 @@ MonoBehaviour:
   crashRayDistance: 1
   groundColPos: {x: 0, y: -0.41, z: 0}
   groundColRadius: 0.5
-  antigravitySpeed: 10
+  antigravitySpeed: 27.5
   gravityVelocity: 20
   groundedVelocity: 1
 --- !u!114 &1698778271028830318
@@ -791,8 +792,8 @@ MonoBehaviour:
   physicsScript: {fileID: 7111445975565599713}
   input: {fileID: -944628639613478452, guid: 0aec3d36dfd8e8947aa69d56a5e80c76, type: 3}
   rotationSpeed: 360
-  acceleration: 50
-  maxSpeed: 20
+  acceleration: 30
+  maxSpeed: 30
   playerModel: {fileID: 1698778270660019701}
 --- !u!114 &1698778271028830315
 MonoBehaviour:
@@ -828,6 +829,7 @@ MonoBehaviour:
   movementScript: {fileID: 1698778271028830318}
   jumpActionReference: {fileID: -2583163502711110346, guid: 0aec3d36dfd8e8947aa69d56a5e80c76, type: 3}
   lockScript: {fileID: 1698778270755510490}
+  playerHealth: {fileID: 0}
   jumpForce: 10
   objectTags:
   - Enemy
@@ -978,6 +980,30 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0.125, z: 0}
+--- !u!114 &1256647544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698778271028830309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7f1658bd8fff340b597c45a122f69b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  health: 3
+  damageTags:
+  - Damage
+  enemyTags:
+  - Enemy
+  invincibilityTime: 0.5
+  defaultLayerIndex: 0
+  attackLayerIndex: 8
+  movementScript: {fileID: 1698778271028830318}
+  rb: {fileID: 1698778271028830308}
+  damageForce: 10
 --- !u!1 &1733738359845559027
 GameObject:
   m_ObjectHideFlags: 0

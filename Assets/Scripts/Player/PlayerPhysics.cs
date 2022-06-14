@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Player {
+namespace Xami.Player {
     public class PlayerPhysics : MonoBehaviour
     {
         [Header("Components")]
@@ -62,7 +62,6 @@ namespace Player {
             GroundCheck();
             GravityManager();
             SlopeRotation();
-            //Crash();
         }
 
         private void GravityManager()
@@ -81,13 +80,6 @@ namespace Player {
             else
             {
                 movementScript.Velocity -= new Vector3(0f, gravityVelocity, 0f) * Time.fixedDeltaTime;
-            }
-        }
-
-        private void Crash()
-        {
-            if (Physics.Raycast(crashTransform.position, movementScript.InputDirection, crashRayDistance)) {
-                movementScript.Velocity = new Vector3(0f, movementScript.Velocity.y, 0f);
             }
         }
 
@@ -113,7 +105,14 @@ namespace Player {
                 Debug.DrawRay(ray.point, ray.normal * 2, Color.blue, 1);
                 slopeRotation = Quaternion.RotateTowards(transform.rotation, Quaternion.FromToRotation(transform.up, groundNormal) * transform.rotation, slopeRotationSpeed * Time.fixedDeltaTime);
 
-                rb.MoveRotation(slopeRotation);
+                if (Mathf.Round(new Vector3(slopeRotation.eulerAngles.x, 0f, slopeRotation.eulerAngles.z).magnitude) != 0)
+                {
+                    rb.MoveRotation(slopeRotation);
+                } else
+                {
+                    rb.MoveRotation(Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, 0f, 0f), slopeRotationSpeed * Time.fixedDeltaTime));
+                }
+
             } else
             {
                 

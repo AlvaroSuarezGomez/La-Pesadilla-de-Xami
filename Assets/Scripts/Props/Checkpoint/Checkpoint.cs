@@ -17,8 +17,8 @@ public class Checkpoint : MonoBehaviour
     {
         if(other.gameObject.tag == "Player" && activated)
         {
-            CheckpointLogic.Instance.SetCheckpoint(this);
-            CheckpointLogic.Instance.rotation = Camera.main.transform.rotation;
+            LevelManager.Instance.SetCheckpoint(this);
+            LevelManager.Instance.rotation = Camera.main.transform.rotation;
             
             activated = false;
         }

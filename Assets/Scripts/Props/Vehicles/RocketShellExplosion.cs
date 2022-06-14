@@ -4,25 +4,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
 
-public class RocketShellExplosion : MonoBehaviour
+namespace Xami.Vehicles
 {
-    [SerializeField] private GameObject explosionObject;
-    [SerializeField] private Vector3 collisionRadius;
-    [SerializeField] private LayerMask collisionLayer;
-
-    private void Update()
+    public class RocketShellExplosion : MonoBehaviour
     {
-        Collider[] deathCollider = Physics.OverlapBox(transform.position, collisionRadius, transform.rotation, collisionLayer, QueryTriggerInteraction.Ignore);    
-        foreach (Collider i in deathCollider)
+        [SerializeField] private GameObject explosionObject;
+        [SerializeField] private Transform parent;
+        [SerializeField] private Vector3 collisionRadius;
+        [SerializeField] private LayerMask collisionLayer;
+
+        private void Update()
         {
-            Instantiate(explosionObject, transform.root.position, explosionObject.transform.rotation);
-            CheckpointLogic.Instance.Respawn(1f);
-            transform.root.gameObject.SetActive(false);
+            if (!parent.GetComponent<RocketShell>().IsJumping)
+            {
+                Collider[] deathCollider = Physics.OverlapBox(transform.position, collisionRadius, transform.rotation, collisionLayer, QueryTriggerInteraction.Ignore);
+                foreach (Collider i in deathCollider)
+                {
+                    Instantiate(explosionObject, parent.position, explosionObject.transform.rotation);
+                    LevelManager.Instance.Respawn(1f);
+                    transform.root.gameObject.SetActive(false);
+                }
+            }
         }
-    }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireCube(transform.position, collisionRadius);
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawWireCube(transform.position, collisionRadius);
+        }
     }
 }

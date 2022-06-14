@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class EnemyMove : MonoBehaviour
 {
 	Animator anim;
-	public GameObject yo;
+	[SerializeField] private GameObject player;
 	bool detectado = false;
 	float distDetectado = 6.0f;
 	float distAtaque = 2.0f;
@@ -23,7 +23,7 @@ public class EnemyMove : MonoBehaviour
 	void Update()
 	{
 		Vector3 posicion = transform.position;
-		Vector3 posicionYo = yo.transform.position;
+		Vector3 posicionYo = player.transform.position;
 		float distancia = Vector3.Distance(posicionYo, posicion);
 		if (distancia <= distDetectado && distancia > distAtaque)
 		{
@@ -49,7 +49,7 @@ public class EnemyMove : MonoBehaviour
 		//una vez que el enemigo ha localizado al player lo persigue
 		if (detectado)
 		{
-			Seguir(yo);
+			Seguir(player);
 		}
 	}
 

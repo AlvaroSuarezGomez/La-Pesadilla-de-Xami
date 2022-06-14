@@ -12,7 +12,6 @@ public class EnemyShoot : MonoBehaviour
 
     [SerializeField]
     private Transform shootTransform;
-
     [SerializeField]
     private GameObject player;
     [SerializeField]

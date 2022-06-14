@@ -5,19 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class DeathCollider : MonoBehaviour
 {
+    [SerializeField] private List<string> tags = new List<string>();
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (tags.Contains(other.gameObject.tag))
         {
-            CheckpointLogic.Instance.Respawn();
+            LevelManager.Instance.Respawn();
         }
     }
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Player")
+        if (tags.Contains(other.gameObject.tag))
         {
-            CheckpointLogic.Instance.Respawn();
+            LevelManager.Instance.Respawn();
         }
     }
 }

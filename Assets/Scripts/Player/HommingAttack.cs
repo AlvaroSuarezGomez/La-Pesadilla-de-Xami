@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-namespace Player
+namespace Xami.Player
 {
     public class HommingAttack : MonoBehaviour
     {
@@ -11,6 +11,7 @@ namespace Player
         [SerializeField] private Movement movementScript;
         [SerializeField] private InputActionReference jumpActionReference;
         [SerializeField] private Lock_Management lockScript;
+        [SerializeField] private PlayerHealth playerHealth;
         [SerializeField] private float jumpForce;
         private Vector3 hommingAttackDirection;
         [SerializeField] private List<string> objectTags = new List<string>();
@@ -27,6 +28,11 @@ namespace Player
 
         private void Awake()
         {
+            if (playerHealth == null)
+            {
+                playerHealth = GetComponent<PlayerHealth>();
+            }
+
             if (playerPhysicsScript == null)
             {
                 playerPhysicsScript = GetComponent<PlayerPhysics>();
@@ -48,7 +54,7 @@ namespace Player
 
         private void Action_performed(InputAction.CallbackContext obj)
         {
-            if ((!playerPhysicsScript.IsGrounded) && (targetObject != null))
+            if ((!playerPhysicsScript.IsGrounded) && (targetObject != null) && movementScript.CanMove)
             {
                 {
                     activateHommingAttack = true;
@@ -65,6 +71,7 @@ namespace Player
                 movementScript.CanMove = false;
                 inHommingAttack = true;
                 movementScript.Velocity = Vector3.zero;
+                playerHealth.IsAttacking = true;
                 
                 StartCoroutine(MoveToObject());
                 StartCoroutine(PreventiveHommingAttackDeactivation());
@@ -77,7 +84,8 @@ namespace Player
             hommingAttackCollider.enabled = true;
             movementScript.CanMove = true;
             activateHommingAttack = false;
-            inHommingAttack = false;
+            inHommingAttack = false; 
+            playerHealth.IsAttacking = false;
         }
 
         private void OnCollisionEnter(Collision collision)
@@ -96,6 +104,8 @@ namespace Player
                 activateHommingAttack = false;
                 playerPhysicsScript.IsJumping = false;
                 inHommingAttack = false;
+                playerHealth.IsAttacking = false;
+                playerHealth.AttackTime = 0.1f;
             }
         }
 
@@ -115,6 +125,8 @@ namespace Player
                 activateHommingAttack = false;
                 playerPhysicsScript.IsJumping = false;
                 inHommingAttack = false;
+                playerHealth.IsAttacking = false;
+                playerHealth.AttackTime = 0.1f;
             }
         }
 
@@ -134,6 +146,8 @@ namespace Player
                 activateHommingAttack = false;
                 playerPhysicsScript.IsJumping = false;
                 inHommingAttack = false;
+                playerHealth.IsAttacking = false;
+                playerHealth.AttackTime = 0.1f;
             }
         }
 
@@ -153,6 +167,8 @@ namespace Player
                 activateHommingAttack = false;
                 playerPhysicsScript.IsJumping = false;
                 inHommingAttack = false;
+                playerHealth.IsAttacking = false;
+                playerHealth.AttackTime = 0.1f;
             }
         }
 

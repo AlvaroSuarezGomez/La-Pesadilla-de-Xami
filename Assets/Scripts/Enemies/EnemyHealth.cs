@@ -17,6 +17,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        //Debug.Log(collision.gameObject);
         if (collision.gameObject.tag == "Player")
         {
             health--;
