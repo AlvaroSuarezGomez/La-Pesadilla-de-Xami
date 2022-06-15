@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelMenuManager : MonoBehaviour
 {
     [SerializeField] private Button exitButton;
+    [SerializeField] private Button playButton;
     [SerializeField] private Button leftButton;
     [SerializeField] private Button rightButton;
     [SerializeField] private GameObject levelSelector;
@@ -18,9 +20,15 @@ public class LevelMenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playButton.onClick.AddListener(playM);
         exitButton.onClick.AddListener(returnM);
         leftButton.onClick.AddListener(leftButtonM);
         rightButton.onClick.AddListener(rightButtonM);
+    }
+
+    void playM()
+    {
+        SceneManager.LoadScene(actualscene);
     }
 
     void returnM()

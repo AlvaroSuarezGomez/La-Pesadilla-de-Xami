@@ -160,14 +160,19 @@ namespace Xami.Vehicles
                 groundNormal = ray.normal;
                 
                 slopeRotation = Quaternion.FromToRotation(transform.up, groundNormal) * transform.rotation;
-                transform.rotation = slopeRotation;
-                //rb.MoveRotation(slopeRotation);
 
-                if ((transform.rotation == slopeRotation) && !rotateToGround)
+                if (rotateToGround)
                 {
-                    Debug.Log(groundNormal);
+                    transform.rotation = slopeRotation;
+                }
+                else
+                {
+                    transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, -transform.rotation.eulerAngles.z);
                     rotateToGround = true;
                 }
+                //rb.MoveRotation(slopeRotation);
+                    Debug.Log(groundNormal);
+                    
 
                 Debug.DrawRay(ray.point, ray.normal * 2, Color.blue, 1);
             }

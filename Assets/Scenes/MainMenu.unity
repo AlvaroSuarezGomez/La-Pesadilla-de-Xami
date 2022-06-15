@@ -412,6 +412,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6611443482410221625, guid: db265a1abcde72049a906bbcbd97c730, type: 3}
   m_PrefabInstance: {fileID: 8483105855401778707}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1165317948 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7690053057331625202, guid: db265a1abcde72049a906bbcbd97c730, type: 3}
+  m_PrefabInstance: {fileID: 8483105855401778707}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165317946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1693822645 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3304526514974747608, guid: db265a1abcde72049a906bbcbd97c730, type: 3}
@@ -470,8 +481,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 4843138e49271fe45a18fd03a4edd0b9, type: 3}
     - target: {fileID: 3814894596272048091, guid: db265a1abcde72049a906bbcbd97c730, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6aeff0ed081ccd54ebaa175dc08707c6, type: 3}
+    - target: {fileID: 3814894596272048091, guid: db265a1abcde72049a906bbcbd97c730, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4374759463315918495, guid: db265a1abcde72049a906bbcbd97c730, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 3940
+      objectReference: {fileID: 0}
+    - target: {fileID: 4374759463315918495, guid: db265a1abcde72049a906bbcbd97c730, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1375
+      objectReference: {fileID: 0}
+    - target: {fileID: 4374759463315918495, guid: db265a1abcde72049a906bbcbd97c730, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -62
+      objectReference: {fileID: 0}
+    - target: {fileID: 4374759463315918495, guid: db265a1abcde72049a906bbcbd97c730, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 102.75
       objectReference: {fileID: 0}
     - target: {fileID: 4749025538737631187, guid: db265a1abcde72049a906bbcbd97c730, type: 3}
       propertyPath: m_Colors.m_PressedColor.b
@@ -541,6 +572,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7276410273778833326, guid: db265a1abcde72049a906bbcbd97c730, type: 3}
+      propertyPath: playButton
+      value: 
+      objectReference: {fileID: 1165317948}
     - target: {fileID: 7276410273778833326, guid: db265a1abcde72049a906bbcbd97c730, type: 3}
       propertyPath: mainMenuFirstButton
       value: 

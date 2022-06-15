@@ -6,17 +6,35 @@ public class IllusoryWall : MonoBehaviour
 {
     private Renderer rend;
 
+    [SerializeField] private int hitNumber = 1;
+
 
     private void Awake()
     {
         rend = GetComponent<Renderer>();
     }
 
+    private void Update()
+    {
+        if (hitNumber <= 0)
+        {
+            StartCoroutine(DissipateWall());
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            StartCoroutine(DissipateWall());
+            hitNumber--;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            hitNumber--;
         }
     }
 

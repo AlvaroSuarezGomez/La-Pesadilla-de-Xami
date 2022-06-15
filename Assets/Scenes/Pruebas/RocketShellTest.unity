@@ -2276,6 +2276,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 660799080}
     - target: {fileID: 1318187529655949883, guid: 030728e504f62e34cb64942c3b5f42f3, type: 3}
+      propertyPath: jumpForce
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318187529655949883, guid: 030728e504f62e34cb64942c3b5f42f3, type: 3}
       propertyPath: levelMusic
       value: 
       objectReference: {fileID: 935544467}

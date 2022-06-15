@@ -12,9 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Pruebas/TestLevel.unity
     guid: aebfc99dc63471d4cbddf4a7fa43a3b7
   - enabled: 0
+    path: Assets/Scenes/Pruebas/RocketShellTest.unity
+    guid: 37947836ddc17d344bc6cfc3d1349cce
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 7989cfa5ec90b514fa1cb59b3f0dd056
+  - enabled: 1
     path: Assets/Scenes/SapphireCoast.unity
     guid: 29bfcda48b81d2a419e6006604b8fce7
   - enabled: 1
-    path: Assets/Scenes/RocketShellTest.unity
-    guid: 37947836ddc17d344bc6cfc3d1349cce
+    path: Assets/Scenes/MtRocket.unity
+    guid: 2425aab551d1a0a4db3a51bcca1f0cb1
   m_configObjects: {}
