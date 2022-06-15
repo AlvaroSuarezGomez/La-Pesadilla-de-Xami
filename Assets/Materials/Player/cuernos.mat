@@ -7,34 +7,19 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BasicWater
-  m_Shader: {fileID: -6465566751694194690, guid: 63edc338a9c81ea499cd262db34407d2, type: 3}
+  m_Name: cuernos
+  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 2000
+  stringTagMap:
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Normal_Map:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - Texture:
-        m_Texture: {fileID: 2800000, guid: 3d750ec2746f3c348bfc0450fcd637d8, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - Texture2D_fa1d72f7a2f44f2b8158fdd577499037:
-        m_Texture: {fileID: 2800000, guid: 3d750ec2746f3c348bfc0450fcd637d8, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - WaterTexture:
-        m_Texture: {fileID: 2800000, guid: 3d750ec2746f3c348bfc0450fcd637d8, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -92,18 +77,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Depth_Distance: 0.5
-    - Depth_Strength: 0.775
-    - Foam_Offset: 0.443
-    - Metallic: 0
-    - Opacity: 1
-    - Size: 10
-    - Smoothness: 0
-    - Transparency: 0
-    - Vector1_7b17c84ffb514818943674ef261d9907: 0.8
-    - Vector1_800d00c770ab4bbfbcf4586c547de27a: 0.5
-    - Water_Size: 50000
-    - Waves: 0.0000005
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -115,12 +88,13 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _GlossMapScale: 0
+    - _GlossMapScale: 1
     - _Glossiness: 0
-    - _GlossyReflections: 0
+    - _GlossyReflections: 1
     - _Metallic: 0
+    - _Mode: 0
     - _OcclusionStrength: 1
-    - _Parallax: 0.005
+    - _Parallax: 0.02
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
@@ -128,22 +102,16 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
+    - _UVSec: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_Base: {r: 0, g: 0.7953818, b: 1, a: 0}
-    - Color_Main_Foam: {r: 1, g: 1, b: 1, a: 0}
-    - Color_Second_Foam: {r: 0, g: 0.54663897, b: 1, a: 0}
-    - Color_c010662412614f30b34eb6edecd53882: {r: 0.1383054, g: 0.6287954, b: 0.7924528, a: 0}
-    - Direction: {r: 0.25, g: 0.25, b: 0, a: 0}
-    - Vector2_24cc36e24c794aaab53f46a4c26cc5df: {r: 10000, g: 10000, b: 10000, a: 10000}
-    - Water_Color: {r: 0, g: 0.8051772, b: 1, a: 0}
-    - _BaseColor: {r: 0, g: 0.4150717, b: 0.46226418, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 0.805, g: 0.7543755, b: 0.541765, a: 1}
+    - _Color: {r: 0.82325685, g: 0.799807, b: 0.6896654, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &2335904265335565431
+--- !u!114 &9023034821605640782
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

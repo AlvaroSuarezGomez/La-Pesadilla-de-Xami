@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 32f9601f5261e19499ecefbe43928eec, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 32f9601f5261e19499ecefbe43928eec, type: 3}
       propertyPath: m_LocalScale.x
@@ -214,6 +214,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (67)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -386,7 +390,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &14133790
 GameObject:
@@ -490,7 +494,7 @@ PrefabInstance:
     - target: {fileID: 720999092, guid: 76aa6a00ba0de3545b5698516200a3e5, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1557448325}
+      objectReference: {fileID: 0}
     - target: {fileID: 5788154211991876686, guid: 76aa6a00ba0de3545b5698516200a3e5, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -684,7 +688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &36237148
 Light:
   m_ObjectHideFlags: 0
@@ -759,7 +763,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &41537432
 PrefabInstance:
@@ -775,6 +779,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (98)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -841,6 +849,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -1092,6 +1104,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -1152,6 +1168,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -1460,6 +1480,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 52
@@ -1516,7 +1540,7 @@ PrefabInstance:
     - target: {fileID: 1872851070, guid: 6c03ccfd36fb8fb4693d1075a5ae9390, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1557448335}
+      objectReference: {fileID: 0}
     - target: {fileID: 1872851070, guid: 6c03ccfd36fb8fb4693d1075a5ae9390, type: 3}
       propertyPath: enemySpeed
       value: 5
@@ -1606,6 +1630,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 37
@@ -1681,6 +1709,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -1842,7 +1874,7 @@ Transform:
   - {fileID: 71187822}
   - {fileID: 1282559423}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &206498294
 GameObject:
@@ -2014,6 +2046,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (99)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 99
@@ -2084,6 +2120,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (78)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -2227,7 +2267,7 @@ Transform:
   - {fileID: 219767566}
   - {fileID: 942086181}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &287439988 stripped
 Transform:
@@ -2514,6 +2554,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (71)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 71
@@ -2633,6 +2677,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 36
@@ -2693,6 +2741,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (65)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -2811,6 +2863,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (80)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -3135,6 +3191,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -3191,7 +3251,7 @@ PrefabInstance:
     - target: {fileID: 1872851070, guid: 6c03ccfd36fb8fb4693d1075a5ae9390, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1557448335}
+      objectReference: {fileID: 0}
     - target: {fileID: 1872851070, guid: 6c03ccfd36fb8fb4693d1075a5ae9390, type: 3}
       propertyPath: enemySpeed
       value: 5
@@ -3347,6 +3407,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 29
@@ -3444,6 +3508,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -3620,6 +3688,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -3743,6 +3815,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (55)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 55
@@ -3803,6 +3879,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (84)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -3875,6 +3955,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -3935,6 +4019,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (63)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -4062,7 +4150,7 @@ PrefabInstance:
     - target: {fileID: 720999092, guid: 76aa6a00ba0de3545b5698516200a3e5, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1557448325}
+      objectReference: {fileID: 0}
     - target: {fileID: 5788154211991876686, guid: 76aa6a00ba0de3545b5698516200a3e5, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -4128,6 +4216,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -4188,6 +4280,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (108)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -4250,6 +4346,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 25
@@ -4310,6 +4410,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (57)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -4428,6 +4532,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (75)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 75
@@ -4488,6 +4596,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (72)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -4715,6 +4827,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 38
@@ -4775,6 +4891,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -4856,6 +4976,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -5004,6 +5128,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (93)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 93
@@ -5065,6 +5193,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (89)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 89
@@ -5125,6 +5257,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (69)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -5262,7 +5398,7 @@ PrefabInstance:
     - target: {fileID: 1872851070, guid: 6c03ccfd36fb8fb4693d1075a5ae9390, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1557448335}
+      objectReference: {fileID: 0}
     - target: {fileID: 1872851070, guid: 6c03ccfd36fb8fb4693d1075a5ae9390, type: 3}
       propertyPath: enemySpeed
       value: 5
@@ -5336,6 +5472,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (86)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -5422,6 +5562,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 54
@@ -5482,6 +5626,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -5638,6 +5786,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (74)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 74
@@ -5709,6 +5861,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -5771,28 +5927,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1908686602}
     - target: {fileID: 1318187529655949883, guid: 030728e504f62e34cb64942c3b5f42f3, type: 3}
-      propertyPath: jumpForce
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1318187529655949883, guid: 030728e504f62e34cb64942c3b5f42f3, type: 3}
       propertyPath: levelMusic
       value: 
       objectReference: {fileID: 13939131}
-    - target: {fileID: 1318187529655949883, guid: 030728e504f62e34cb64942c3b5f42f3, type: 3}
-      propertyPath: upperRayDistance
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1318187529655949883, guid: 030728e504f62e34cb64942c3b5f42f3, type: 3}
-      propertyPath: groundRayDistance
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1318187529655949883, guid: 030728e504f62e34cb64942c3b5f42f3, type: 3}
-      propertyPath: slopeRotationSpeed
-      value: 360
-      objectReference: {fileID: 0}
     - target: {fileID: 1318187529655949884, guid: 030728e504f62e34cb64942c3b5f42f3, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1318187529655949884, guid: 030728e504f62e34cb64942c3b5f42f3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5850,6 +5990,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (83)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -5911,6 +6055,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -6059,6 +6207,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (102)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 102
@@ -6120,6 +6272,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (107)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 107
@@ -6180,6 +6336,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -6309,6 +6469,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 34
@@ -6369,6 +6533,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (58)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -6431,6 +6599,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (59)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 59
@@ -6491,6 +6663,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -6654,6 +6830,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 49
@@ -6772,7 +6952,7 @@ PrefabInstance:
     - target: {fileID: 1872851070, guid: 6c03ccfd36fb8fb4693d1075a5ae9390, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1557448335}
+      objectReference: {fileID: 0}
     - target: {fileID: 1872851070, guid: 6c03ccfd36fb8fb4693d1075a5ae9390, type: 3}
       propertyPath: enemySpeed
       value: 5
@@ -6842,6 +7022,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 39
@@ -6902,6 +7086,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (92)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -7212,7 +7400,7 @@ PrefabInstance:
     - target: {fileID: 720999092, guid: 76aa6a00ba0de3545b5698516200a3e5, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1557448325}
+      objectReference: {fileID: 0}
     - target: {fileID: 5788154211991876686, guid: 76aa6a00ba0de3545b5698516200a3e5, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -7277,6 +7465,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -7424,7 +7616,7 @@ PrefabInstance:
     - target: {fileID: 720999092, guid: 76aa6a00ba0de3545b5698516200a3e5, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1557448325}
+      objectReference: {fileID: 0}
     - target: {fileID: 5788154211991876686, guid: 76aa6a00ba0de3545b5698516200a3e5, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -7547,6 +7739,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 43
@@ -7612,6 +7808,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -7739,6 +7939,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (66)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -7989,6 +8193,327 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7313059788044596367, guid: f55afffb0084a124b8dcc8bc3c1db14a, type: 3}
+--- !u!1001 &1007922806
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 293475893193572158, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9646681
+      objectReference: {fileID: 0}
+    - target: {fileID: 293475893193572158, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.030812224
+      objectReference: {fileID: 0}
+    - target: {fileID: 293475893193572158, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.1313406
+      objectReference: {fileID: 0}
+    - target: {fileID: 293475893193572158, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.22630909
+      objectReference: {fileID: 0}
+    - target: {fileID: 293475893193572158, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 293475893193572158, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 293475893193572158, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149530301328043154, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9646681
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149530301328043154, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.030812224
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149530301328043154, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.1313406
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149530301328043154, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.22630909
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149530301328043154, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149530301328043154, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149530301328043154, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276330293354891301, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_Name
+      value: PlayerFinal
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276330293354891310, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1908686600}
+    - target: {fileID: 2276330293354891311, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276330293354891311, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 22.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276330293354891311, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276330293354891311, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 146.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276330293354891311, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276330293354891311, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276330293354891311, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276330293354891311, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276330293354891311, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276330293354891311, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276330293354891311, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850022342645101585, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7889798
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850022342645101585, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.19938731
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850022342645101585, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.47989395
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850022342645101585, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.32780695
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850022342645101585, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850022342645101585, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850022342645101585, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661994768675177661, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7889798
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661994768675177661, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.19938731
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661994768675177661, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.47989395
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661994768675177661, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.32780695
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661994768675177661, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661994768675177661, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661994768675177661, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770046711764534581, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770046711764534581, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770046711764534581, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770046711764534581, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3770046711764534581, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072035278184420246, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072035278184420246, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072035278184420246, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072035278184420246, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072035278184420246, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072035278184420246, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072035278184420246, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355606900002833049, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355606900002833049, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355606900002833049, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355606900002833049, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355606900002833049, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464225050546025528, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464225050546025528, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464225050546025528, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464225050546025528, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464225050546025528, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179279713146124004, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179279713146124004, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179279713146124004, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179279713146124004, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179279713146124004, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179279713146124004, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179279713146124004, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688926520773602209, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1908686600}
+    - target: {fileID: 7944145099981748707, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944145099981748707, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944145099981748707, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944145099981748707, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944145099981748707, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944145099981748707, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944145099981748707, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
 --- !u!1001 &1010073183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8003,6 +8528,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -8060,7 +8589,7 @@ PrefabInstance:
     - target: {fileID: 720999092, guid: 76aa6a00ba0de3545b5698516200a3e5, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1557448325}
+      objectReference: {fileID: 0}
     - target: {fileID: 5788154211991876686, guid: 76aa6a00ba0de3545b5698516200a3e5, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -8248,6 +8777,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -8318,6 +8851,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -8497,7 +9034,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1064083403
 PrefabInstance:
@@ -8571,6 +9108,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (68)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 68
@@ -8631,6 +9172,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -8775,6 +9320,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (111)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 111
@@ -8841,6 +9390,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (97)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 97
@@ -8901,6 +9454,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -8967,6 +9524,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (64)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -9228,6 +9789,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 40
@@ -9380,6 +9945,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (85)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 85
@@ -9441,6 +10010,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -9501,6 +10074,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -9687,6 +10264,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (96)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 96
@@ -9747,6 +10328,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (81)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -10145,7 +10730,7 @@ PrefabInstance:
     - target: {fileID: 720999092, guid: 76aa6a00ba0de3545b5698516200a3e5, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1557448325}
+      objectReference: {fileID: 0}
     - target: {fileID: 5788154211991876686, guid: 76aa6a00ba0de3545b5698516200a3e5, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -10239,6 +10824,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (88)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -10384,6 +10973,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -10585,6 +11178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (82)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 82
@@ -10631,6 +11228,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+--- !u!4 &1319819078 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2276330293354891311, guid: e2ffbb0c309b7664aa38507d1f631be5, type: 3}
+  m_PrefabInstance: {fileID: 1007922806}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1324013026 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
@@ -10708,6 +11310,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (91)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 91
@@ -10764,7 +11370,7 @@ PrefabInstance:
     - target: {fileID: 1872851070, guid: 6c03ccfd36fb8fb4693d1075a5ae9390, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1557448335}
+      objectReference: {fileID: 0}
     - target: {fileID: 1872851070, guid: 6c03ccfd36fb8fb4693d1075a5ae9390, type: 3}
       propertyPath: enemySpeed
       value: 5
@@ -10901,6 +11507,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -11084,6 +11694,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (110)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -11845,6 +12459,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -12258,7 +12876,7 @@ Transform:
   - {fileID: 481344852}
   - {fileID: 1331305650}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1503469929
 PrefabInstance:
@@ -12274,6 +12892,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -12331,7 +12953,7 @@ PrefabInstance:
     - target: {fileID: 720999092, guid: 76aa6a00ba0de3545b5698516200a3e5, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1557448325}
+      objectReference: {fileID: 0}
     - target: {fileID: 5788154211991876686, guid: 76aa6a00ba0de3545b5698516200a3e5, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -12397,6 +13019,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -12458,7 +13084,7 @@ PrefabInstance:
     - target: {fileID: 1872851070, guid: 6c03ccfd36fb8fb4693d1075a5ae9390, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1557448335}
+      objectReference: {fileID: 0}
     - target: {fileID: 1872851070, guid: 6c03ccfd36fb8fb4693d1075a5ae9390, type: 3}
       propertyPath: enemySpeed
       value: 5
@@ -12598,6 +13224,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (94)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 94
@@ -12658,6 +13288,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (106)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -12743,6 +13377,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -13009,16 +13647,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f55afffb0084a124b8dcc8bc3c1db14a, type: 3}
---- !u!1 &1557448325 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1698778271028830309, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-  m_PrefabInstance: {fileID: 1617092729}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1557448335 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1698778271028830319, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-  m_PrefabInstance: {fileID: 1617092729}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1561220205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13120,7 +13748,7 @@ PrefabInstance:
     - target: {fileID: 720999092, guid: 76aa6a00ba0de3545b5698516200a3e5, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1557448325}
+      objectReference: {fileID: 0}
     - target: {fileID: 5788154211991876686, guid: 76aa6a00ba0de3545b5698516200a3e5, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -13308,6 +13936,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (70)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 70
@@ -13368,6 +14000,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -13454,6 +14090,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -13514,6 +14154,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (95)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -13675,91 +14319,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41b6c2efb6f74294496551302612e148, type: 3}
---- !u!1001 &1617092729
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1698778271028830309, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_Name
-      value: PlayerV1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1698778271028830309, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1698778271028830318, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 1908686600}
-    - target: {fileID: 1698778271028830319, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1698778271028830319, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1698778271028830319, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1698778271028830319, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1698778271028830319, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 22.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1698778271028830319, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 14.78
-      objectReference: {fileID: 0}
-    - target: {fileID: 1698778271028830319, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 146.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1698778271028830319, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1698778271028830319, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1698778271028830319, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1698778271028830319, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1698778271028830319, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1698778271028830319, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1698778271028830319, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7111445975565599713, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 1908686600}
-    - target: {fileID: 7111445975565599713, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
-      propertyPath: antigravitySpeed
-      value: 17.5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 769c384c4a429464696f16e36a9c5c2f, type: 3}
 --- !u!1001 &1617511967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13836,6 +14395,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (109)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -13965,6 +14528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 45
@@ -14025,6 +14592,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (73)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -14101,6 +14672,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -14443,6 +15018,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 50
@@ -14503,6 +15082,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -14575,6 +15158,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (56)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 56
@@ -14635,6 +15222,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -14863,6 +15454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -15016,7 +15611,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1727612991 stripped
 Transform:
@@ -15042,6 +15637,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -15103,6 +15702,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (90)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -15256,6 +15859,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (87)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 87
@@ -15373,6 +15980,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (76)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -15502,6 +16113,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -15562,6 +16177,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (103)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -15818,7 +16437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df3ccc1e2da110f4c89817a9bd5403be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 1557448335}
+  parent: {fileID: 1319819078}
   offset: {x: 0, y: -1, z: 8}
   lookAtObject: 0
   target: {fileID: 0}
@@ -15868,6 +16487,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -15930,7 +16553,7 @@ PrefabInstance:
     - target: {fileID: 720999092, guid: 76aa6a00ba0de3545b5698516200a3e5, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1557448325}
+      objectReference: {fileID: 0}
     - target: {fileID: 5788154211991876686, guid: 76aa6a00ba0de3545b5698516200a3e5, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -16024,6 +16647,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -16148,6 +16775,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (77)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 77
@@ -16257,7 +16888,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1958525444 stripped
 Transform:
@@ -16278,6 +16909,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (101)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -16585,6 +17220,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (105)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 105
@@ -16704,6 +17343,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (79)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 79
@@ -16770,6 +17413,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -16830,6 +17477,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -17060,6 +17711,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform (104)
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 104
@@ -17120,6 +17775,10 @@ PrefabInstance:
     - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_Name
       value: BridgePlatform (100)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
@@ -17182,6 +17841,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BridgePlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 3157320023735693606, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4573335330188770809, guid: 407dcb88596a1ac4f97d58fe96561b8d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -17238,7 +17901,7 @@ PrefabInstance:
     - target: {fileID: 720999092, guid: 76aa6a00ba0de3545b5698516200a3e5, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1557448325}
+      objectReference: {fileID: 0}
     - target: {fileID: 5788154211991876686, guid: 76aa6a00ba0de3545b5698516200a3e5, type: 3}
       propertyPath: m_RootOrder
       value: 6

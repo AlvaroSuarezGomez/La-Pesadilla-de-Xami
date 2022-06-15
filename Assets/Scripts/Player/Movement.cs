@@ -12,11 +12,19 @@ namespace Xami.Player
         [SerializeField] private Camera cam;
         [SerializeField] private PlayerPhysics physicsScript;
 
+        [Header("Animation")]
+        [SerializeField] private Animator anim;
+        [SerializeField] private int movementSpeedIndex = Animator.StringToHash("MovementSpeed");
+        [SerializeField] private int ridingShellIndex = Animator.StringToHash("RidingShell");
+
         [Header("Input")]
         [SerializeField] private InputActionAsset input;
         private InputAction moveAction;
         private Vector3 inputDirection;
         public Vector3 InputDirection { get { return inputDirection; } }
+
+        [Header("Vehicles")]
+        public bool ridingShell;
 
         [Header("Movement")]
         private bool canMove = true;
@@ -40,6 +48,7 @@ namespace Xami.Player
 
         [Header("Model Settings")]
         [SerializeField] private Transform playerModel;
+        public Transform PlayerModel { get { return playerModel; } set { playerModel = value; } }
 
         public Coroutine disableMovementCoroutine;
         private float movementCooldown;
@@ -61,6 +70,11 @@ namespace Xami.Player
                 physicsScript = GetComponent<PlayerPhysics>();
             }
 
+            if (anim == null)
+            {
+                anim = GetComponentInChildren<Animator>();
+            }
+
             input.Enable();
             moveAction = input.FindAction("Move");
 
@@ -76,6 +90,8 @@ namespace Xami.Player
             movementCooldown -= Time.deltaTime;
             movementCooldown = Mathf.Max(0, movementCooldown);
             //Debug.Log(movementCooldown);
+
+            anim.SetBool(ridingShellIndex, ridingShell);
         }
 
         private void FixedUpdate()
@@ -107,7 +123,6 @@ namespace Xami.Player
             }
 
             //Debug.Log("Velocity : " + localVelocity.x + " / " + localVelocity.z);
-
             velocity = transform.TransformDirection(localVelocity);
 
             if ((Mathf.Abs(velocity.sqrMagnitude) > physicsScript.AntigravitySpeed) && physicsScript.IsGrounded)
@@ -119,6 +134,14 @@ namespace Xami.Player
             {
                 rb.velocity = new Vector3(velocity.x, rb.velocity.y, velocity.z);
                 rb.useGravity = true;
+            }
+
+            if (physicsScript.IsGrounded)
+            {
+                anim.SetFloat(movementSpeedIndex, new Vector2(localVelocity.x, localVelocity.z).sqrMagnitude);
+            } else
+            {
+                anim.SetFloat(movementSpeedIndex, 0f);
             }
         }
 

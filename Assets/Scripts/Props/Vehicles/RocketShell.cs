@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Xami.Player;
 
 namespace Xami.Vehicles
 {
@@ -195,6 +196,9 @@ namespace Xami.Vehicles
             base.OnTriggerEnter(other);
             if (other.gameObject.tag == "Player" && !activated)
             {
+                Physics.IgnoreCollision(GetComponent<Collider>(), other);
+                player.GetComponent<Movement>().PlayerModel.rotation = Quaternion.Euler(Vector3.zero);
+                player.GetComponent<Movement>().ridingShell = true;
                 cam.SetParent(transform);
                 cam.SetOffset(new Vector3(-0.5f, -2f, 10f));
                 anim.SetBool("Activated", true);
