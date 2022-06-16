@@ -10,10 +10,14 @@ public class Timer : MonoBehaviour
 {
     private float time;
 
+    public float LapTime => time;
+
     [SerializeField] 
     private TextMeshProUGUI text;
 
     private int levelIndex;
+
+    public bool activated = true;
 
     void Start()
     {
@@ -22,7 +26,10 @@ public class Timer : MonoBehaviour
     }
     void Update()
     {
-        time += Time.deltaTime;
+        if (activated)
+        {
+            time += Time.deltaTime;
+        }
         string mins = ((int)time / 60).ToString("00");
         string segs = (time % 60).ToString("00");
         string milisegs = ((time * 100) % 100).ToString("00");

@@ -55,9 +55,11 @@ namespace Xami.Player {
             if (IsAttacking)
             {
                 gameObject.layer = attackLayerIndex;
+                gameObject.tag = "Hitbox";
             } else
             {
                 gameObject.layer = defaultLayerIndex;
+                gameObject.tag = "Player";
             }
 
             attackTime -= Time.deltaTime;

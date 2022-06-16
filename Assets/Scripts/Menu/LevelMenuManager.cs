@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Xami.Data;
 
 public class LevelMenuManager : MonoBehaviour
 {
@@ -17,6 +19,9 @@ public class LevelMenuManager : MonoBehaviour
 
     [SerializeField] private GameObject mainMenuFirstButton;
     [SerializeField] private AudioSource audioButton;
+
+    [SerializeField] private TextMeshProUGUI highScore;
+
     //audioButton.Play();
     private int actualscene = 1;
     // Start is called before the first frame update
@@ -26,6 +31,23 @@ public class LevelMenuManager : MonoBehaviour
         exitButton.onClick.AddListener(returnM);
         leftButton.onClick.AddListener(leftButtonM);
         rightButton.onClick.AddListener(rightButtonM);
+    }
+
+    private void Update()
+    {
+        if (ScoreManager.Instance.Score.scores.Count > actualscene)
+        {
+            string mins = ((int)ScoreManager.Instance.Score.scores[actualscene] / 60).ToString("00");
+            string segs = (ScoreManager.Instance.Score.scores[actualscene] % 60).ToString("00");
+            string milisegs = ((ScoreManager.Instance.Score.scores[actualscene] * 100) % 100).ToString("00");
+
+            string TimerString = string.Format("{00}:{01}:{02}", mins, segs, milisegs);
+
+            highScore.text = "Record: " + TimerString.ToString();
+        } else
+        {
+            highScore.text = "Record: 00:00:00";
+        }
     }
 
     void playM()

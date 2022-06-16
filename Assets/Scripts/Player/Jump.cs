@@ -44,7 +44,7 @@ namespace Xami.Player
 
         private void Action_performed(InputAction.CallbackContext obj)
         {
-            if (playerPhysicsScript.IsGrounded)
+            if (playerPhysicsScript.IsGrounded && movementScript.CanMove)
             {
                 anim.SetTrigger(jumpIndex);
                 playerPhysicsScript.IsJumping = true;

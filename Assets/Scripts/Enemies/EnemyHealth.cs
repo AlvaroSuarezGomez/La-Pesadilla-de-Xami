@@ -18,9 +18,14 @@ public class EnemyHealth : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //Debug.Log(collision.gameObject);
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Hitbox")
         {
             health--;
+        }
+
+        if (collision.gameObject.tag == "Death")
+        {
+            Destroy(mainObject);
         }
     }
 }

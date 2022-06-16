@@ -9,6 +9,8 @@ TagManager:
   - Spring
   - Vehicle
   - Damage
+  - Death
+  - Hitbox
   layers:
   - Default
   - TransparentFX

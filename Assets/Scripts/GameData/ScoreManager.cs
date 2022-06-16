@@ -9,6 +9,8 @@ namespace Xami.Data {
 
         private Score score;
 
+        public Score Score => score;
+
         private IScoreProvider scoreProvider;
 
         private void Awake()

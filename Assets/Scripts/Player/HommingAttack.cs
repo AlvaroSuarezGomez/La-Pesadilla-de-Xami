@@ -26,8 +26,17 @@ namespace Xami.Player
         [SerializeField] private float hommingAttackSpeed = 10f;
         [SerializeField] private float preventiveTime = 5f;
 
+        [SerializeField]
+        private Animator anim;
+        private int inHommingAttackIndex = Animator.StringToHash("InHommingAttack");
+
         private void Awake()
         {
+            if (anim == null)
+            {
+                anim = GetComponentInChildren<Animator>();
+            }
+
             if (playerHealth == null)
             {
                 playerHealth = GetComponent<PlayerHealth>();
@@ -49,7 +58,13 @@ namespace Xami.Player
         private void FixedUpdate()
         {
             PerformHommingAttack();
+            
             //Debug.Log(inHommingAttack);
+        }
+
+        private void Update()
+        {
+            anim.SetBool(inHommingAttackIndex, inHommingAttack);
         }
 
         private void Action_performed(InputAction.CallbackContext obj)

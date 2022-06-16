@@ -131,7 +131,10 @@ namespace Xami.Props
 
         private void OnDrawGizmos()
         {
-            Gizmos.DrawCube(centerTransform.position, centerTransform.localScale);
+            if (centerTransform != null)
+            {
+                Gizmos.DrawCube(centerTransform.position, centerTransform.localScale);
+            }
         }
     }
 }

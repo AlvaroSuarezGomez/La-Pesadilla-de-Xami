@@ -24,7 +24,6 @@ namespace Xami.Player {
         private Vector3 groundNormal;
         private Quaternion slopeRotation;
         [SerializeField] private Transform crashTransform;
-        [SerializeField] private float crashRayDistance = 0.25f;
 
         [SerializeField] private Vector3 groundColPos;
         [SerializeField] private float groundColRadius;
