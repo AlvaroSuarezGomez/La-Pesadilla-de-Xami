@@ -11,24 +11,39 @@ public class Animationcontrol : MonoBehaviour
     private int num = 0;
     private float waittime = 0.1f;
     private bool waiting = false;
+    private float actualtime;
     // Start is called before the first frame update
     void Start()
     {
         imagen.sprite = sprites[num];
+        waiting = false;
+        actualtime = 0;
     }
-
+    
     // Update is called once per frame
     void Update()
     {
         if (!waiting)
         {
             waiting = true;
-            StartCoroutine(next());
+            actualtime = 0;
+        } else
+        {
+            if(actualtime >= waittime)
+            {
+                actualtime = 0;
+                waiting = false;
+                StartCoroutine(next());
+            }
+            else
+            {
+                actualtime += Time.deltaTime;
+            }
         }
     }
     IEnumerator next()
     {
-        yield return new WaitForSeconds(waittime);
+        yield return null;
         
         if(num >= numSprites-1)
         {
@@ -39,6 +54,5 @@ public class Animationcontrol : MonoBehaviour
             num++;
         }
         imagen.sprite = sprites[num];
-        waiting = false;
     }
 }

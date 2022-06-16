@@ -20,6 +20,8 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] private AudioMixer sfx;
 
     [SerializeField] private GameObject mainMenuFirstButton;
+    [SerializeField] private AudioSource audioButton;
+    //audioButton.Play();
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +69,7 @@ public class OptionsMenu : MonoBehaviour
     }
     void returnM()
     {
+        audioButton.Play();
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(mainMenuFirstButton);
         optionsMenu.SetActive(false);
@@ -74,6 +77,7 @@ public class OptionsMenu : MonoBehaviour
     }
     void refreshM()
     {
+        audioButton.Play();
         audiocheck.isOn = true;
         musicVolume.value = musicPre;
         sfxVolume.value = sfxPre;

@@ -16,6 +16,8 @@ public class LevelMenuManager : MonoBehaviour
     [SerializeField] private Image[] imagelist;
 
     [SerializeField] private GameObject mainMenuFirstButton;
+    [SerializeField] private AudioSource audioButton;
+    //audioButton.Play();
     private int actualscene = 1;
     // Start is called before the first frame update
     void Start()
@@ -28,11 +30,13 @@ public class LevelMenuManager : MonoBehaviour
 
     void playM()
     {
+        audioButton.Play();
         SceneManager.LoadScene(actualscene);
     }
 
     void returnM()
     {
+        audioButton.Play();
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(mainMenuFirstButton);
         levelSelector.SetActive(false);
@@ -40,6 +44,7 @@ public class LevelMenuManager : MonoBehaviour
     }
     void leftButtonM()
     {
+        audioButton.Play();
         actualscene--;
         if(actualscene < 1)
         {
@@ -59,6 +64,7 @@ public class LevelMenuManager : MonoBehaviour
     }
     void rightButtonM()
     {
+        audioButton.Play();
         actualscene++;
         if (actualscene > imagelist.Length)
         {
