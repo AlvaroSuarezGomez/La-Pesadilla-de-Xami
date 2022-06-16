@@ -57,7 +57,7 @@ public class IllusoryWall : MonoBehaviour
         {
             opacity -= 0.01f;
             rend.material.SetFloat(hash_Opacity, opacity);
-            Debug.Log(opacity);
+            //Debug.Log(opacity);
             yield return new WaitForSeconds(0.1f);
         }
     }

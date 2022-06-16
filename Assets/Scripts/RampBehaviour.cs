@@ -41,7 +41,7 @@ namespace Xami.Props
         private void OnTriggerEnter(Collider collision)
         {
 
-            if (collision.gameObject.tag == "Player")
+            if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Hitbox")
             {   
                 playerMovement = collision.gameObject?.GetComponent<Movement>();
                 playerPhysicsScript = collision.gameObject?.GetComponent<PlayerPhysics>();
@@ -74,7 +74,7 @@ namespace Xami.Props
         private void OnCollisionEnter(Collision collision)
         {
 
-            if (collision.gameObject.tag == "Player")
+            if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Hitbox")
             {
                 playerMovement = collision.gameObject?.GetComponent<Movement>();
                 playerPhysicsScript = collision.gameObject?.GetComponent<PlayerPhysics>();

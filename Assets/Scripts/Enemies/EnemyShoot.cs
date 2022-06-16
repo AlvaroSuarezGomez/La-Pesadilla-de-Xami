@@ -31,6 +31,7 @@ public class EnemyShoot : MonoBehaviour
         if((Vector3.Distance(transform.position, player.transform.position) <= maxDistance) && (enemyState == EnemyState.Wait))
         {
             transform.LookAt(player.transform.position);
+            transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
             enemyState = EnemyState.Track;
             StartCoroutine(WaitAndChangeState());
         }
