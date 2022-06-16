@@ -67,7 +67,7 @@ public class Goal : MonoBehaviour
 
             timer.activated = false;
 
-            if ((ScoreManager.Instance.Score.scores.Count <= SceneManager.GetActiveScene().buildIndex) || (timer.LapTime < ScoreManager.Instance.Score.scores[SceneManager.GetActiveScene().buildIndex]))
+            if ((ScoreManager.Instance.Score.scores.Count <= SceneManager.GetActiveScene().buildIndex) || ((timer.LapTime < ScoreManager.Instance.Score.scores[SceneManager.GetActiveScene().buildIndex]) || ScoreManager.Instance.Score.scores[SceneManager.GetActiveScene().buildIndex] <= 0f))
             {
                 timer.SaveTime();
                 StartCoroutine(ShowMessage());
@@ -81,12 +81,12 @@ public class Goal : MonoBehaviour
     {
         while (transform.localScale.x > 0)
         {
-            transform.localScale = new Vector3(transform.localScale.x - orScale / 10, transform.localScale.y - orScale / 10, transform.localScale.z - orScale / 10);
-            yield return new WaitForSeconds(0.1f);
-            if (!activated)
-            {
-                SceneManager.LoadScene(0);
-            }
+            transform.localScale = new Vector3(transform.localScale.x - orScale / 100, transform.localScale.y - orScale / 100, transform.localScale.z - orScale / 100);
+            yield return new WaitForSeconds(0.01f);
+        }
+        if (!activated)
+        {
+            SceneManager.LoadScene(0);
         }
     }
 

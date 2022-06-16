@@ -7,6 +7,8 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
 
+    [SerializeField] private int levelIndex;
+
     public Vector3 currentCheckpoint;
 
     public Quaternion rotation;
@@ -26,6 +28,12 @@ public class LevelManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(Instance);
+
+        if (SceneManager.GetActiveScene().buildIndex != Instance.levelIndex)
+        {
+            Destroy(Instance.gameObject);
+            Destroy(gameObject);
+        }
     }
 
     public void SetCheckpoint(Checkpoint checkpoint)

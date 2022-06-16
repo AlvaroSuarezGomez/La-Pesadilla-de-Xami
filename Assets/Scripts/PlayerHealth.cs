@@ -9,6 +9,7 @@ namespace Xami.Player {
         [Header("Health Properties")]
         [SerializeField] private int maxHealth = 3;
         [SerializeField] private int health;
+        public int Health { get { return health; } set { health = value; } }
         [SerializeField] private List<string> damageTags = new List<string>();
         [SerializeField] private List<string> enemyTags = new List<string>();
 
@@ -71,6 +72,20 @@ namespace Xami.Player {
         private void Die()
         {
             LevelManager.Instance.Respawn();
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            //Debug.Log(((damageTags.Contains(collision.gameObject.tag) && !IsInvincible) || (enemyTags.Contains(collision.gameObject.tag) && (!IsAttacking && !IsInvincible))));
+            //Debug.Log(IsAttacking);
+            if ((damageTags.Contains(collision.gameObject.tag) && !IsInvincible) || (enemyTags.Contains(collision.gameObject.tag) && (!IsAttacking && !IsInvincible)))
+            {
+                isInvincible = true;
+                health--;
+                movementScript.DisableMovementForTime(0.5f);
+                rb.velocity += ((collision.contacts[0].normal + Vector3.up * 0.1f) * damageForce);
+                StartCoroutine(WaitAndDisableInvincibility());
+            }
         }
 
         private void OnCollisionStay(Collision collision)

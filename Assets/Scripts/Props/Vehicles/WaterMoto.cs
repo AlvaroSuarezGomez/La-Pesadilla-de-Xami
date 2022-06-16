@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Xami.Player;
 
 namespace Xami.Vehicles
 {
@@ -28,9 +29,17 @@ namespace Xami.Vehicles
             if (other.gameObject.tag == "Player")
             {
                 activated = true;
-                //cam.GetComponent<FixedCamera>().Parent = gameObject.transform;
-                cam.GetComponent<FixedCamera>().lookAtObject = true;
-                cam.GetComponent<FixedCamera>().target = gameObject.transform;
+                cam.GetComponent<FixedCamera>().Parent = transform;
+                cam.GetComponent<FixedCamera>().lookAtParent = true;
+                //cam.GetComponent<FixedCamera>().target = gameObject.transform;
+            }
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.tag == "Damage" && !player.GetComponent<PlayerHealth>().IsInvincible)
+            {
+                player.GetComponent<PlayerHealth>().Health--;
             }
         }
     }

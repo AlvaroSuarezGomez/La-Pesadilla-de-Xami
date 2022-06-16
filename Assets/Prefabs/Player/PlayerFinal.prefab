@@ -248,7 +248,6 @@ GameObject:
   - component: {fileID: 2276330293354891300}
   - component: {fileID: 6736959082536031308}
   - component: {fileID: 577696059268301624}
-  - component: {fileID: 1615150173}
   m_Layer: 0
   m_Name: PlayerFinal
   m_TagString: Player
@@ -337,7 +336,7 @@ MonoBehaviour:
   rb: {fileID: 2276330293354891300}
   jumpActionReference: {fileID: -2583163502711110346, guid: 0aec3d36dfd8e8947aa69d56a5e80c76, type: 3}
   jumpForce: 10
-  anim: {fileID: 0}
+  anim: {fileID: 1637796575}
   jumpIndex: 125937960
 --- !u!114 &2276330293354891309
 MonoBehaviour:
@@ -367,6 +366,7 @@ MonoBehaviour:
   hommingAttackCollider: {fileID: 577696059388617267}
   hommingAttackSpeed: 50
   preventiveTime: 2
+  anim: {fileID: 1637796575}
 --- !u!54 &2276330293354891300
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -421,23 +421,6 @@ MonoBehaviour:
   movementScript: {fileID: 2276330293354891310}
   rb: {fileID: 2276330293354891300}
   damageForce: 10
---- !u!114 &1615150173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2276330293354891301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9de4a706e5e9d8744bc1fe2fe1054a1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  col: {fileID: 16946309}
-  playerMovement: {fileID: 2276330293354891310}
-  anim: {fileID: 1637796575}
-  attackAction: {fileID: -6297868967318660386, guid: 0aec3d36dfd8e8947aa69d56a5e80c76, type: 3}
-  attackTime: 0.5
 --- !u!1 &6264880231094234412
 GameObject:
   m_ObjectHideFlags: 0

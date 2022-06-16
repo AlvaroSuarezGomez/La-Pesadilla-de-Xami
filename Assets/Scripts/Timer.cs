@@ -8,6 +8,8 @@ using Xami.Data;
 
 public class Timer : MonoBehaviour
 {
+    public Timer Instance { get; private set; }
+
     private float time;
 
     public float LapTime => time;
@@ -18,6 +20,17 @@ public class Timer : MonoBehaviour
     private int levelIndex;
 
     public bool activated = true;
+
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+    }
 
     void Start()
     {
