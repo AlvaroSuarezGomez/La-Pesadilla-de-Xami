@@ -203,13 +203,14 @@ namespace Xami.Vehicles
                 player.GetComponent<Movement>().ridingShell = true;
                 if (followCamera)
                 {
-                    cam.lookAtObject = true;
-                    cam.target = transform;
+                    cam.Parent = transform;
+                    cam.lookAtParent = true;
                 } else
                 {
-                    cam.SetParent(transform);
+                    cam.SetParent(transform); 
+                    cam.SetOffset(new Vector3(0, -2f, 10f));
                 }
-                cam.SetOffset(new Vector3(0, -2f, 10f));
+                
                 anim.SetBool("Activated", true);
                 audioSource.Play();
                 StartCoroutine(WaitAndActivate());

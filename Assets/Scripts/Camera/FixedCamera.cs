@@ -8,8 +8,10 @@ public class FixedCamera : MonoBehaviour
     public Transform Parent { get { return parent; } set { parent = value; } }
 
     [SerializeField] private Vector3 offset;
-    [SerializeField] public bool lookAtObject;
+    public bool lookAtObject; 
+    public bool lookAtParent;
     [SerializeField] public Transform target;
+    [SerializeField] private float smoothRotationTime;
 
     private void Update()
     {
@@ -17,6 +19,11 @@ public class FixedCamera : MonoBehaviour
         if (lookAtObject)
         {
             RotationRelativeToObject();
+        }
+
+        if (lookAtParent)
+        {
+            ParentDirection();
         }
         //DetectCollision();
     }
@@ -41,6 +48,13 @@ public class FixedCamera : MonoBehaviour
         lookPos.y = 0;
         var rotation = Quaternion.LookRotation(lookPos);
         transform.rotation = Quaternion.Lerp(transform.rotation, rotation, 100f);
+    }
+
+    public void ParentDirection()
+    {
+        transform.position = parent.transform.position + (parent.transform.rotation * offset);
+        transform.rotation = Quaternion.Slerp(transform.rotation, parent.rotation, smoothRotationTime * Time.deltaTime);
+        //transform.LookAt(parent);
     }
 
     public void SetOffset(Vector3 newOffset)
