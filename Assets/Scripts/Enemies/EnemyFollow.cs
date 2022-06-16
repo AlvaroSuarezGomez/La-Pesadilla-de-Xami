@@ -18,6 +18,7 @@ public class EnemyFollow : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, player.position) <= maxDistance)
         {
+            transform.LookAt(player);
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z), enemySpeed * Time.deltaTime);
         }
     }

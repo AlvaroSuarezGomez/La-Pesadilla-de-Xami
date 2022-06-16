@@ -18,8 +18,17 @@ namespace Xami.Player
         [Header("Jump Physics")]
         [SerializeField] private float jumpForce = 10f;
 
+        [Header("Animation")]
+        [SerializeField] private Animator anim;
+        [SerializeField] private int jumpIndex = Animator.StringToHash("Jump");
+
         private void Awake()
         {
+            if (anim == null)
+            {
+                anim = GetComponentInChildren<Animator>();
+            }
+
             if (rb == null)
             {
                 rb = GetComponent<Rigidbody>();
@@ -37,6 +46,7 @@ namespace Xami.Player
         {
             if (playerPhysicsScript.IsGrounded)
             {
+                anim.SetTrigger(jumpIndex);
                 playerPhysicsScript.IsJumping = true;
                 rb.velocity += transform.up * jumpForce;
                 StartCoroutine(WaitAndDeactivateJump());

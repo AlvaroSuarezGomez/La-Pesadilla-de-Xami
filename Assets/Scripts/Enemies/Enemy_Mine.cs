@@ -75,11 +75,16 @@ public class Enemy_Mine : MonoBehaviour
             render.materials[1].color = defaultColor;
             yield return new WaitForSeconds(tiempoEspera*2);
         }
-        Instantiate(explosionObject, parent.position, explosionObject.transform.rotation);
+        GameObject explosion = Instantiate(explosionObject, parent.position, explosionObject.transform.rotation);
         
         colliderThis.tag = "Damage";
-        colliderThis.radius = explosionRadius;
-        Destroy(gameObject, 0.2f);
+        while (colliderThis.radius < explosionRadius)
+        {
+            colliderThis.radius+=explosionRadius/10;
+            yield return new WaitForSeconds(Time.deltaTime*5f);
+        }
+        Destroy(explosion, 1f);
+        Destroy(gameObject);
         
 
 

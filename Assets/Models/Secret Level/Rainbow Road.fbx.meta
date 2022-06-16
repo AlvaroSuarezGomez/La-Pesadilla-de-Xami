@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 42f420924369b6e49ba223a75dc5aa0c
+guid: 21fdcb3d2a944cc40ac4874ce1801cf7
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,118 +7,118 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: DASH
-    second: {fileID: 2100000, guid: b44f7398d8e9ee2429ce06f18f02e56d, type: 2}
+      name: course_model_DASH1
+    second: {fileID: 2100000, guid: 56e846bad4c5c66468f8bf7ac86e9cd3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: dokan
-    second: {fileID: 2100000, guid: 28de5900cf0a74b4c819b4d1dd61af32, type: 2}
+      name: course_model_dokan1
+    second: {fileID: 2100000, guid: 5ae9f39de5dd07c4bbfb4602f5a95a76, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: heri
-    second: {fileID: 2100000, guid: f9f28edbc6be309448b2dc17f6630b71, type: 2}
+      name: course_model_heri1
+    second: {fileID: 2100000, guid: d1c3ff83926cc5943bc615b59c4fcf46, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: lambert212
-    second: {fileID: 2100000, guid: cf2f93fec519c454987660ffcdde2786, type: 2}
+      name: course_model_lambert213
+    second: {fileID: 2100000, guid: fe6c0ec11fa750f479b453e8b47a6595, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: logo
-    second: {fileID: 2100000, guid: f056a112f32210c47b2c415bc0e508f9, type: 2}
+      name: course_model_logo1
+    second: {fileID: 2100000, guid: bbe520bcf71d5d54ebdd61b1e280af1b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: lwall
-    second: {fileID: 2100000, guid: b2115afbde8cc2546836457a095ad182, type: 2}
+      name: course_model_lwall1
+    second: {fileID: 2100000, guid: 691a110a84b03b7479670155d520d45b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: pasted__star_obj
-    second: {fileID: 2100000, guid: 1e58a0e116b4b5542bdf5814783ae853, type: 2}
+      name: course_model_pasted__star_obj1
+    second: {fileID: 2100000, guid: 3e184f83094318d4cabf308ee474b74e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: rainbow0
-    second: {fileID: 2100000, guid: 68638d38fa256f840a6cb21d6e44c083, type: 2}
+      name: course_model_rainbow0_d1
+    second: {fileID: 2100000, guid: fe9b56a3ec70ea6449f5e1b77f9d2343, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: rainbow0_d
-    second: {fileID: 2100000, guid: c69e7b06faff87e4fac6969b144c828e, type: 2}
+      name: course_model_rainbow1
+    second: {fileID: 2100000, guid: f3b12d0e70915934d8907ce385c03129, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: rainbow1
-    second: {fileID: 2100000, guid: 96dd1bf337f4ac541808b4f69d25eb6a, type: 2}
+      name: course_model_rainbow11
+    second: {fileID: 2100000, guid: 8f6fcefd375b3b1498444b25a17217cc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: rainbow1_d
-    second: {fileID: 2100000, guid: 0f4d3297bbcc9964e934c4914d9ba157, type: 2}
+      name: course_model_rainbow1_d1
+    second: {fileID: 2100000, guid: b6876faeba6de9f4c8cd0b97e03fcaf2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: rainbow2
-    second: {fileID: 2100000, guid: f6045ee87345a6d489c9804bd279d2b7, type: 2}
+      name: course_model_rainbow2_d1
+    second: {fileID: 2100000, guid: b66707a805ec35a408668bdb950b633e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: rainbow2_d
-    second: {fileID: 2100000, guid: 2eb44483cffaaac48afc70e999176b77, type: 2}
+      name: course_model_rainbow3_d1
+    second: {fileID: 2100000, guid: 8190ab098921b6b438c179cc1cdeda5a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: rainbow3
-    second: {fileID: 2100000, guid: c2d8f6ffdb82ded469723b6bbc7fb73b, type: 2}
+      name: course_model_rainbow4_d1
+    second: {fileID: 2100000, guid: a2cb7ddfa0f53874db0e0c3bd24cda6f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: rainbow3_d
-    second: {fileID: 2100000, guid: 029f8946eac05f64ab5d9f19f7d6703d, type: 2}
+      name: course_model_rainbow5
+    second: {fileID: 2100000, guid: dcd6c84efbca8664a808863f370b6394, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: rainbow4
-    second: {fileID: 2100000, guid: f31a137d271c6114d80ea195d76a36e6, type: 2}
+      name: course_model_rainbow5_d1
+    second: {fileID: 2100000, guid: 55665e54a758da04bb77ed6874c75d64, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: rainbow4_d
-    second: {fileID: 2100000, guid: d92aa4e500e0ef8458dffea5a8c0a35f, type: 2}
+      name: course_model_rainbow7
+    second: {fileID: 2100000, guid: 0ae80f2a2c8086d42976f839c06107a7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: rainbow5
-    second: {fileID: 2100000, guid: 47a1f25cd4696084298b0ec1cb733c1b, type: 2}
+      name: course_model_rainbow8
+    second: {fileID: 2100000, guid: fb540635a105182489283195c0f3be19, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: rainbow5_d
-    second: {fileID: 2100000, guid: 768fad92c6074f14fa8a0763bea7e9e6, type: 2}
+      name: course_model_rainbow9
+    second: {fileID: 2100000, guid: 7c519ebc63cf31a49bfe00d7fa33e2c0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: rrainbow7
-    second: {fileID: 2100000, guid: 77f567e95c934564f819f67f91430dcc, type: 2}
+      name: course_model_rrainbow8
+    second: {fileID: 2100000, guid: e317cae7ed2ba4c4f9c8de9357fdc892, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: star
-    second: {fileID: 2100000, guid: ef607a6cc795d0146a4a8f12636f01cc, type: 2}
+      name: course_model_star1
+    second: {fileID: 2100000, guid: f79a46db1ac94b64aa71be612c33510b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: wa1
-    second: {fileID: 2100000, guid: 3a98333d0c9e5e841b56db07d42faeb3, type: 2}
+      name: course_model_wa2
+    second: {fileID: 2100000, guid: c3610f0be191c9743a657956b316a5fb, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: ya
-    second: {fileID: 2100000, guid: c1ec373a84b2fbe488d7fac92b71e0ed, type: 2}
+      name: course_model_ya1
+    second: {fileID: 2100000, guid: d1d0185b16bd24c40b9baa93f1e01647, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -178,7 +178,7 @@ ModelImporter:
     secondaryUVMinLightmapResolution: 40
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

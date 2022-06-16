@@ -39,6 +39,8 @@ namespace Xami.Vehicles
         public bool IsJumping => isJumping;
         private bool isDashing;
 
+        [SerializeField] private bool followCamera;
+
 
         protected override void Awake()
         {
@@ -196,11 +198,18 @@ namespace Xami.Vehicles
             base.OnTriggerEnter(other);
             if (other.gameObject.tag == "Player" && !activated)
             {
-                Physics.IgnoreCollision(GetComponent<Collider>(), other);
+                //player.gameObject.GetComponent<Collider>().enabled = false;
                 player.GetComponent<Movement>().PlayerModel.rotation = Quaternion.Euler(Vector3.zero);
                 player.GetComponent<Movement>().ridingShell = true;
-                cam.SetParent(transform);
-                cam.SetOffset(new Vector3(-0.5f, -2f, 10f));
+                if (followCamera)
+                {
+                    cam.lookAtObject = true;
+                    cam.target = transform;
+                } else
+                {
+                    cam.SetParent(transform);
+                }
+                cam.SetOffset(new Vector3(0, -2f, 10f));
                 anim.SetBool("Activated", true);
                 audioSource.Play();
                 StartCoroutine(WaitAndActivate());

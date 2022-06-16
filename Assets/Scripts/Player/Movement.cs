@@ -16,6 +16,7 @@ namespace Xami.Player
         [SerializeField] private Animator anim;
         [SerializeField] private int movementSpeedIndex = Animator.StringToHash("MovementSpeed");
         [SerializeField] private int ridingShellIndex = Animator.StringToHash("RidingShell");
+        [SerializeField] private int groundedIndex = Animator.StringToHash("IsGrounded");
 
         [Header("Input")]
         [SerializeField] private InputActionAsset input;
@@ -92,6 +93,7 @@ namespace Xami.Player
             //Debug.Log(movementCooldown);
 
             anim.SetBool(ridingShellIndex, ridingShell);
+            anim.SetBool(groundedIndex, physicsScript.IsGrounded);
         }
 
         private void FixedUpdate()

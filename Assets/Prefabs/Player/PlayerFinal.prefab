@@ -300,7 +300,9 @@ MonoBehaviour:
   physicsScript: {fileID: 7688926520773602209}
   anim: {fileID: 1637796575}
   movementSpeedIndex: -124615418
+  ridingShellIndex: 612758325
   input: {fileID: -944628639613478452, guid: 0aec3d36dfd8e8947aa69d56a5e80c76, type: 3}
+  ridingShell: 0
   rotationSpeed: 360
   acceleration: 30
   maxSpeed: 30

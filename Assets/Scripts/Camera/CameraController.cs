@@ -13,6 +13,8 @@ public class CameraController : MonoBehaviour
     [SerializeField] private bool changeRotation;
     [SerializeField] private bool changeAnchorPoint;
 
+    [SerializeField] List<string> tags = new List<string>();
+
     private static Coroutine cameraChangerCoroutine;
 
     private void Awake()
@@ -25,7 +27,7 @@ public class CameraController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if ((cam.gameObject.GetComponent<FixedCamera>() != null) && (other.gameObject.tag == "Player"))
+        if ((cam.gameObject.GetComponent<FixedCamera>() != null) && ((other.gameObject.tag == "Player") || tags.Contains(other.gameObject.tag)))
         {
             if (cameraChangerCoroutine != null)
             {

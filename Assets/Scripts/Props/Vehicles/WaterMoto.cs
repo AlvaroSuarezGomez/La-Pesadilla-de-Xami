@@ -28,7 +28,7 @@ namespace Xami.Vehicles
             if (other.gameObject.tag == "Player")
             {
                 activated = true;
-                cam.GetComponent<FixedCamera>().Parent = gameObject.transform;
+                //cam.GetComponent<FixedCamera>().Parent = gameObject.transform;
                 cam.GetComponent<FixedCamera>().lookAtObject = true;
                 cam.GetComponent<FixedCamera>().target = gameObject.transform;
             }

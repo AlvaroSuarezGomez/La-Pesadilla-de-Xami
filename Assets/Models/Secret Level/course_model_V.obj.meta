@@ -3,7 +3,27 @@ guid: 8c6bfcbd8fb095e40b5080d7913c2934
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fog_bg
+    second: {fileID: 2100000, guid: 0486155cc72253942947f1681742af1c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: milky
+    second: {fileID: 2100000, guid: 7b48d8c258568794aa0c87383206b3d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: milky2
+    second: {fileID: 2100000, guid: 639a3fc3e3d7f3c438973347d8b8a416, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: space
+    second: {fileID: 2100000, guid: 06cec17bdeaf03f4e81cdfb6a675029b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

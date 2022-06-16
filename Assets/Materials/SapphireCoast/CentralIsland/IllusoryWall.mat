@@ -21,19 +21,22 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: IllusoryWall
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: ceea06f98ee48cd4fb0159611b7a9623, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap:
-    RenderType: Transparent
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses:
   - SHADOWCASTER
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_3ffeeb2400aa4ab2a6a5377364afbd9f:
+        m_Texture: {fileID: 2800000, guid: ffd17b9063bd8ec4c861cd8481b1bf7a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: 8af3f7b58ec504b4fbc581f4b7dbd7ca, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -74,6 +77,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_946ec6c422ca49c698bba709dec24957_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 78f0c6fe82bb41c45b3eb4ab1f7c8795, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -106,6 +113,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0.069
+    - _OPACITY: 1.5
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueOffset: 0
@@ -118,6 +126,9 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 0
     m_Colors:
+    - Color_05e410c944d648f7b042f109da78365f: {r: 0.4528302, g: 0.36353874, b: 0.29263082, a: 0}
+    - Vector2_2622c5a0f2c34e7d87f090be6f537462: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_3737d74bcea34f2aab7530f29b7097dd: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

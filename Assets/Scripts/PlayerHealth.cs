@@ -71,7 +71,7 @@ namespace Xami.Player {
             LevelManager.Instance.Respawn();
         }
 
-        private void OnCollisionEnter(Collision collision)
+        private void OnCollisionStay(Collision collision)
         {
             //Debug.Log(((damageTags.Contains(collision.gameObject.tag) && !IsInvincible) || (enemyTags.Contains(collision.gameObject.tag) && (!IsAttacking && !IsInvincible))));
             //Debug.Log(IsAttacking);
@@ -84,6 +84,20 @@ namespace Xami.Player {
                 StartCoroutine(WaitAndDisableInvincibility());
             }
         }
+
+        /*private void OnTriggerStay(Collider collision)
+        {
+            //Debug.Log(((damageTags.Contains(collision.gameObject.tag) && !IsInvincible) || (enemyTags.Contains(collision.gameObject.tag) && (!IsAttacking && !IsInvincible))));
+            //Debug.Log(IsAttacking);
+            if ((damageTags.Contains(collision.gameObject.tag) && !IsInvincible) || (enemyTags.Contains(collision.gameObject.tag) && (!IsAttacking && !IsInvincible)))
+            {
+                isInvincible = true;
+                health--;
+                movementScript.DisableMovementForTime(0.5f);
+                rb.velocity += ((collision.ClosestPoint(transform.position) + Vector3.up * 0.1f) * damageForce/100);
+                StartCoroutine(WaitAndDisableInvincibility());
+            }
+        }*/
 
         private IEnumerator WaitAndDisableInvincibility()
         {
