@@ -12,10 +12,19 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject levelSelector;
     [SerializeField] private GameObject optionsMenu;
     [SerializeField] private GameObject principalMenu;
-    [SerializeField] private GameObject optionsFirstButton, levelSelectorFirstButton;
+    [SerializeField] private GameObject principalFirstButton, optionsFirstButton, levelSelectorFirstButton;
     [SerializeField] private AudioSource audioButton;
     //audioButton.Play();
     // Start is called before the first frame update
+    private void Awake()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(principalFirstButton);
+        GameObject levelManager = GameObject.Find("LevelManager");
+        GameObject timer = GameObject.Find("Timer");
+        Destroy(levelManager);
+        Destroy(timer);
+    }
     void Start()
     {
         Cursor.visible = true;

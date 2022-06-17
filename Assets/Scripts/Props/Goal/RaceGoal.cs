@@ -8,22 +8,25 @@ public class RaceGoal : MonoBehaviour
 {
     public bool activated;
 
-    [SerializeField] private Timer timer;
-
     [SerializeField] private GameObject recordMessage;
 
     [SerializeField] private float messageWait;
+
+    private void Awake()
+    {
+        Timer.Instance.ResetTimer();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if ((other.gameObject.tag == "Vehicle") && activated)
         {
-            if ((ScoreManager.Instance.Score.scores.Count <= SceneManager.GetActiveScene().buildIndex) || (timer.LapTime < ScoreManager.Instance.Score.scores[SceneManager.GetActiveScene().buildIndex]))
+            if ((ScoreManager.Instance.Score.scores.Count <= SceneManager.GetActiveScene().buildIndex) || (Timer.Instance.LapTime < ScoreManager.Instance.Score.scores[SceneManager.GetActiveScene().buildIndex]))
             {
-                timer.SaveTime();
-                timer.ResetTimer();
+                Timer.Instance.SaveTime();
                 StartCoroutine(ShowMessage());
             }
+            Timer.Instance.ResetTimer();
             activated = false;
         }
     }

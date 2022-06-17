@@ -52,8 +52,12 @@ public class FixedCamera : MonoBehaviour
 
     public void ParentDirection()
     {
-        transform.position = parent.transform.position + (parent.transform.rotation * -offset);
-        transform.rotation = Quaternion.Slerp(transform.rotation, parent.rotation, smoothRotationTime * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, parent.transform.position + (parent.transform.rotation * -offset), smoothRotationTime * Time.deltaTime);
+        Quaternion rotationY = Quaternion.Euler(0f, parent.rotation.eulerAngles.y, 0f);
+        Quaternion rotationXZ = Quaternion.Slerp(transform.rotation, parent.rotation, smoothRotationTime * Time.deltaTime);
+
+        transform.rotation = Quaternion.Euler(rotationXZ.eulerAngles.x, rotationY.eulerAngles.y, rotationXZ.eulerAngles.z);
+
         //transform.LookAt(parent);
     }
 

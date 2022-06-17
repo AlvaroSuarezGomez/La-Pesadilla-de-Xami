@@ -29,11 +29,11 @@ public class LevelManager : MonoBehaviour
 
         DontDestroyOnLoad(Instance);
 
-        if (SceneManager.GetActiveScene().buildIndex != Instance.levelIndex)
+        /*if (SceneManager.GetActiveScene().buildIndex != Instance.levelIndex)
         {
             Destroy(Instance.gameObject);
             Destroy(gameObject);
-        }
+        }*/
     }
 
     public void SetCheckpoint(Checkpoint checkpoint)

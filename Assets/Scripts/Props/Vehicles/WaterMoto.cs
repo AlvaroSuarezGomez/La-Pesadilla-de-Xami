@@ -39,7 +39,7 @@ namespace Xami.Vehicles
         {
             if (collision.gameObject.tag == "Damage" && !player.GetComponent<PlayerHealth>().IsInvincible)
             {
-                player.GetComponent<PlayerHealth>().Health--;
+                player.GetComponent<PlayerHealth>().Damage();
             }
         }
     }

@@ -53,6 +53,11 @@ namespace Xami.Vehicles
                 audioSource = GetComponent<AudioSource>();
             }
         }
+        private void OnDestroy()
+        {
+            jumpAction.action.performed -= JumpAction_performed;
+            dashAction.action.performed -= DashAction_performed;
+        }
 
         private void DashAction_performed(InputAction.CallbackContext obj)
         {
@@ -111,14 +116,17 @@ namespace Xami.Vehicles
 
         private void Move()
         {
-            velocity = rb.velocity;
-            localVelocity = transform.InverseTransformDirection(velocity);
-            localVelocity = new Vector3(0f, localVelocity.y, speed);
-            velocity = transform.TransformDirection(localVelocity);
-            rb.velocity = velocity;
+            if (activated)
+            {
+                velocity = rb.velocity;
+                localVelocity = transform.InverseTransformDirection(velocity);
+                localVelocity = new Vector3(0f, localVelocity.y, speed);
+                velocity = transform.TransformDirection(localVelocity);
+                rb.velocity = velocity;
 
-            Vector2 dir = rotateAction.ReadValue<Vector2>();
-            transform.Rotate(0f, dir.x * rotationSpeed * Time.fixedDeltaTime, 0f);
+                Vector2 dir = rotateAction.ReadValue<Vector2>();
+                transform.Rotate(0f, dir.x * rotationSpeed * Time.fixedDeltaTime, 0f);
+            }
         }
 
         private void Gravity()
@@ -214,6 +222,22 @@ namespace Xami.Vehicles
                 anim.SetBool("Activated", true);
                 audioSource.Play();
                 StartCoroutine(WaitAndActivate());
+            }
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.tag == "Damage" && !player.GetComponent<PlayerHealth>().IsInvincible)
+            {
+                player.GetComponent<PlayerHealth>().Damage();
+            }
+        }
+
+        private void OnCollisionStay(Collision collision)
+        {
+            if (collision.gameObject.tag == "Damage" && !player.GetComponent<PlayerHealth>().IsInvincible)
+            {
+                player.GetComponent<PlayerHealth>().Damage();
             }
         }
 

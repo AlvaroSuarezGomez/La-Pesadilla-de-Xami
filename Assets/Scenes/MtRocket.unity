@@ -6019,6 +6019,10 @@ PrefabInstance:
       propertyPath: levelMusic
       value: 
       objectReference: {fileID: 13939131}
+    - target: {fileID: 1318187529655949883, guid: 030728e504f62e34cb64942c3b5f42f3, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 192
+      objectReference: {fileID: 0}
     - target: {fileID: 1318187529655949884, guid: 030728e504f62e34cb64942c3b5f42f3, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -10676,7 +10680,11 @@ PrefabInstance:
     - target: {fileID: 1543522858510651415, guid: 2b7e5e4a5aa672049bfbe9bc40274603, type: 3}
       propertyPath: text
       value: 
-      objectReference: {fileID: 1365722739}
+      objectReference: {fileID: 0}
+    - target: {fileID: 1543522858510651415, guid: 2b7e5e4a5aa672049bfbe9bc40274603, type: 3}
+      propertyPath: activated
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b7e5e4a5aa672049bfbe9bc40274603, type: 3}
 --- !u!1 &1257398491 stripped
@@ -15651,6 +15659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2631bc7fc322b5f479d783d9b1a1c9a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerText: {fileID: 1365722739}
 --- !u!4 &1739576189
 Transform:
   m_ObjectHideFlags: 0
@@ -16433,6 +16442,7 @@ GameObject:
   - component: {fileID: 1908686599}
   - component: {fileID: 1908686603}
   - component: {fileID: 1908686602}
+  - component: {fileID: 1908686604}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -16555,6 +16565,18 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &1908686604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908686598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afe4dcbbdaf6bff478cab1a1b488fab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1920445287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18044,6 +18066,10 @@ PrefabInstance:
     - target: {fileID: 4998745763236523521, guid: 24795a0917aa47140b83abafb507559b, type: 3}
       propertyPath: m_Name
       value: Pause
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998745763236523534, guid: 24795a0917aa47140b83abafb507559b, type: 3}
+      propertyPath: levelIndex
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4998745763236523535, guid: 24795a0917aa47140b83abafb507559b, type: 3}
       propertyPath: m_RootOrder

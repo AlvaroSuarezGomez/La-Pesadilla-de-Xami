@@ -19,8 +19,6 @@ public class Goal : MonoBehaviour
 
     [SerializeField] private List<string> tags = new List<string>();
 
-    [SerializeField] private Timer timer;
-
     [SerializeField] private GameObject recordMessage;
     [SerializeField] private GameObject returnMessage;
 
@@ -33,6 +31,11 @@ public class Goal : MonoBehaviour
     {
         orScale = transform.localScale.x;
         continueAction.action.performed += Continue_Action_Performed;
+    }
+
+    private void OnDestroy()
+    {
+        continueAction.action.performed -= Continue_Action_Performed;
     }
 
     private void Continue_Action_Performed(InputAction.CallbackContext obj)
@@ -58,18 +61,20 @@ public class Goal : MonoBehaviour
             if (other.gameObject.GetComponent<Movement>() != null)
             {
                 other.gameObject.GetComponent<Movement>().CanMove = false;
+                other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
             }
 
             if (other.gameObject.GetComponent<Vehicle>() != null)
             {
                 other.gameObject.GetComponent<Vehicle>().Activated = false;
+                other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             }
 
-            timer.activated = false;
+            Timer.Instance.Activated = false;
 
-            if ((ScoreManager.Instance.Score.scores.Count <= SceneManager.GetActiveScene().buildIndex) || ((timer.LapTime < ScoreManager.Instance.Score.scores[SceneManager.GetActiveScene().buildIndex]) || ScoreManager.Instance.Score.scores[SceneManager.GetActiveScene().buildIndex] <= 0f))
+            if ((ScoreManager.Instance.Score.scores.Count <= SceneManager.GetActiveScene().buildIndex) || ((Timer.Instance.LapTime < ScoreManager.Instance.Score.scores[SceneManager.GetActiveScene().buildIndex]) || ScoreManager.Instance.Score.scores[SceneManager.GetActiveScene().buildIndex] <= 0f))
             {
-                timer.SaveTime();
+                Timer.Instance.SaveTime();
                 StartCoroutine(ShowMessage());
                 activated = true;
             }

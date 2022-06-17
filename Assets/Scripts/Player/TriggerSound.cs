@@ -15,6 +15,11 @@ public class TriggerSound : MonoBehaviour
         tauntActionReference.action.performed += Action_performed;
     }
 
+    private void OnDestroy()
+    {
+        tauntActionReference.action.performed -= Action_performed;
+    }
+
     private void Action_performed(InputAction.CallbackContext obj)
     {
         audioSource.Play();

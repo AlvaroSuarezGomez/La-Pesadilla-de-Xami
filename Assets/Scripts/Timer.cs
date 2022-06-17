@@ -8,33 +8,43 @@ using Xami.Data;
 
 public class Timer : MonoBehaviour
 {
-    public Timer Instance { get; private set; }
+    public static Timer Instance { get; private set; }
 
     private float time;
 
     public float LapTime => time;
 
-    [SerializeField] 
-    private TextMeshProUGUI text;
+
+    public TextMeshProUGUI text;
 
     private int levelIndex;
 
-    public bool activated = true;
+    private bool activated;
+
+    public bool Activated { get { return activated; } set { activated = value; } }
 
     private void Awake()
     {
         if (Instance != null)
         {
-            Destroy(gameObject);
-            return;
+            Destroy(this);
+            activated = true;
+        } else
+        {
+            Instance = this;
         }
 
-        Instance = this;
+        DontDestroyOnLoad(Instance);
+        //Debug.Log(Instance.time + " " + Instance.activated);
     }
 
     void Start()
     {
-        time = 0;
+        if (!activated)
+        {
+            time = 0;
+            activated = true;
+        }
         levelIndex = SceneManager.GetActiveScene().buildIndex;
     }
     void Update()

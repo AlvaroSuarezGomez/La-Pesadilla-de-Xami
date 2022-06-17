@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 namespace Xami.Data {
     public class ScoreManager : MonoBehaviour
     {
         public static ScoreManager Instance { get; private set; }
+
+        public TextMeshProUGUI timerText;
 
         private Score score;
 
@@ -25,6 +28,14 @@ namespace Xami.Data {
 
             scoreProvider = new JsonScoreProvider("scores.json");
             score = scoreProvider.Load();
+        }
+
+        private void Start()
+        {
+            if (Timer.Instance != null)
+            {
+                Timer.Instance.text = timerText;
+            }
         }
 
         public void RecordScore(float time, int index)

@@ -58416,6 +58416,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 142915259}
+  - component: {fileID: 142915260}
   m_Layer: 2
   m_Name: CameraControllerPoints
   m_TagString: Untagged
@@ -58447,6 +58448,18 @@ Transform:
   m_Father: {fileID: 132441143}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &142915260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142915258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afe4dcbbdaf6bff478cab1a1b488fab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &142974094 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2689379044825461672, guid: b10c1e53b7e22fd4db7910986889cf8a, type: 3}
@@ -62527,6 +62540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2631bc7fc322b5f479d783d9b1a1c9a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerText: {fileID: 935764482}
 --- !u!4 &392950954
 Transform:
   m_ObjectHideFlags: 0
@@ -65209,6 +65223,10 @@ PrefabInstance:
     - target: {fileID: 4998745763236523521, guid: 24795a0917aa47140b83abafb507559b, type: 3}
       propertyPath: m_Name
       value: Pause
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998745763236523534, guid: 24795a0917aa47140b83abafb507559b, type: 3}
+      propertyPath: levelIndex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4998745763236523535, guid: 24795a0917aa47140b83abafb507559b, type: 3}
       propertyPath: m_RootOrder

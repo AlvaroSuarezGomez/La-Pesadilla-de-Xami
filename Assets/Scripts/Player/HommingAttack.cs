@@ -55,6 +55,11 @@ namespace Xami.Player
             jumpActionReference.action.performed += Action_performed;
         }
 
+        private void OnDestroy()
+        {
+            jumpActionReference.action.performed -= Action_performed;
+        }
+
         private void FixedUpdate()
         {
             PerformHommingAttack();

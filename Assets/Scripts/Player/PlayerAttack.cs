@@ -28,6 +28,11 @@ namespace Xami.Player {
             attackAction.action.performed += Attack_Action_performed;
         }
 
+        private void OnDestroy()
+        {
+            attackAction.action.performed -= Attack_Action_performed;
+        }
+
         private void Attack_Action_performed(InputAction.CallbackContext obj)
         {
             if (playerMovement.CanMove && canAttack)

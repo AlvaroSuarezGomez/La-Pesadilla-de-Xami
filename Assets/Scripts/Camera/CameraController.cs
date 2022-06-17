@@ -15,7 +15,8 @@ public class CameraController : MonoBehaviour
 
     [SerializeField] List<string> tags = new List<string>();
 
-    private static Coroutine cameraChangerCoroutine;
+    private bool canMove;
+    public bool CanMove { get { return canMove; } set { canMove = value; } }
 
     private void Awake()
     {
@@ -23,16 +24,17 @@ public class CameraController : MonoBehaviour
         {
             cam = Camera.main;
         }
+
+        CameraControllerManager.AddCameraController(this);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if ((cam.gameObject.GetComponent<FixedCamera>() != null) && ((other.gameObject.tag == "Player") || tags.Contains(other.gameObject.tag)))
         {
-            if (cameraChangerCoroutine != null)
-            {
-                StopCoroutine(cameraChangerCoroutine);
-            }
+            CameraControllerManager.DisableCameraControllers();
+            canMove = true;
+            Debug.Log(CanMove);
 
             if (changePosition)
             {
@@ -41,7 +43,7 @@ public class CameraController : MonoBehaviour
 
             if (changeRotation)
             {
-                cameraChangerCoroutine = StartCoroutine(ChangeCameraRotation());
+                StartCoroutine(ChangeCameraRotation());
             }
 
             if (anchorPoint != null)
@@ -57,10 +59,9 @@ public class CameraController : MonoBehaviour
     {
         if ((cam.gameObject.GetComponent<FixedCamera>() != null) && (collision.gameObject.tag == "Player"))
         {
-            if (cameraChangerCoroutine != null)
-            {
-                StopCoroutine(cameraChangerCoroutine);
-            }
+            CameraControllerManager.DisableCameraControllers();
+            canMove = true;
+            Debug.Log(CanMove);
 
             if (changePosition)
             {
@@ -69,7 +70,7 @@ public class CameraController : MonoBehaviour
 
             if (changeRotation)
             {
-                cameraChangerCoroutine = StartCoroutine(ChangeCameraRotation());
+                StartCoroutine(ChangeCameraRotation());
             }
 
             if (anchorPoint != null)
@@ -83,7 +84,7 @@ public class CameraController : MonoBehaviour
 
     private IEnumerator ChangeCameraRotation()
     {
-        while (cam.transform.rotation != Quaternion.Euler(newRotation))
+        while (cam.transform.rotation != Quaternion.Euler(newRotation) && canMove)
         {
             cam.transform.rotation = Quaternion.Slerp(cam.transform.rotation, Quaternion.Euler(newRotation), rotationSpeed * Time.deltaTime);
             yield return new WaitForSeconds(Time.deltaTime);

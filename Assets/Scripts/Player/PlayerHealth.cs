@@ -80,11 +80,7 @@ namespace Xami.Player {
             //Debug.Log(IsAttacking);
             if ((damageTags.Contains(collision.gameObject.tag) && !IsInvincible) || (enemyTags.Contains(collision.gameObject.tag) && (!IsAttacking && !IsInvincible)))
             {
-                isInvincible = true;
-                health--;
-                movementScript.DisableMovementForTime(0.5f);
-                rb.velocity += ((collision.contacts[0].normal + Vector3.up * 0.1f) * damageForce);
-                StartCoroutine(WaitAndDisableInvincibility());
+                Damage();
             }
         }
 
@@ -94,11 +90,8 @@ namespace Xami.Player {
             //Debug.Log(IsAttacking);
             if ((damageTags.Contains(collision.gameObject.tag) && !IsInvincible) || (enemyTags.Contains(collision.gameObject.tag) && (!IsAttacking && !IsInvincible)))
             {
-                isInvincible = true;
-                health--;
-                movementScript.DisableMovementForTime(0.5f);
+                Damage();
                 rb.velocity += ((collision.contacts[0].normal + Vector3.up * 0.1f) * damageForce);
-                StartCoroutine(WaitAndDisableInvincibility());
             }
         }
 
@@ -116,6 +109,13 @@ namespace Xami.Player {
             }
         }*/
 
+        public void Damage()
+        {
+            isInvincible = true;
+            health--;
+            movementScript.DisableMovementForTime(0.5f);
+            StartCoroutine(WaitAndDisableInvincibility());
+        }
         private IEnumerator WaitAndDisableInvincibility()
         {
             yield return new WaitForSeconds(invincibilityTime);

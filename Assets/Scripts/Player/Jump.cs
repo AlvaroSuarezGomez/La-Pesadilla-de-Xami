@@ -42,6 +42,11 @@ namespace Xami.Player
             jumpActionReference.action.performed += Action_performed;
         }
 
+        private void OnDestroy()
+        {
+            jumpActionReference.action.performed -= Action_performed;
+        }
+
         private void Action_performed(InputAction.CallbackContext obj)
         {
             if (playerPhysicsScript.IsGrounded && movementScript.CanMove)

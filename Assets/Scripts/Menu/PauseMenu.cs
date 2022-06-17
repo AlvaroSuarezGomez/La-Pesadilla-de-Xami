@@ -9,6 +9,7 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
+    [SerializeField] private int levelIndex;
     [SerializeField] private bool activated;
     [SerializeField] private InputActionReference pauseInputAction;
     [SerializeField] private GameObject pauseCanvas;
@@ -22,8 +23,14 @@ public class PauseMenu : MonoBehaviour
         exitButton.onClick.AddListener(Exit);
     }
 
+    private void OnDestroy()
+    {
+        pauseInputAction.action.performed -= Pause_Action_Performed;
+    }
+
     private void Update()
     {
+        Debug.Log("a");
         if (activated)
         {
             Time.timeScale = 0;
@@ -51,6 +58,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Pause_Action_Performed(InputAction.CallbackContext obj)
     {
+        Debug.Log("a");
         if (!activated)
         {
             EventSystem.current.SetSelectedGameObject(null);
